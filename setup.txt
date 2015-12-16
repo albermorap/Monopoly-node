@@ -1,0 +1,31 @@
+Para preparar el esqueleto de la solución del Monopoly basado en Nodejs, sigue los siguientes pasos:
+1. Preparar una nueva carpeta para la solución basada en Nodejs (en este repositorio se utiliza monopoly-node)
+
+2. La estructura tiene una subcarpeta para la aplicación cliente (client); una carpeta para la aplicación de servidor (server) y una carpeta donde se almacenan los módulos Nodejs (cada vez que ejecutamos npm install nombre-modulo)
+
+3. Una vez tenemos la estructura de carpetas, copiamos nuestro modelo del juego y nuestro archivo de test en la carpeta server (en este repositorio se utiliza como referencia el archivo juego.js para el modelo y monopoly_spec.js para los tests)
+
+-----------para entender mejor el siguiente paso es recomendable haber realizado los ejercicios 1 a 5 del tutorial-nodejs------
+--- En particular, para que funcionen los siguientes pasos es necesario instalar Nodejs (nodejs.org)
+
+4. El siguiente paso es realizar unos pequeños cambios en el modelo para que funcione en el lado del servidor. Los cambios tienen por objeto exportar aquellos objetos que necesitemos (por ahora los que necesitemos para pasar los tests). Puedes ver cómo exportar objetos en el archivo juego.js (última linea).
+
+5. Ahora modificamos nuestro archivo de test. Véase la primera línea del archivo monopoly_spec.js. Observa que ahora hacemos referencia a nuestros objetos utilizando la variable con la que importamos el módulo (véase el modo de crear el juego)
+
+6. El siguiente paso es ejecutar los test de jasmine del lado del servidor. Para eso hay que instalar jasmine-node. En línea de comandos ejecuta: npm install jasmine-node
+
+7. Una vez instalado jasmine-node, en linea de comandos ejecuta jasmine-node nombre_spec.js > error (redirigimos la salida porque es previsible que salgan muchos errores, aunque la mayoría se deba a que no hemos exportado algún objeto necesario)
+
+8. Con el editor, repasamos los errores, comenzando por el primero. Es posible que tengamos que repetir los pasos 4 y 5 para cada objeto que sea necesario
+
+9. Repetimos los pasos 7 y 8 (y posiblemente el 4 y 5) hasta que pasemos todos los tests
+
+10. Una vez tenemos el modelo y los tests en perfecto estado, tenemos que modificar nuestro archivo monopoly-server.js para que utiliza nuestro modelo. Observa la línea var modelo=require("./server/juego.js") y modifícala para que utilice tu modelo.
+
+11. Antes de poder lanzar el servidor, tenemos que instalar módulos Nodejs. En línea de comandos (en el directorio raiz de nuestra solucion, esto es, en monopoly-node) ejecuta npm install underscore (si utilizas underscore), npm install express
+
+12. Una vez hayamos instalado los módulos Nodejs y modificado el archivo del paso 10, en linea de comandos ejecuta node monopoly-server.js 
+
+13. Para comprobar que funciona correctamente, en la barra de navegación del navegador escribe http://localhost:1337/ 
+
+14. Modifica el archivo index.html para que muestre un texto diferente al actual y comprueba el resultado
