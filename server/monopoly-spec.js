@@ -115,7 +115,7 @@ describe("Monopoly",function(){
 				expect(tab.getCasilla(3).getTema().getNombre()).toEqual("Plaza Lavapies");
 
 				expect(tab.getCasilla(6).getTema().getNombre()).toEqual("Glorieta Cuatro Caminos");
-				expect(tab.getCasilla(8).getTema().getNombre()).toEqual("Avenida Reina Sofia");
+				expect(tab.getCasilla(8).getTema().getNombre()).toEqual("Avenida Reina Victoria");
 				expect(tab.getCasilla(9).getTema().getNombre()).toEqual("Calle Bravo Murillo");
 
 				expect(tab.getCasilla(11).getTema().getNombre()).toEqual("Glorieta de Bilbao");
@@ -778,6 +778,20 @@ describe("Monopoly",function(){
 					expect(ficha1.getPropiedades().length).toEqual(1)
 					expect(ficha1.getSaldo()).toEqual(saldoAnterior + titulo.getPropiedad().getPrecio() * 0.5)
 					expect(titulo.getPropiedad().getEstado().constructor.name).toEqual("Hipotecada")
+				});
+
+				it("Cuando un jugador hipoteca una propiedad pierde el monopolio si lo tenía", function(){
+					ficha1.lanzarDados([0,1])
+					ficha1.comprarPropiedad()
+					ficha1.pasarTurno()
+					ficha1.lanzarDados([0,2])
+					ficha1.comprarPropiedad()
+
+					var titulo = ficha1.getPropiedades()[0]
+
+					expect(ficha1.getMonopolios().length).toEqual(1)
+					ficha1.hipotecarPropiedad(titulo)
+					expect(ficha1.getMonopolios().length).toEqual(0)
 				});
 
 				it("Un jugador no puede hipotecar una calle si esta tiene edificaciones", function(){

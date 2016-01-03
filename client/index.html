@@ -10,7 +10,7 @@
 
 		<!-- icons -->
 		<link rel="apple-touch-icon" href="client/assets/img/apple-touch-icon.png">
-		<link rel="shortcut icon" href="favicon.ico">
+		<link rel="shortcut icon" href="client/favicon.ico">
 
 		<!-- Bootstrap Core CSS file -->
 		<link rel="stylesheet" href="client/assets/css/bootstrap.min.css">
@@ -26,6 +26,7 @@
 		<script src="client/lib/jquery-1.11.3.js"></script>
 		<script src="client/lib/jquery.cookie.js"></script>		
 		<script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+		<script src="client/assets/js/bootstrap.min.js"></script>	
 		<script src="client/assets/js/monopoly-client.js"></script>	
 		
 	</head>
@@ -65,7 +66,7 @@
 		<!-- Page Content -->
 		<div class="container-fluid">
 			<div class="row">
-				<div class="col-sm-7 col-sm-push-4">
+				<div class="col-sm-7 col-sm-push-5">
 						<div id="tituloPartida">
 							<h1 id="nombrePartida">Nombre de partida</h1>
 						</div>						
@@ -73,33 +74,43 @@
 						<hr>
 				</div>
 			</div>
-			<!-- /.row -->
+
+			<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			  	<div class="modal-dialog">
+			    	<div class="modal-content">
+				      	<div class="modal-header">
+				      		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">×</span></button>
+							<h4 class="modal-title" id="mySmallModalLabel">Aviso</h4>
+						</div> 
+						<div id="myModalBody" class="modal-body"></div> 
+						<div id="myModalFooter" class="modal-footer">
+					        <button id="myModalButton" type='button' class='btn btn-primary' data-dismiss='modal'>Aceptar</button>
+					    </div>
+					</div> 
+			    </div>
+		  	</div>
 
 			<div class="row">
-				<div class="col-sm-7 col-sm-push-4">
-
+				<div class="col-sm-7 col-sm-push-5">
 					<!-- Image -->
 					<div id="tablero">
-						<figure class="margin-b-3">
-							<img class="img-responsive" src="client/assets/img/tablero.jpg" alt="">
-							<canvas class="img-responsive" id="tablero"></canvas>
-						</figure>			
+						<canvas class="img-responsive" id="micanvas" height="720" width="720"></canvas>						
 					</div>
-									
-				
+
 					<!-- Información -->					
-					<div class="panel panel-default">
+					<div class="panel panel-info">
 						<div class="panel-heading">
 							<h4 class="panel-title">Información</h4>
 						</div>
 						<div class="panel-body" id="infoFicha"></div>
 					</div>
 
-				</div>
+				</div>				
 
-				<div class="col-sm-4 col-sm-pull-7">
+				<div class="col-sm-5 col-sm-pull-7">
 					<!-- Panel -->
-					<div class="panel panel-default">
+					<div class="panel panel-primary">
 						<div class="panel-heading" id="nombreJugador">
 							<h4 class="panel-title" id="nombreJugadorDefecto">Bienvenido</h4>
 						</div>
@@ -107,31 +118,31 @@
 							<div id="datosJugador"></div>
 							<div id="dados"></div>
 							<div id="botones"></div>
-							<div id="opcionesHipotecar"></div>
-							<div id="opcionesConstruir"></div>
-						</div>						
-					</div>				
-
-					<!-- Panel -->
-					<div class="panel panel-default">
-						<div class="panel-heading">
-							<h4 class="panel-title">Propiedades</h4>
-						</div>
-						<div class="panel-body">
-							<p><font color="#0404B4">Azul</font></p><ul id="prop-azul"></ul>
-							<p>Verde</p><ul id="prop-verde"></ul>
-							<p>Amarillo</p><ul id="prop-amarillo"></ul>
-							<p>Rojo</p><ul id="prop-rojo"></ul>
-							<p>Naranja</p><ul id="prop-naranja"></ul>
-							<p>Rosa</p><ul id="prop-rosa"></ul>
-							<p>Azul Claro</p><ul id="prop-azulClaro"></ul>
-							<p>Marron</p><ul id="prop-marron"></ul>
-							<p>Estaciones</p><ul id="prop-estacion"></ul>
-							<p>Servicios Públicos</p><ul id="prop-servicioPublico"></ul>
+							<hr>
+							<div id="avisos"></div>							
 						</div>
 					</div>
 
+					<!-- Panel -->
+					<div class="panel panel-primary" id="propiedades">
+						<div class="panel-heading">
+							<h4 class="panel-title">Propiedades</h4>
+						</div>						
+						<!--div class='btn-group' role='group'>
+						  	<button type='button' class='btn btn-default' onclick='hipotecar("hola")'>Hipotecar</button>
+
+							  	<select class="form-control" id="sel1">
+								    <option selected>Selecciona una propiedad </option>
+								    <option>1</option>
+								    <option>2</option>
+								    <option>3</option>
+								    <option>4</option>
+							  	</select>
+						</div-->
+					</div>
 				</div>
+
+				
 			</div>
 			<!-- /.row -->
 
@@ -146,7 +157,7 @@
 		</div>
 
 		<script>			
-			inicio();
+			inicio();			
 		</script>
 
 		<!-- Bootstrap Core scripts -->

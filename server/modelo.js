@@ -63,9 +63,10 @@ function Partida(nombre){
 		if (ficha.length == 1)
 			return ficha[0]
 	}
+	this.getFichas = function(){return this.fichas}
 
 	this.generarCajaTarjetas = function(){
-		var inicial = [new LibreCarcel(), new Avanzar(3), new Retroceder(3), new Pagar(50), new Cobrar(50)]
+		var inicial = [new LibreCarcel(), new Avanzar(4), new Retroceder(4), new Pagar(50), new Cobrar(50)]
 		var caja = []
 
 		while (inicial.length > 0){
@@ -143,7 +144,7 @@ function Partida(nombre){
 		console.log("   Usuario " + ficha.getUsuario().getNombre() + ":  HA CAIDO EN CASILLA - " + nuevaPosicion)
 
 		// Ha pasado por la casilla de salida sin caer en ella
-		if (nuevaPosicion != 0 && nuevaPosicion <= antiguaPosicion)
+		if (nuevaPosicion != 0 && nuevaPosicion < antiguaPosicion && ficha.getTurnosEnCarcel() == 0 && num >= 0)
 			this.cobrarDineroSalida(ficha)
 
 		this.tablero.getCasilla(nuevaPosicion).caer(ficha);
@@ -178,17 +179,20 @@ function Partida(nombre){
 	this.devolverHotel = function(){numHoteles++}
 
 
-	this.comprobarMonopolio = function(ficha, calle){
-		var propMismoColor = calle.getPropietario().getPropiedades().filter(function (v,i,array){return v.getPropiedad().getColor() == calle.getColor()})
-		if (propMismoColor.length == this.tablero.numeroColoresCalles[calle.getColor()]){
-			ficha.setMonopolio(calle.getColor())
-			ficha.setInfo("CONSEGUIDO MONOPOLIO " + calle.getColor())
-			console.log("   Usuario " + ficha.getUsuario().getNombre() + ":  MONOPOLIO - " + calle.getColor())
+	this.comprobarMonopolio = function(ficha, color){
+		var callesMismoColor = ficha.getPropiedades().filter(function (v,i,array){
+			return v.getPropiedad().getEstado().constructor.name == "Comprada" && v.getPropiedad().getTipo() == "Calle" && v.getPropiedad().getColor() == color
+		})
+		if (callesMismoColor.length == this.tablero.numeroColoresCalles[color]){
+			ficha.setMonopolio(color)
+			console.log("   Usuario " + ficha.getUsuario().getNombre() + ":  MONOPOLIO - " + color)
 		}
+		else
+			ficha.quitarMonopolio(color)
 	}
 
 	this.cobrarDineroSalida = function(ficha){
-		ficha.setInfo("HA PASADO POR LA CASILLA DE SALIDA - cobra 200 pelotis")
+		ficha.setCobroSalida(true)
 		console.log("   Usuario " + ficha.getUsuario().getNombre() + ":  HA PASADO POR LA CASILLA DE SALIDA - cobra 200 pelotis")
 		ficha.cobrar(200)
 	}
@@ -240,44 +244,44 @@ function Dado(){
 
 Comando: {
 	function Avanzar(numCasillas){
+		this.msg = "Avanza " + numCasillas + " casillas"
 		this.numCasillas = numCasillas
 		this.ejecutar = function(ficha){
-			ficha.setInfo("TARJETA AVANZAR - " + this.numCasillas + " casillas")
 			console.log("   Usuario " + ficha.getUsuario().getNombre() + ":  TARJETA AVANZAR - " + this.numCasillas + " casillas")
 			ficha.getPartida().moverFicha(ficha, this.numCasillas)
 		}
 	}
 
 	function Retroceder(numCasillas){
+		this.msg = "Retrocede " + numCasillas + " casillas"
 		this.numCasillas = numCasillas
 		this.ejecutar = function(ficha){
-			ficha.setInfo("TARJETA RETROCEDER - " + this.numCasillas + " casillas")
 			console.log("   Usuario " + ficha.getUsuario().getNombre() + ":  TARJETA RETROCEDER - " + this.numCasillas + " casillas")
 			ficha.getPartida().moverFicha(ficha, -this.numCasillas)
 		}
 	}
 
 	function Pagar(cantidad){
+		this.msg = "Paga " + cantidad + " pelotis"
 		this.cantidad = cantidad
 		this.ejecutar = function(ficha){
-			ficha.setInfo("TARJETA PAGAR - " + this.cantidad + " pelotis")
 			console.log("   Usuario " + ficha.getUsuario().getNombre() + ":  TARJETA PAGAR - " + this.cantidad + " pelotis")
 			ficha.pagar(cantidad, DEUDA_REQUERIDA)
 		}
 	}
 
 	function Cobrar(cantidad){
+		this.msg = "Cobra " + cantidad + " pelotis"
 		this.cantidad = cantidad
 		this.ejecutar = function(ficha){
-			ficha.setInfo("TARJETA COBRAR - " + this.cantidad + " pelotis")
 			console.log("   Usuario " + ficha.getUsuario().getNombre() + ":  TARJETA COBRAR - " + this.cantidad + " pelotis")
 			ficha.cobrar(cantidad)
 		}
 	}
 
 	function LibreCarcel(){
+		this.msg = "TARJETA LIBRE DE CÁRCEL: Con esta tarjeta podrás salir de la cárcel"
 		this.ejecutar = function(ficha){
-			ficha.setInfo("TARJETA LIBRE CÁRCEL - obtiene la tarjeta")
 			console.log("   Usuario " + ficha.getUsuario().getNombre() + ":  TARJETA LIBRE CÁRCEL - obtiene la tarjeta")
 			ficha.setTarjetaLibreCarcel(true)
 		}
@@ -296,6 +300,14 @@ Tablero: {
 		}
 
 		this.getCasilla = function(posicion){return this.casillas[posicion]}
+		this.getPosicion = function(temaCasilla){
+			var pos
+			this.casillas.forEach(function (v,i,array){
+				if (v.getTema() == temaCasilla)
+					pos = i
+			})
+			return pos
+		}
 
 		this.iniciar = function(){
 			this.casillas = []
@@ -316,7 +328,7 @@ Tablero: {
 			this.agregarCasilla(5, new Casilla(new Estacion("Estacion de Goya", 200)))
 			this.agregarCasilla(6, new Casilla(new Calle("azulClaro", "Glorieta Cuatro Caminos", 100)))
 			this.agregarCasilla(7, new Casilla(new Tarjeta("suerte")))
-			this.agregarCasilla(8, new Casilla(new Calle("azulClaro", "Avenida Reina Sofia", 100)))
+			this.agregarCasilla(8, new Casilla(new Calle("azulClaro", "Avenida Reina Victoria", 100)))
 			this.agregarCasilla(9, new Casilla(new Calle("azulClaro", "Calle Bravo Murillo", 120)))
 			
 			this.agregarCasilla(10, new Casilla(new Carcel()))
@@ -377,7 +389,7 @@ Tablero: {
 			}
 
 			function Libre(){
-				this.caer = function(casilla, ficha){ficha.setInfo(casilla.getNombre() + " está libre - " + casilla.getPrecio() + " pelotis.")}
+				this.caer = function(casilla, ficha){console.log(casilla.getNombre() + " está libre - " + casilla.getPrecio() + " pelotis.")}
 				this.comprar = function(casilla, ficha){casilla.ejecutarCompra(ficha)}
 				this.edificar = function(casilla, ficha){console.log("Primero tienes que comprar La casilla " + casilla.getTipo())}
 				this.hipotecar = function(casilla,ficha){console.log("Primero tienes que comprar La casilla " + casilla.getTipo())}
@@ -470,7 +482,7 @@ Tablero: {
 						this.estado = new Comprada()
 						console.log("   Usuario " + ficha.getUsuario().getNombre() + ":  PROPIEDAD COMPRADA - " + this.nombre)
 
-						ficha.getPartida().comprobarMonopolio(ficha, this)
+						ficha.getPartida().comprobarMonopolio(ficha, this.color)
 					}
 				}
 
@@ -550,6 +562,7 @@ Tablero: {
 					if (this.numCasas == 0){
 						this.estado = new Hipotecada()
 						ficha.cobrar(this.precio * 0.5)
+						ficha.getPartida().comprobarMonopolio(ficha, this.color)
 						console.log("   Usuario " + ficha.getUsuario().getNombre() + ":  PROPIEDAD HIPOTECADA - " + this.nombre)
 					}
 					else
@@ -580,6 +593,7 @@ Tablero: {
 					if (ficha.pagar(this.precio, DEUDA_NO_REQUERIDA)){
 						this.titulo.setPropietario(ficha)
 						this.estado = new Comprada()
+						console.log("   Usuario " + ficha.getUsuario().getNombre() + ":  PROPIEDAD COMPRADA - " + this.nombre)
 					}
 				}
 
@@ -602,7 +616,7 @@ Tablero: {
 
 				this.edificar = function(ficha){console.log("La " + this.nombre + " no es edificable.")}
 				this.venderEdificio = function(ficha){console.log("La " + this.nombre + " no es edificable.")}
-				this.hipotecar = function(ficha){this.estado.edificar(this, ficha)}
+				this.hipotecar = function(ficha){this.estado.hipotecar(this, ficha)}
 
 				this.ejecutarHipoteca = function(ficha){
 					this.estado = new Hipotecada()
@@ -634,6 +648,7 @@ Tablero: {
 					if (ficha.pagar(this.precio, DEUDA_NO_REQUERIDA)){
 						this.titulo.setPropietario(ficha)
 						this.estado = new Comprada()
+						console.log("   Usuario " + ficha.getUsuario().getNombre() + ":  PROPIEDAD COMPRADA - " + this.nombre)
 					}
 				}
 
@@ -661,7 +676,7 @@ Tablero: {
 
 				this.edificar = function(ficha){console.log("La " + this.nombre + " no es edificable.")}
 				this.venderEdificio = function(ficha){console.log("La " + this.nombre + " no es edificable.")}
-				this.hipotecar = function(ficha){this.estado.edificar(this, ficha)}
+				this.hipotecar = function(ficha){this.estado.hipotecar(this, ficha)}
 
 				this.ejecutarHipoteca = function(ficha){
 					this.estado = new Hipotecada()
@@ -698,8 +713,9 @@ Tablero: {
 			this.getClase = function(){return this.clase}
 			this.getEstado = function(){return this.estado}
 
-			this.caer = function(ficha){
+			this.caer = function(ficha){				
 				var tarjetaCogida = ficha.getPartida().getTarjeta(this.clase)
+				ficha.setTarjetaCogida(tarjetaCogida)
 				tarjetaCogida.ejecutar(ficha)
 			}
 
@@ -717,7 +733,6 @@ Tablero: {
 			this.getEstado = function(){return this.estado}
 
 			this.caer = function(ficha){
-				ficha.setInfo("PAGAR IMPUESTO - " + this.dinero + " pelotis")
 				console.log("   Usuario " + ficha.getUsuario().getNombre() + ":  PAGAR IMPUESTO - " + this.dinero + " pelotis")
 				ficha.pagar(this.dinero, DEUDA_REQUERIDA)
 			}
@@ -736,6 +751,7 @@ Tablero: {
 
 			this.caer = function(ficha){
 				console.log("   Usuario " + ficha.getUsuario().getNombre() + ":  A LA CÁRCEL!!")
+				ficha.casillaALaCarel = true
 				ficha.encarcelar()
 			}
 
@@ -802,6 +818,10 @@ Jugadores: {
 			this.dobles = 0
 
 			this.lanzarDados = function(partida, ficha, tiradaTest){
+				ficha.setCobroSalida(false)
+				ficha.setTarjetaCogida(false)
+				ficha.casillaALaCarel = false
+
 				if (!this.dadosTirados){
 					var tirada
 					if (tiradaTest == undefined)
@@ -816,13 +836,13 @@ Jugadores: {
 						if (ficha.getTurnosEnCarcel() == 0){
 							if (tirada[0] == tirada[1]){
 								this.dobles++
-								if (this.dobles == 3){
-									ficha.setInfo("DADOS - " + "tres dobles, ¡A LA CÁRCEL!")
+								if (this.dobles == 3){									
+									console.log("   Usuario " + ficha.getUsuario().getNombre() + ":  DADOS - " + "tres dobles, ¡A LA CÁRCEL!")
 									ficha.encarcelar()
 								}
 								else{
 									partida.moverFicha(ficha, tirada[0] + tirada[1])
-									ficha.setInfo("DADOS - " + "dobles, ¡TIRA OTRA VEZ!")
+									//ficha.setInfo("DADOS - " + "dobles, ¡TIRA OTRA VEZ!")
 								}
 							}
 							else{
@@ -832,7 +852,7 @@ Jugadores: {
 						}
 						else{
 							if (tirada[0] == tirada[1]){
-								ficha.setInfo("DADOS - " + "dobles, ¡SALES DE LA CÁRCEL!")
+								console.log("   Usuario " + ficha.getUsuario().getNombre() + ":  DADOS - " + "dobles, ¡SALES DE LA CÁRCEL!")
 								ficha.setTurnosEnCarcel(0)
 								this.dadosTirados = true
 								partida.moverFicha(ficha, tirada[0] + tirada[1])
@@ -842,12 +862,12 @@ Jugadores: {
 								ficha.setTurnosEnCarcel(ficha.getTurnosEnCarcel() - 1)
 
 								if (ficha.getTurnosEnCarcel() == 0){
-									ficha.setInfo("SALES DE LA CÁRCEL - pagando 50 pelotis")
+									console.log("   Usuario " + ficha.getUsuario().getNombre() + ":  SALES DE LA CÁRCEL - pagando 50 pelotis")
 									ficha.pagar(50, DEUDA_REQUERIDA)
 									partida.moverFicha(ficha, tirada[0] + tirada[1])
 								}
 								else
-									ficha.setInfo("DADOS - " + "no dobles, te quedan " + ficha.getTurnosEnCarcel() + " turnos en la cárcel")								
+									console.log("   Usuario " + ficha.getUsuario().getNombre() + ":  DADOS - " + "no dobles, te quedan " + ficha.getTurnosEnCarcel() + " turnos en la cárcel")								
 							}
 						}
 						
@@ -858,7 +878,7 @@ Jugadores: {
 					console.log("   Usuario " + ficha.getUsuario().getNombre() + ":  DADOS - " + "lanzados ya")
 			}
 
-			this.puedeRelizarOperacion = function(){
+			this.puedeRelizarOperacion = function(ficha){
 				if (this.dadosTirados || this.dobles > 0)
 					return true
 
@@ -876,21 +896,30 @@ Jugadores: {
 					console.log("   Usuario " + ficha.getUsuario().getNombre() + ":  NO PUEDE USAR TARJETA - Libre de cárcel")
 			}
 
+			this.pagarSalidaCarcel = function(ficha){
+				if (ficha.getTurnosEnCarcel() > 0 && ficha.pagar(50, DEUDA_NO_REQUERIDA)){
+					ficha.setTurnosEnCarcel(0)
+					console.log("   Usuario " + ficha.getUsuario().getNombre() + ":  SALE DE LA CÁRCEL PAGANDO 50 pelotis")
+				}
+				else
+					console.log("   Usuario " + ficha.getUsuario().getNombre() + ":  NO ESTÁ EN LA CÁRCEL")
+			}
+
 			TransaccionesTurno: {
 				this.comprarPropiedad = function(partida, ficha){
-					if (this.puedeRelizarOperacion())
+					if (this.puedeRelizarOperacion(ficha))
 						partida.comprarPropiedad(ficha)	
 				}
 				this.edificar = function(titulo, ficha){
-					if (this.puedeRelizarOperacion())
+					if (this.puedeRelizarOperacion(ficha))
 						titulo.edificar(ficha)
 				}
 				this.venderEdificio = function(titulo, ficha){
-					if (this.puedeRelizarOperacion())
+					if (this.puedeRelizarOperacion(ficha))
 						titulo.venderEdificio(ficha)
 				}
 				this.hipotecarPropiedad = function(titulo, ficha){
-					if (this.puedeRelizarOperacion())
+					if (this.puedeRelizarOperacion(ficha))
 						titulo.hipotecarPropiedad(ficha)
 				}
 			}
@@ -902,6 +931,7 @@ Jugadores: {
 						console.log("   Usuario " + ficha.getUsuario().getNombre() + ":  DECLARADO EN BANCARROTA")
 					}
 					partida.cambiarTurno()
+					
 				}					
 				else
 					console.log("   Usuario " + ficha.getUsuario().getNombre() + ":  TIRA LOS DADOS ANTES")
@@ -911,6 +941,7 @@ Jugadores: {
 		function NoMeToca(){
 			this.lanzarDados = function(partida, ficha){console.log("   Usuario " + ficha.getUsuario().getNombre() + ":  ESPERA TU TURNO")}
 			this.usarTarjetaLibreCarcel = function(ficha){console.log("   Usuario " + ficha.getUsuario().getNombre() + ":  ESPERA TU TURNO")}
+			this.pagarSalidaCarcel = function(ficha){console.log("   Usuario " + ficha.getUsuario().getNombre() + ":  ESPERA TU TURNO")}
 			this.comprarPropiedad = function(partida, ficha){console.log("   Usuario " + ficha.getUsuario().getNombre() + ":  ESPERA TU TURNO")}
 			this.edificar = function(titulo, ficha){console.log("   Usuario " + ficha.getUsuario().getNombre() + ":  ESPERA TU TURNO")}
 			this.venderEdificio = function(titulo, ficha){console.log("   Usuario " + ficha.getUsuario().getNombre() + ":  ESPERA TU TURNO")}
@@ -924,6 +955,9 @@ Jugadores: {
 		this.partida = partida
 
 		this.info = []
+		this.tarjetaCogida
+		this.cobroSalida = false
+		this.casillaALaCarel = false
 
 		this.color = color
 		this.saldo = 1500
@@ -946,14 +980,33 @@ Jugadores: {
 			}
 			this.info.push(info)
 		}
+		this.setTarjetaCogida = function(tarjeta){this.tarjetaCogida = tarjeta}
+		this.getTarjetaCogida = function(){
+			if (this.tarjetaCogida)	return this.tarjetaCogida.msg
+			else return ""
+		}
+		this.setCobroSalida = function(valor){this.cobroSalida = valor}
+		this.getCobroSalida = function(){return this.cobroSalida}
+		this.getCasillaALaCarcel = function(){return this.casillaALaCarel}
 		this.getColor = function(){return this.color}
 		this.getSaldo = function(){return this.saldo}
 		this.getPosicion = function(){return this.posicion}
 		this.setPosicion = function(numCasilla){this.posicion = numCasilla}
+		this.getPropiedad = function(nombre){
+			for (i in this.propiedades)
+				if (this.propiedades[i].getPropiedad().getNombre() == nombre) return this.propiedades[i]					 
+		}
 		this.getPropiedades = function(){return this.propiedades}
 		this.asignarPropiedad = function(titulo){this.propiedades.push(titulo)}
 		this.getMonopolios = function(){return this.monopolios}
-		this.setMonopolio = function(color){return this.monopolios.push(color)}
+		this.setMonopolio = function(color){
+			if (this.monopolios.indexOf(color) == -1)
+				this.monopolios.push(color)
+		}
+		this.quitarMonopolio = function(color){
+			var i = this.monopolios.indexOf(color)
+			if (i != -1) this.monopolios.splice(i,1)
+		}
 		this.getTurno = function(){return this.turno}
 		this.setTurno = function(turno){this.turno = turno}
 		this.getTurnosEnCarcel = function(){return this.turnosEnCarcel}
@@ -970,6 +1023,7 @@ Jugadores: {
 		// Le podemos pasar una tirada fija para las pruebas
 		this.lanzarDados = function(tiradaTest){return this.turno.lanzarDados(this.partida, this, tiradaTest)}
 		this.usarTarjetaLibreCarcel = function(){this.turno.usarTarjetaLibreCarcel(this)}
+		this.pagarSalidaCarcel = function(){this.turno.pagarSalidaCarcel(this)}
 		this.comprarPropiedad = function(){this.turno.comprarPropiedad(this.partida, this)}
 		this.edificar = function(titulo){this.turno.edificar(titulo, this)}
 		this.venderEdificio = function(titulo){this.turno.venderEdificio(titulo, this)}
@@ -1030,8 +1084,9 @@ Jugadores: {
 			this.pagarDeudas()
 		}		
 
-		this.encarcelar = function(){			
+		this.encarcelar = function(){
 			this.turnosEnCarcel = 3
+			this.turno.dadosTirados = true
 			this.partida.moverFicha(this, 10 - this.posicion)
 			this.pasarTurno()
 		}	

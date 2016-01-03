@@ -56,8 +56,8 @@ Partida Partida 1:  PRIMER TURNO - Alberto
    Usuario Alberto:  HA CAIDO EN CASILLA - 4
    Usuario Alberto:  PAGAR IMPUESTO - 200 pelotis
    Usuario Alberto:  SALDO - 1500 - 200 = 1300
-   Usuario Alberto:  DADOS - 5 + 4
-   Usuario Alberto:  HA CAIDO EN CASILLA - 13
+   Usuario Alberto:  DADOS - 5 + 2
+   Usuario Alberto:  HA CAIDO EN CASILLA - 11
 .Partida Partida 1:  NUEVO JUGADOR - Alberto
 Partida Partida 1:  NUEVO JUGADOR - Pepe
 Partida Partida 1:  PRIMER TURNO - Alberto
@@ -148,6 +148,7 @@ Partida Partida 1:  PRIMER TURNO - Alberto
    Usuario Alberto:  DADOS - 0 + 1
    Usuario Alberto:  HA CAIDO EN CASILLA - 1
    Usuario Alberto:  SALDO - 1500 - 60 = 1440
+   Usuario Alberto:  PROPIEDAD COMPRADA - Ronda de Valencia
 Partida Partida 1:  TURNO DE - Pepe
    Usuario Pepe:  SALDO - 1500 - 1500 = 0
    Usuario Pepe:  DADOS - 0 + 1
@@ -214,12 +215,14 @@ Partida Partida 1:  PRIMER TURNO - Alberto
    Usuario Alberto:  DADOS - 0 + 1
    Usuario Alberto:  HA CAIDO EN CASILLA - 1
    Usuario Alberto:  SALDO - 1500 - 60 = 1440
+   Usuario Alberto:  PROPIEDAD COMPRADA - Ronda de Valencia
 .Partida Partida 1:  NUEVO JUGADOR - Alberto
 Partida Partida 1:  NUEVO JUGADOR - Jesus
 Partida Partida 1:  PRIMER TURNO - Alberto
    Usuario Alberto:  DADOS - 0 + 1
    Usuario Alberto:  HA CAIDO EN CASILLA - 1
    Usuario Alberto:  SALDO - 1500 - 60 = 1440
+   Usuario Alberto:  PROPIEDAD COMPRADA - Ronda de Valencia
 Partida Partida 1:  TURNO DE - Jesus
    Usuario Jesus:  DADOS - 0 + 1
    Usuario Jesus:  HA CAIDO EN CASILLA - 1
@@ -233,6 +236,7 @@ Partida Partida 1:  PRIMER TURNO - Alberto
    Usuario Alberto:  DADOS - 0 + 1
    Usuario Alberto:  HA CAIDO EN CASILLA - 1
    Usuario Alberto:  SALDO - 1500 - 60 = 1440
+   Usuario Alberto:  PROPIEDAD COMPRADA - Ronda de Valencia
 Partida Partida 1:  TURNO DE - Jesus
    Usuario Jesus:  DADOS - 0 + 1
    Usuario Jesus:  HA CAIDO EN CASILLA - 1
@@ -245,6 +249,7 @@ Partida Partida 1:  PRIMER TURNO - Alberto
    Usuario Alberto:  DADOS - 0 + 1
    Usuario Alberto:  HA CAIDO EN CASILLA - 1
    Usuario Alberto:  SALDO - 1500 - 60 = 1440
+   Usuario Alberto:  PROPIEDAD COMPRADA - Ronda de Valencia
    Usuario Alberto:  SALDO - 1440 + 60 = 1500
 Partida Partida 1:  TURNO DE - Jesus
    Usuario Jesus:  DADOS - 0 + 40
@@ -255,6 +260,7 @@ Partida Partida 1:  TURNO DE - Alberto
    Usuario Alberto:  DADOS - 0 + 2
    Usuario Alberto:  HA CAIDO EN CASILLA - 3
    Usuario Alberto:  SALDO - 1500 - 60 = 1440
+   Usuario Alberto:  PROPIEDAD COMPRADA - Plaza Lavapies
    Usuario Alberto:  MONOPOLIO - marron
    Usuario Alberto:  SALDO - 1440 + 60 = 1500
 Partida Partida 1:  TURNO DE - Jesus
@@ -266,6 +272,7 @@ Partida Partida 1:  TURNO DE - Alberto
    Usuario Alberto:  DADOS - 0 + 3
    Usuario Alberto:  HA CAIDO EN CASILLA - 6
    Usuario Alberto:  SALDO - 1500 - 100 = 1400
+   Usuario Alberto:  PROPIEDAD COMPRADA - Glorieta Cuatro Caminos
    Usuario Alberto:  SALDO - 1400 + 100 = 1500
 Partida Partida 1:  TURNO DE - Jesus
    Usuario Jesus:  DADOS - 0 + 40
@@ -276,6 +283,7 @@ Partida Partida 1:  TURNO DE - Alberto
    Usuario Alberto:  DADOS - 0 + 2
    Usuario Alberto:  HA CAIDO EN CASILLA - 8
    Usuario Alberto:  SALDO - 1500 - 100 = 1400
+   Usuario Alberto:  PROPIEDAD COMPRADA - Avenida Reina Victoria
    Usuario Alberto:  SALDO - 1400 + 100 = 1500
 Partida Partida 1:  TURNO DE - Jesus
    Usuario Jesus:  DADOS - 0 + 40
@@ -286,6 +294,7 @@ Partida Partida 1:  TURNO DE - Alberto
    Usuario Alberto:  DADOS - 0 + 1
    Usuario Alberto:  HA CAIDO EN CASILLA - 9
    Usuario Alberto:  SALDO - 1500 - 120 = 1380
+   Usuario Alberto:  PROPIEDAD COMPRADA - Calle Bravo Murillo
    Usuario Alberto:  MONOPOLIO - azulClaro
    Usuario Alberto:  SALDO - 1380 + 120 = 1500
 Partida Partida 1:  TURNO DE - Jesus
@@ -297,6 +306,7 @@ Partida Partida 1:  TURNO DE - Alberto
    Usuario Alberto:  DADOS - 0 + 2
    Usuario Alberto:  HA CAIDO EN CASILLA - 11
    Usuario Alberto:  SALDO - 1500 - 140 = 1360
+   Usuario Alberto:  PROPIEDAD COMPRADA - Glorieta de Bilbao
    Usuario Alberto:  SALDO - 1360 + 140 = 1500
 Partida Partida 1:  TURNO DE - Jesus
    Usuario Jesus:  DADOS - 0 + 40
@@ -307,6 +317,7 @@ Partida Partida 1:  TURNO DE - Alberto
    Usuario Alberto:  DADOS - 0 + 2
    Usuario Alberto:  HA CAIDO EN CASILLA - 13
    Usuario Alberto:  SALDO - 1500 - 140 = 1360
+   Usuario Alberto:  PROPIEDAD COMPRADA - Calle Alberto Aguilera
    Usuario Alberto:  SALDO - 1360 + 140 = 1500
 Partida Partida 1:  TURNO DE - Jesus
    Usuario Jesus:  DADOS - 0 + 40
@@ -317,6 +328,7 @@ Partida Partida 1:  TURNO DE - Alberto
    Usuario Alberto:  DADOS - 0 + 1
    Usuario Alberto:  HA CAIDO EN CASILLA - 14
    Usuario Alberto:  SALDO - 1500 - 160 = 1340
+   Usuario Alberto:  PROPIEDAD COMPRADA - Calle Fuencarral
    Usuario Alberto:  MONOPOLIO - rosa
    Usuario Alberto:  SALDO - 1340 + 160 = 1500
 Partida Partida 1:  TURNO DE - Jesus
@@ -328,6 +340,7 @@ Partida Partida 1:  TURNO DE - Alberto
    Usuario Alberto:  DADOS - 0 + 2
    Usuario Alberto:  HA CAIDO EN CASILLA - 16
    Usuario Alberto:  SALDO - 1500 - 180 = 1320
+   Usuario Alberto:  PROPIEDAD COMPRADA - Avenida Felipe II
    Usuario Alberto:  SALDO - 1320 + 180 = 1500
 Partida Partida 1:  TURNO DE - Jesus
    Usuario Jesus:  DADOS - 0 + 40
@@ -338,6 +351,7 @@ Partida Partida 1:  TURNO DE - Alberto
    Usuario Alberto:  DADOS - 0 + 2
    Usuario Alberto:  HA CAIDO EN CASILLA - 18
    Usuario Alberto:  SALDO - 1500 - 180 = 1320
+   Usuario Alberto:  PROPIEDAD COMPRADA - Calle Velazquez
    Usuario Alberto:  SALDO - 1320 + 180 = 1500
 Partida Partida 1:  TURNO DE - Jesus
    Usuario Jesus:  DADOS - 0 + 40
@@ -348,6 +362,7 @@ Partida Partida 1:  TURNO DE - Alberto
    Usuario Alberto:  DADOS - 0 + 1
    Usuario Alberto:  HA CAIDO EN CASILLA - 19
    Usuario Alberto:  SALDO - 1500 - 200 = 1300
+   Usuario Alberto:  PROPIEDAD COMPRADA - Calle Serrano
    Usuario Alberto:  MONOPOLIO - naranja
    Usuario Alberto:  SALDO - 1300 + 200 = 1500
 Partida Partida 1:  TURNO DE - Jesus
@@ -359,6 +374,7 @@ Partida Partida 1:  TURNO DE - Alberto
    Usuario Alberto:  DADOS - 0 + 2
    Usuario Alberto:  HA CAIDO EN CASILLA - 21
    Usuario Alberto:  SALDO - 1500 - 220 = 1280
+   Usuario Alberto:  PROPIEDAD COMPRADA - Avenida de America
    Usuario Alberto:  SALDO - 1280 + 220 = 1500
 Partida Partida 1:  TURNO DE - Jesus
    Usuario Jesus:  DADOS - 0 + 40
@@ -369,6 +385,7 @@ Partida Partida 1:  TURNO DE - Alberto
    Usuario Alberto:  DADOS - 0 + 2
    Usuario Alberto:  HA CAIDO EN CASILLA - 23
    Usuario Alberto:  SALDO - 1500 - 220 = 1280
+   Usuario Alberto:  PROPIEDAD COMPRADA - Calle Maria de Molina
    Usuario Alberto:  SALDO - 1280 + 220 = 1500
 Partida Partida 1:  TURNO DE - Jesus
    Usuario Jesus:  DADOS - 0 + 40
@@ -379,6 +396,7 @@ Partida Partida 1:  TURNO DE - Alberto
    Usuario Alberto:  DADOS - 0 + 1
    Usuario Alberto:  HA CAIDO EN CASILLA - 24
    Usuario Alberto:  SALDO - 1500 - 240 = 1260
+   Usuario Alberto:  PROPIEDAD COMPRADA - Calle Cea Bermudez
    Usuario Alberto:  MONOPOLIO - rojo
    Usuario Alberto:  SALDO - 1260 + 240 = 1500
 Partida Partida 1:  TURNO DE - Jesus
@@ -390,6 +408,7 @@ Partida Partida 1:  TURNO DE - Alberto
    Usuario Alberto:  DADOS - 0 + 2
    Usuario Alberto:  HA CAIDO EN CASILLA - 26
    Usuario Alberto:  SALDO - 1500 - 260 = 1240
+   Usuario Alberto:  PROPIEDAD COMPRADA - Avenida Los Reyez Catolicos
    Usuario Alberto:  SALDO - 1240 + 260 = 1500
 Partida Partida 1:  TURNO DE - Jesus
    Usuario Jesus:  DADOS - 0 + 40
@@ -400,6 +419,7 @@ Partida Partida 1:  TURNO DE - Alberto
    Usuario Alberto:  DADOS - 0 + 1
    Usuario Alberto:  HA CAIDO EN CASILLA - 27
    Usuario Alberto:  SALDO - 1500 - 260 = 1240
+   Usuario Alberto:  PROPIEDAD COMPRADA - Calle Bailen
    Usuario Alberto:  SALDO - 1240 + 260 = 1500
 Partida Partida 1:  TURNO DE - Jesus
    Usuario Jesus:  DADOS - 0 + 40
@@ -410,6 +430,7 @@ Partida Partida 1:  TURNO DE - Alberto
    Usuario Alberto:  DADOS - 0 + 2
    Usuario Alberto:  HA CAIDO EN CASILLA - 29
    Usuario Alberto:  SALDO - 1500 - 280 = 1220
+   Usuario Alberto:  PROPIEDAD COMPRADA - Plaza de España
    Usuario Alberto:  MONOPOLIO - amarillo
    Usuario Alberto:  SALDO - 1220 + 280 = 1500
 Partida Partida 1:  TURNO DE - Jesus
@@ -421,6 +442,7 @@ Partida Partida 1:  TURNO DE - Alberto
    Usuario Alberto:  DADOS - 0 + 2
    Usuario Alberto:  HA CAIDO EN CASILLA - 31
    Usuario Alberto:  SALDO - 1500 - 300 = 1200
+   Usuario Alberto:  PROPIEDAD COMPRADA - Puerta del Sol
    Usuario Alberto:  SALDO - 1200 + 300 = 1500
 Partida Partida 1:  TURNO DE - Jesus
    Usuario Jesus:  DADOS - 0 + 40
@@ -431,6 +453,7 @@ Partida Partida 1:  TURNO DE - Alberto
    Usuario Alberto:  DADOS - 0 + 1
    Usuario Alberto:  HA CAIDO EN CASILLA - 32
    Usuario Alberto:  SALDO - 1500 - 300 = 1200
+   Usuario Alberto:  PROPIEDAD COMPRADA - Calle Alcala
    Usuario Alberto:  SALDO - 1200 + 300 = 1500
 Partida Partida 1:  TURNO DE - Jesus
    Usuario Jesus:  DADOS - 0 + 40
@@ -441,6 +464,7 @@ Partida Partida 1:  TURNO DE - Alberto
    Usuario Alberto:  DADOS - 0 + 2
    Usuario Alberto:  HA CAIDO EN CASILLA - 34
    Usuario Alberto:  SALDO - 1500 - 320 = 1180
+   Usuario Alberto:  PROPIEDAD COMPRADA - Gran Via
    Usuario Alberto:  MONOPOLIO - verde
    Usuario Alberto:  SALDO - 1180 + 320 = 1500
 Partida Partida 1:  TURNO DE - Jesus
@@ -452,6 +476,7 @@ Partida Partida 1:  TURNO DE - Alberto
    Usuario Alberto:  DADOS - 0 + 3
    Usuario Alberto:  HA CAIDO EN CASILLA - 37
    Usuario Alberto:  SALDO - 1500 - 380 = 1120
+   Usuario Alberto:  PROPIEDAD COMPRADA - Paseo de la Castellana
    Usuario Alberto:  SALDO - 1120 + 380 = 1500
 Partida Partida 1:  TURNO DE - Jesus
    Usuario Jesus:  DADOS - 0 + 40
@@ -462,6 +487,7 @@ Partida Partida 1:  TURNO DE - Alberto
    Usuario Alberto:  DADOS - 0 + 2
    Usuario Alberto:  HA CAIDO EN CASILLA - 39
    Usuario Alberto:  SALDO - 1500 - 400 = 1100
+   Usuario Alberto:  PROPIEDAD COMPRADA - Paseo del Prado
    Usuario Alberto:  MONOPOLIO - azul
    Usuario Alberto:  SALDO - 1100 + 400 = 1500
 Partida Partida 1:  TURNO DE - Jesus
@@ -476,6 +502,7 @@ Partida Partida 1:  PRIMER TURNO - Alberto
    Usuario Alberto:  DADOS - 0 + 1
    Usuario Alberto:  HA CAIDO EN CASILLA - 1
    Usuario Alberto:  SALDO - 1500 - 60 = 1440
+   Usuario Alberto:  PROPIEDAD COMPRADA - Ronda de Valencia
 Partida Partida 1:  TURNO DE - Jesus
    Usuario Jesus:  DADOS - 0 + 1
    Usuario Jesus:  HA CAIDO EN CASILLA - 1
@@ -488,6 +515,7 @@ Partida Partida 1:  TURNO DE - Alberto
    Usuario Alberto:  DADOS - 0 + 2
    Usuario Alberto:  HA CAIDO EN CASILLA - 3
    Usuario Alberto:  SALDO - 1515 - 60 = 1455
+   Usuario Alberto:  PROPIEDAD COMPRADA - Plaza Lavapies
    Usuario Alberto:  MONOPOLIO - marron
 Partida Partida 1:  TURNO DE - Jesus
    Usuario Jesus:  DADOS - 0 + 2
@@ -501,6 +529,7 @@ Partida Partida 1:  TURNO DE - Alberto
    Usuario Alberto:  DADOS - 0 + 3
    Usuario Alberto:  HA CAIDO EN CASILLA - 6
    Usuario Alberto:  SALDO - 1530 - 100 = 1430
+   Usuario Alberto:  PROPIEDAD COMPRADA - Glorieta Cuatro Caminos
 Partida Partida 1:  TURNO DE - Jesus
    Usuario Jesus:  DADOS - 0 + 3
    Usuario Jesus:  HA CAIDO EN CASILLA - 6
@@ -513,6 +542,7 @@ Partida Partida 1:  TURNO DE - Alberto
    Usuario Alberto:  DADOS - 0 + 2
    Usuario Alberto:  HA CAIDO EN CASILLA - 8
    Usuario Alberto:  SALDO - 1555 - 100 = 1455
+   Usuario Alberto:  PROPIEDAD COMPRADA - Avenida Reina Victoria
 Partida Partida 1:  TURNO DE - Jesus
    Usuario Jesus:  DADOS - 0 + 2
    Usuario Jesus:  HA CAIDO EN CASILLA - 8
@@ -525,6 +555,7 @@ Partida Partida 1:  TURNO DE - Alberto
    Usuario Alberto:  DADOS - 0 + 1
    Usuario Alberto:  HA CAIDO EN CASILLA - 9
    Usuario Alberto:  SALDO - 1580 - 120 = 1460
+   Usuario Alberto:  PROPIEDAD COMPRADA - Calle Bravo Murillo
    Usuario Alberto:  MONOPOLIO - azulClaro
 Partida Partida 1:  TURNO DE - Jesus
    Usuario Jesus:  DADOS - 0 + 1
@@ -538,6 +569,7 @@ Partida Partida 1:  TURNO DE - Alberto
    Usuario Alberto:  DADOS - 0 + 2
    Usuario Alberto:  HA CAIDO EN CASILLA - 11
    Usuario Alberto:  SALDO - 1610 - 140 = 1470
+   Usuario Alberto:  PROPIEDAD COMPRADA - Glorieta de Bilbao
 Partida Partida 1:  TURNO DE - Jesus
    Usuario Jesus:  DADOS - 0 + 2
    Usuario Jesus:  HA CAIDO EN CASILLA - 11
@@ -550,6 +582,7 @@ Partida Partida 1:  TURNO DE - Alberto
    Usuario Alberto:  DADOS - 0 + 2
    Usuario Alberto:  HA CAIDO EN CASILLA - 13
    Usuario Alberto:  SALDO - 1645 - 140 = 1505
+   Usuario Alberto:  PROPIEDAD COMPRADA - Calle Alberto Aguilera
 Partida Partida 1:  TURNO DE - Jesus
    Usuario Jesus:  DADOS - 0 + 2
    Usuario Jesus:  HA CAIDO EN CASILLA - 13
@@ -562,6 +595,7 @@ Partida Partida 1:  TURNO DE - Alberto
    Usuario Alberto:  DADOS - 0 + 1
    Usuario Alberto:  HA CAIDO EN CASILLA - 14
    Usuario Alberto:  SALDO - 1680 - 160 = 1520
+   Usuario Alberto:  PROPIEDAD COMPRADA - Calle Fuencarral
    Usuario Alberto:  MONOPOLIO - rosa
 Partida Partida 1:  TURNO DE - Jesus
    Usuario Jesus:  DADOS - 0 + 1
@@ -575,6 +609,7 @@ Partida Partida 1:  TURNO DE - Alberto
    Usuario Alberto:  DADOS - 0 + 2
    Usuario Alberto:  HA CAIDO EN CASILLA - 16
    Usuario Alberto:  SALDO - 1720 - 180 = 1540
+   Usuario Alberto:  PROPIEDAD COMPRADA - Avenida Felipe II
 Partida Partida 1:  TURNO DE - Jesus
    Usuario Jesus:  DADOS - 0 + 2
    Usuario Jesus:  HA CAIDO EN CASILLA - 16
@@ -587,6 +622,7 @@ Partida Partida 1:  TURNO DE - Alberto
    Usuario Alberto:  DADOS - 0 + 2
    Usuario Alberto:  HA CAIDO EN CASILLA - 18
    Usuario Alberto:  SALDO - 1765 - 180 = 1585
+   Usuario Alberto:  PROPIEDAD COMPRADA - Calle Velazquez
 Partida Partida 1:  TURNO DE - Jesus
    Usuario Jesus:  DADOS - 0 + 2
    Usuario Jesus:  HA CAIDO EN CASILLA - 18
@@ -599,6 +635,7 @@ Partida Partida 1:  TURNO DE - Alberto
    Usuario Alberto:  DADOS - 0 + 1
    Usuario Alberto:  HA CAIDO EN CASILLA - 19
    Usuario Alberto:  SALDO - 1810 - 200 = 1610
+   Usuario Alberto:  PROPIEDAD COMPRADA - Calle Serrano
    Usuario Alberto:  MONOPOLIO - naranja
 Partida Partida 1:  TURNO DE - Jesus
    Usuario Jesus:  DADOS - 0 + 1
@@ -612,6 +649,7 @@ Partida Partida 1:  TURNO DE - Alberto
    Usuario Alberto:  DADOS - 0 + 2
    Usuario Alberto:  HA CAIDO EN CASILLA - 21
    Usuario Alberto:  SALDO - 1860 - 220 = 1640
+   Usuario Alberto:  PROPIEDAD COMPRADA - Avenida de America
 Partida Partida 1:  TURNO DE - Jesus
    Usuario Jesus:  DADOS - 0 + 2
    Usuario Jesus:  HA CAIDO EN CASILLA - 21
@@ -624,6 +662,7 @@ Partida Partida 1:  TURNO DE - Alberto
    Usuario Alberto:  DADOS - 0 + 2
    Usuario Alberto:  HA CAIDO EN CASILLA - 23
    Usuario Alberto:  SALDO - 1915 - 220 = 1695
+   Usuario Alberto:  PROPIEDAD COMPRADA - Calle Maria de Molina
 Partida Partida 1:  TURNO DE - Jesus
    Usuario Jesus:  DADOS - 0 + 2
    Usuario Jesus:  HA CAIDO EN CASILLA - 23
@@ -636,6 +675,7 @@ Partida Partida 1:  TURNO DE - Alberto
    Usuario Alberto:  DADOS - 0 + 1
    Usuario Alberto:  HA CAIDO EN CASILLA - 24
    Usuario Alberto:  SALDO - 1970 - 240 = 1730
+   Usuario Alberto:  PROPIEDAD COMPRADA - Calle Cea Bermudez
    Usuario Alberto:  MONOPOLIO - rojo
 Partida Partida 1:  TURNO DE - Jesus
    Usuario Jesus:  DADOS - 0 + 1
@@ -649,6 +689,7 @@ Partida Partida 1:  TURNO DE - Alberto
    Usuario Alberto:  DADOS - 0 + 2
    Usuario Alberto:  HA CAIDO EN CASILLA - 26
    Usuario Alberto:  SALDO - 2030 - 260 = 1770
+   Usuario Alberto:  PROPIEDAD COMPRADA - Avenida Los Reyez Catolicos
 Partida Partida 1:  TURNO DE - Jesus
    Usuario Jesus:  DADOS - 0 + 2
    Usuario Jesus:  HA CAIDO EN CASILLA - 26
@@ -661,6 +702,7 @@ Partida Partida 1:  TURNO DE - Alberto
    Usuario Alberto:  DADOS - 0 + 1
    Usuario Alberto:  HA CAIDO EN CASILLA - 27
    Usuario Alberto:  SALDO - 2095 - 260 = 1835
+   Usuario Alberto:  PROPIEDAD COMPRADA - Calle Bailen
 Partida Partida 1:  TURNO DE - Jesus
    Usuario Jesus:  DADOS - 0 + 1
    Usuario Jesus:  HA CAIDO EN CASILLA - 27
@@ -673,6 +715,7 @@ Partida Partida 1:  TURNO DE - Alberto
    Usuario Alberto:  DADOS - 0 + 2
    Usuario Alberto:  HA CAIDO EN CASILLA - 29
    Usuario Alberto:  SALDO - 2160 - 280 = 1880
+   Usuario Alberto:  PROPIEDAD COMPRADA - Plaza de España
    Usuario Alberto:  MONOPOLIO - amarillo
 Partida Partida 1:  TURNO DE - Jesus
    Usuario Jesus:  DADOS - 0 + 2
@@ -686,6 +729,7 @@ Partida Partida 1:  TURNO DE - Alberto
    Usuario Alberto:  DADOS - 0 + 2
    Usuario Alberto:  HA CAIDO EN CASILLA - 31
    Usuario Alberto:  SALDO - 2230 - 300 = 1930
+   Usuario Alberto:  PROPIEDAD COMPRADA - Puerta del Sol
 Partida Partida 1:  TURNO DE - Jesus
    Usuario Jesus:  DADOS - 0 + 2
    Usuario Jesus:  HA CAIDO EN CASILLA - 31
@@ -698,6 +742,7 @@ Partida Partida 1:  TURNO DE - Alberto
    Usuario Alberto:  DADOS - 0 + 1
    Usuario Alberto:  HA CAIDO EN CASILLA - 32
    Usuario Alberto:  SALDO - 2305 - 300 = 2005
+   Usuario Alberto:  PROPIEDAD COMPRADA - Calle Alcala
 Partida Partida 1:  TURNO DE - Jesus
    Usuario Jesus:  DADOS - 0 + 1
    Usuario Jesus:  HA CAIDO EN CASILLA - 32
@@ -710,6 +755,7 @@ Partida Partida 1:  TURNO DE - Alberto
    Usuario Alberto:  DADOS - 0 + 2
    Usuario Alberto:  HA CAIDO EN CASILLA - 34
    Usuario Alberto:  SALDO - 2380 - 320 = 2060
+   Usuario Alberto:  PROPIEDAD COMPRADA - Gran Via
    Usuario Alberto:  MONOPOLIO - verde
 Partida Partida 1:  TURNO DE - Jesus
    Usuario Jesus:  DADOS - 0 + 2
@@ -723,6 +769,7 @@ Partida Partida 1:  TURNO DE - Alberto
    Usuario Alberto:  DADOS - 0 + 3
    Usuario Alberto:  HA CAIDO EN CASILLA - 37
    Usuario Alberto:  SALDO - 2460 - 380 = 2080
+   Usuario Alberto:  PROPIEDAD COMPRADA - Paseo de la Castellana
 Partida Partida 1:  TURNO DE - Jesus
    Usuario Jesus:  DADOS - 0 + 3
    Usuario Jesus:  HA CAIDO EN CASILLA - 37
@@ -735,6 +782,7 @@ Partida Partida 1:  TURNO DE - Alberto
    Usuario Alberto:  DADOS - 0 + 2
    Usuario Alberto:  HA CAIDO EN CASILLA - 39
    Usuario Alberto:  SALDO - 2555 - 400 = 2155
+   Usuario Alberto:  PROPIEDAD COMPRADA - Paseo del Prado
    Usuario Alberto:  MONOPOLIO - azul
 Partida Partida 1:  TURNO DE - Jesus
    Usuario Jesus:  DADOS - 0 + 2
@@ -905,16 +953,19 @@ Partida Partida 1:  PRIMER TURNO - Alberto
    Usuario Alberto:  DADOS - 0 + 1
    Usuario Alberto:  HA CAIDO EN CASILLA - 1
    Usuario Alberto:  SALDO - 1500 - 60 = 1440
+   Usuario Alberto:  PROPIEDAD COMPRADA - Ronda de Valencia
 Partida Partida 1:  TURNO DE - Alberto
    Usuario Alberto:  DADOS - 0 + 2
    Usuario Alberto:  HA CAIDO EN CASILLA - 3
    Usuario Alberto:  SALDO - 1440 - 60 = 1380
+   Usuario Alberto:  PROPIEDAD COMPRADA - Plaza Lavapies
    Usuario Alberto:  MONOPOLIO - marron
 .Partida Partida 1:  NUEVO JUGADOR - Alberto
 Partida Partida 1:  PRIMER TURNO - Alberto
    Usuario Alberto:  DADOS - 0 + 1
    Usuario Alberto:  HA CAIDO EN CASILLA - 1
    Usuario Alberto:  SALDO - 1500 - 60 = 1440
+   Usuario Alberto:  PROPIEDAD COMPRADA - Ronda de Valencia
    Usuario Alberto:  SALDO - 1440 + 30 = 1470
    Usuario Alberto:  PROPIEDAD HIPOTECADA - Ronda de Valencia
 .Partida Partida 1:  NUEVO JUGADOR - Alberto
@@ -922,10 +973,26 @@ Partida Partida 1:  PRIMER TURNO - Alberto
    Usuario Alberto:  DADOS - 0 + 1
    Usuario Alberto:  HA CAIDO EN CASILLA - 1
    Usuario Alberto:  SALDO - 1500 - 60 = 1440
+   Usuario Alberto:  PROPIEDAD COMPRADA - Ronda de Valencia
 Partida Partida 1:  TURNO DE - Alberto
    Usuario Alberto:  DADOS - 0 + 2
    Usuario Alberto:  HA CAIDO EN CASILLA - 3
    Usuario Alberto:  SALDO - 1440 - 60 = 1380
+   Usuario Alberto:  PROPIEDAD COMPRADA - Plaza Lavapies
+   Usuario Alberto:  MONOPOLIO - marron
+   Usuario Alberto:  SALDO - 1380 + 30 = 1410
+   Usuario Alberto:  PROPIEDAD HIPOTECADA - Ronda de Valencia
+.Partida Partida 1:  NUEVO JUGADOR - Alberto
+Partida Partida 1:  PRIMER TURNO - Alberto
+   Usuario Alberto:  DADOS - 0 + 1
+   Usuario Alberto:  HA CAIDO EN CASILLA - 1
+   Usuario Alberto:  SALDO - 1500 - 60 = 1440
+   Usuario Alberto:  PROPIEDAD COMPRADA - Ronda de Valencia
+Partida Partida 1:  TURNO DE - Alberto
+   Usuario Alberto:  DADOS - 0 + 2
+   Usuario Alberto:  HA CAIDO EN CASILLA - 3
+   Usuario Alberto:  SALDO - 1440 - 60 = 1380
+   Usuario Alberto:  PROPIEDAD COMPRADA - Plaza Lavapies
    Usuario Alberto:  MONOPOLIO - marron
    Usuario Alberto:  SALDO - 1380 - 50 = 1330
    Usuario Alberto:  CASA CONSTRUIDA - Ronda de Valencia: 1
@@ -935,16 +1002,19 @@ Partida Partida 1:  PRIMER TURNO - Alberto
    Usuario Alberto:  DADOS - 0 + 1
    Usuario Alberto:  HA CAIDO EN CASILLA - 1
    Usuario Alberto:  SALDO - 1500 - 60 = 1440
+   Usuario Alberto:  PROPIEDAD COMPRADA - Ronda de Valencia
    Usuario Alberto:  IMPOSIBLE EDIFICAR - Ronda de Valencia: no tiene el monopolio marron
 .Partida Partida 1:  NUEVO JUGADOR - Alberto
 Partida Partida 1:  PRIMER TURNO - Alberto
    Usuario Alberto:  DADOS - 0 + 1
    Usuario Alberto:  HA CAIDO EN CASILLA - 1
    Usuario Alberto:  SALDO - 1500 - 60 = 1440
+   Usuario Alberto:  PROPIEDAD COMPRADA - Ronda de Valencia
 Partida Partida 1:  TURNO DE - Alberto
    Usuario Alberto:  DADOS - 0 + 2
    Usuario Alberto:  HA CAIDO EN CASILLA - 3
    Usuario Alberto:  SALDO - 1440 - 60 = 1380
+   Usuario Alberto:  PROPIEDAD COMPRADA - Plaza Lavapies
    Usuario Alberto:  MONOPOLIO - marron
    Usuario Alberto:  SALDO - 1380 - 50 = 1330
    Usuario Alberto:  CASA CONSTRUIDA - Ronda de Valencia: 1
@@ -953,10 +1023,12 @@ Partida Partida 1:  PRIMER TURNO - Alberto
    Usuario Alberto:  DADOS - 0 + 1
    Usuario Alberto:  HA CAIDO EN CASILLA - 1
    Usuario Alberto:  SALDO - 1500 - 60 = 1440
+   Usuario Alberto:  PROPIEDAD COMPRADA - Ronda de Valencia
 Partida Partida 1:  TURNO DE - Alberto
    Usuario Alberto:  DADOS - 0 + 2
    Usuario Alberto:  HA CAIDO EN CASILLA - 3
    Usuario Alberto:  SALDO - 1440 - 60 = 1380
+   Usuario Alberto:  PROPIEDAD COMPRADA - Plaza Lavapies
    Usuario Alberto:  MONOPOLIO - marron
    Usuario Alberto:  SALDO - 1380 - 50 = 1330
    Usuario Alberto:  CASA CONSTRUIDA - Ronda de Valencia: 1
@@ -966,10 +1038,12 @@ Partida Partida 1:  PRIMER TURNO - Alberto
    Usuario Alberto:  DADOS - 0 + 1
    Usuario Alberto:  HA CAIDO EN CASILLA - 1
    Usuario Alberto:  SALDO - 1500 - 60 = 1440
+   Usuario Alberto:  PROPIEDAD COMPRADA - Ronda de Valencia
 Partida Partida 1:  TURNO DE - Alberto
    Usuario Alberto:  DADOS - 0 + 2
    Usuario Alberto:  HA CAIDO EN CASILLA - 3
    Usuario Alberto:  SALDO - 1440 - 60 = 1380
+   Usuario Alberto:  PROPIEDAD COMPRADA - Plaza Lavapies
    Usuario Alberto:  MONOPOLIO - marron
    Usuario Alberto:  SALDO - 1380 - 50 = 1330
    Usuario Alberto:  CASA CONSTRUIDA - Ronda de Valencia: 1
@@ -997,10 +1071,12 @@ Partida Partida 1:  PRIMER TURNO - Alberto
    Usuario Alberto:  DADOS - 0 + 1
    Usuario Alberto:  HA CAIDO EN CASILLA - 1
    Usuario Alberto:  SALDO - 1500 - 60 = 1440
+   Usuario Alberto:  PROPIEDAD COMPRADA - Ronda de Valencia
 Partida Partida 1:  TURNO DE - Alberto
    Usuario Alberto:  DADOS - 0 + 2
    Usuario Alberto:  HA CAIDO EN CASILLA - 3
    Usuario Alberto:  SALDO - 1440 - 60 = 1380
+   Usuario Alberto:  PROPIEDAD COMPRADA - Plaza Lavapies
    Usuario Alberto:  MONOPOLIO - marron
    Usuario Alberto:  SALDO - 1380 - 50 = 1330
    Usuario Alberto:  CASA CONSTRUIDA - Ronda de Valencia: 1
@@ -1008,7 +1084,7 @@ Partida Partida 1:  TURNO DE - Alberto
    Usuario Alberto:  NO HAY EDIFICIOS
 .
 
-Finished in 0.126 seconds
-58 tests, 325 assertions, 0 failures, 0 skipped
+Finished in 0.163 seconds
+59 tests, 327 assertions, 0 failures, 0 skipped
 
 
