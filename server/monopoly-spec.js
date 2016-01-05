@@ -162,7 +162,7 @@ describe("Monopoly",function(){
 		var partida
 
 		beforeEach(function(){
-			partida = new modelo.Partida("Partida 1")
+			partida = new modelo.Partida("Partida 1", 1)
 		});
 	
 		it("La partida permite añadir hasta 6 jugadores", function(){
@@ -461,7 +461,7 @@ describe("Monopoly",function(){
 			var partida, usr1, usr2
 
 			beforeEach(function(){
-				partida = new modelo.Partida("Partida 1")
+				partida = new modelo.Partida("Partida 1", 1)
 
 				usr1 = new modelo.Usuario("Alberto");
 				usr1.unirseAPartida(partida);
@@ -696,7 +696,7 @@ describe("Monopoly",function(){
 			var partida, ficha1
 
 			beforeEach(function(){
-				partida = new modelo.Partida("Partida 1")
+				partida = new modelo.Partida("Partida 1", 1)
 				ficha1 = (new modelo.Usuario("Alberto")).unirseAPartida(partida)				
 			});
 
@@ -746,7 +746,7 @@ describe("Monopoly",function(){
 			var partida, ficha1
 
 			beforeEach(function(){
-				partida = new modelo.Partida("Partida 1")
+				partida = new modelo.Partida("Partida 1", 1)
 				ficha1 = (new modelo.Usuario("Alberto")).unirseAPartida(partida)
 				partida.calcularPrimerTurno(true) // El turno es de Alberto, no aleatorio
 			});
@@ -926,16 +926,12 @@ describe("Monopoly",function(){
 		});
 
 		describe("Sprint 6",function(){
-			var partida, ficha1, ficha2
+			it("Un jugador puede vender una propiedad a otro, por lo que se cambia de propietario", function(){
+				var partida = new modelo.Partida("Partida 1", 1)
+				var ficha1 = (new modelo.Usuario("Alberto")).unirseAPartida(partida)
+				var ficha2 = (new modelo.Usuario("Pepe")).unirseAPartida(partida)
+				partida.calcularPrimerTurno(true)
 
-			beforeEach(function(){
-				partida = new modelo.Partida("Partida 1")
-				ficha1 = (new modelo.Usuario("Alberto")).unirseAPartida(partida)
-				ficha2 = (new modelo.Usuario("Pepe")).unirseAPartida(partida)
-				partida.calcularPrimerTurno(true) // El turno es de Alberto, no aleatorio
-			});
-
-			it("Un jugador puede vender una propiedad a otro", function(){
 				ficha1.lanzarDados([0,1])
 				ficha1.comprarPropiedad()
 
@@ -952,6 +948,24 @@ describe("Monopoly",function(){
 				expect(titulo.getPropietario()).toEqual(ficha2)
 				expect(ficha1.getSaldo()).toEqual(saldoAnterior1 + cantidadVenta)
 				expect(ficha2.getSaldo()).toEqual(saldoAnterior2 - cantidadVenta)
+			});
+
+			it("Una partida no puede empezar hasta que haya un número mínimo de jugadores", function(){
+				var minNumJugadores = 2
+				var partida = new modelo.Partida("Partida 1", minNumJugadores)
+				expect(partida.getMinNumJugadores()).toEqual(minNumJugadores)
+				var ficha1 = (new modelo.Usuario("Alberto")).unirseAPartida(partida)
+
+				ficha1.empezarPartida()
+				expect(partida.getFase().constructor.name).toEqual("FaseInicial")
+
+				var ficha2 = (new modelo.Usuario("Pepe")).unirseAPartida(partida)
+				expect(partida.fichas.length).toEqual(minNumJugadores)
+				ficha1.empezarPartida()
+				expect(partida.getFase().constructor.name).toEqual("FaseJugar")
+
+				expect(new modelo.Usuario("Juan").unirseAPartida(partida)).toBeUndefined()
+				expect(partida.fichas.length).toEqual(2)
 			});
 		});
 	});

@@ -15,7 +15,7 @@ var server = http.createServer(app)
 var io = require('socket.io')(server);
 app.use("/",express.static(__dirname))
 
-var partida = new modelo.Partida("1")
+var partida = new modelo.Partida("1", 2)
 
 function comprobarJugador(uid, response){
 	var jsonData
@@ -98,7 +98,7 @@ app.get("/", function (request, response) {
 })
 
 app.get("/reset", function (request, response) {
-	partida = new modelo.Partida("1")
+	partida = new modelo.Partida("1", 2)
 	console.log("Partida reiniciada!!")
 	response.redirect("/")
 })
@@ -126,11 +126,18 @@ app.get("/nuevoJugador/:nombre", function (request, response) {
 })
 
 app.get("/empezarPartida/:uid", function (request, response) {
+	var jsonData
 	var ficha = comprobarJugador(request.params.uid, response)	
 	if (ficha){
 		ficha.empezarPartida()
 
-		var jsonData = {"error":"0", "datosFicha":getDatosFicha(ficha)}
+		if (partida.getFase().constructor.name == "FaseJugar"){
+			jsonData = {"error":"0"}
+			io.emit("partidaEmpezada")
+		}
+		else
+			jsonData = {"error":"2", "msg":"Se necesitan al menos "+partida.getMinNumJugadores()+" jugadores para empezar la partida"}
+
 		response.send(jsonData)
 	}	
 })
@@ -139,7 +146,7 @@ app.get("/empezarPartidaTest/:uid", function (request, response) {
 	partida.calcularPrimerTurno(true)
 	var ficha = comprobarJugador(request.params.uid, response)
 	if (ficha){
-		var jsonData = {"error":"0", "datosFicha":getDatosFicha(ficha)}
+		var jsonData = {"error":"0"}
 		response.send(jsonData)
 	}
 })
@@ -302,17 +309,15 @@ app.get("/pagarSalidaCarcel/:uid", function (request, response) {
 })
 
 
-var lista = []
+var contJugadores = 0
 io.on("connection", function(client){
-	/*client.on("listo", function(data){
-		lista.push(data)
-		console.log("Llega el jugador " + data.usr)
-		if (lista.length == partida.numeroJugadores)
-			io.emit("go", {juego:"ok"})
-	})*/
-  	/*client.on("pasarTurno",function(data){
-  		io.socket.emit("cambioTurno",{juego:"ok"})
-  	})*/
+	client.on("conectado", function(data){
+		contJugadores++
+		console.log("Llega el jugador: " + data.nombreJugador)
+		io.emit("nuevoJugador", {"jugadores":getDatosPartida().fichas})
+		// Si se llega al máximo de jugadores se lanza la partida
+		if (contJugadores == partida.coloresFichas.length)	io.emit("empiezaPartida", {"color":data.colorJugador})
+	})
 });
 
 server.listen(port, host)

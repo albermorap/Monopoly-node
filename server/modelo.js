@@ -18,8 +18,12 @@ FasesPartida: {
 	function FaseInicial(){
 		this.solicitarNuevoJugador = function(partida, usuario){return partida.crearJugador(usuario)}
 		this.empezar = function(partida){
-			partida.calcularPrimerTurno(false)			
-			console.log(partida.getNombre() + ":  COMIENZA")
+			if (partida.getFichas().length >= partida.getMinNumJugadores()){
+				partida.calcularPrimerTurno(false)			
+				console.log(partida.getNombre() + ":  COMIENZA")
+			}
+			else
+				console.log(partida.getNombre() + ":  Se necesitan al menos "+partida.getMinNumJugadores()+" jugadores")				
 		}
 		this.lanzarDados = function(partida){console.log("La partida " + partida.getNombre() + " aún no ha comenzado.")}
 	}
@@ -42,8 +46,9 @@ FasesPartida: {
 }
 
 
-function Partida(nombre){
+function Partida(nombre, minNumeroJugadores){
 	this.nombre = nombre
+	this.minNumeroJugadores = minNumeroJugadores
 	this.tablero = (new FactoryMethod).crearTablero(40)
 	this.dado = (new FactoryMethod).crearDado()
 	this.fichas = []
@@ -53,9 +58,10 @@ function Partida(nombre){
 	var numCasas = 32
 	var numHoteles = 12
 	this.cajaTarjetasComunidad
-	this.cajaTarjetasSuerte
+	this.cajaTarjetasSuerte	
 
 	this.getNombre = function(){return "Partida " + this.nombre}
+	this.getMinNumJugadores = function(){return this.minNumeroJugadores}
 	this.getFase = function(){return this.fase}
 	this.getTurno = function(){return this.turno}
 	this.getFichaConTurno = function(){return this.fichas[this.turno]}

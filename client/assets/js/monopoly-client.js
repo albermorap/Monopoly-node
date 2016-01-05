@@ -227,6 +227,8 @@ DatosJugador:{
 	}
 
 	function mostrarSaldo(saldo){
+		$.cookie("saldo", saldo)
+
 		if (saldo == -1){
 			$("#zonaDatosJugador").append("<h4><strong>SALDO: </strong><span class='label label-danger'>Bancarrota</span></h4>")
 		}
@@ -238,8 +240,7 @@ DatosJugador:{
 					$("#zonaDatosJugador").append("<h4 id='info_saldo'><strong>SALDO: "+saldo+" pelotis</strong> <span class='label label-danger'><span class='glyphicon glyphicon-arrow-down'/> "+($.cookie("saldo")-saldo)+"</span></h4>")
 				else
 					$("#zonaDatosJugador").append("<h4 id='info_saldo'><strong>SALDO: "+saldo+" pelotis</strong></h4>")
-			}		
-			$.cookie("saldo", saldo)
+			}
 		}		
 	}
 
@@ -425,6 +426,20 @@ FuncionesAuxiliares:{
 //Funciones para comunicar con el servidor
 
 Sockets: {
+	socket.on("nuevoJugador", function (data){
+		mostrarJugadores(data.jugadores)
+	})
+
+	socket.on("empiezaPartida", function (data){
+		if (data.color == $.cookie("color"))
+			empezarPartida($.cookie("uid"))
+	})
+
+	socket.on("partidaEmpezada", function (data){
+		if ($.cookie("uid") != undefined)
+			refrescar($.cookie("uid"))
+	})
+
 	socket.on("cambioTurno", function (data){
 		if ($.cookie("uid") != undefined)
 			refrescar($.cookie("uid"))
@@ -473,6 +488,8 @@ function obtenerFicha(nombre){
 				quitarZonaPedir()				
 				mostrarBotonesFaseInicial()
 				mostrarDatosJugador(data.datosFicha)
+
+				socket.emit('conectado', {"nombreJugador":data.datosFicha.nombre, "colorJugador":data.datosFicha.color})
 			}		
 		})
 }
@@ -481,10 +498,8 @@ function empezarPartida(uid){
 	$.getJSON(url+"empezarPartida/"+uid, function (data){
 		if (data.error == 1)
 			reiniciarSesion(data.msg)
-		else{
-			quitarZonaInicial()
-			comprobarTurno(data.datosFicha)
-		}
+		else if (data.error == 2)
+			showMsg(data.msg)
 	})
 }
 
