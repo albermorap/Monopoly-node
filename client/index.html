@@ -66,7 +66,7 @@
 		<!-- Page Content -->
 		<div class="container-fluid">
 			<div class="row">
-				<div class="col-sm-7 col-sm-push-5">
+				<div class="col-md-6 col-md-push-4">
 						<div id="tituloPartida">
 							<h1 id="nombrePartida">Nombre de partida</h1>
 						</div>						
@@ -84,35 +84,63 @@
 							<h4 class="modal-title" id="mySmallModalLabel">Aviso</h4>
 						</div> 
 						<div id="myModalBody" class="modal-body"></div> 
-						<div id="myModalFooter" class="modal-footer">
-					        <button id="myModalButton" type='button' class='btn btn-primary' data-dismiss='modal'>Aceptar</button>
-					    </div>
+						<div id="myModalFooter" class="modal-footer"></div>
+					</div> 
+			    </div>
+		  	</div>
+
+		  	<div class="modal fade" id="modalSiNo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			  	<div class="modal-dialog">
+			    	<div class="modal-content">
+				      	<div class="modal-header">
+							<h4 class="modal-title" id="modalSiNoHeader"></h4>
+						</div> 
+						<div id="modalSiNoBody" class="modal-body"></div> 
+						<div id="modalSiNoFooter" class="modal-footer"></div>
+					</div> 
+			    </div>
+		  	</div>
+
+		  	<div class="modal fade" id="modalVentaPropiedad" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			  	<div class="modal-dialog">
+			    	<div class="modal-content">
+				      	<div class="modal-header">
+				      		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">×</span></button>
+							<h4 class="modal-title">Oferta de venta de propiedad</h4>
+						</div> 
+						<div class="modal-body">
+							<form>
+								<div class="form-group" id="oleole">
+									<label for="select_colorComprador">Comprador</label>
+									<select class="form-control" id="select_colorComprador"></select>
+								</div>
+							  	<div class="form-group">
+							    	<label for="input_cantidadVenta">Precio</label>
+							    	<input type="text" class="form-control" id="input_cantidadVenta" placeholder="¿Por cuántos pelotis?">
+							  	</div>
+							</form>
+						</div> 
+						<div id="modalVentaPropiedadFooter" class="modal-footer"></div>
 					</div> 
 			    </div>
 		  	</div>
 
 			<div class="row">
-				<div class="col-sm-7 col-sm-push-5">
-					<!-- Image -->
-					<div id="tablero">
-						<canvas class="img-responsive" id="micanvas" height="720" width="720"></canvas>						
-					</div>
 
-					<!-- Información -->					
-					<div class="panel panel-info">
-						<div class="panel-heading">
-							<h4 class="panel-title">Información</h4>
-						</div>
-						<div class="panel-body" id="infoFicha"></div>
-					</div>
+				<div class="col-md-6 col-md-push-4">
+					<!-- Ganador -->
+					<div id="ganadoAlert" class="alert alert-warning" role="alert" hidden></div>
 
+					<!-- Tablero -->
+					<canvas class="img-responsive" id="micanvas" height="720" width="720"></canvas>
 				</div>				
 
-				<div class="col-sm-5 col-sm-pull-7">
+				<div class="col-md-4 col-md-pull-6">
 					<!-- Panel -->
 					<div class="panel panel-primary">
-						<div class="panel-heading" id="nombreJugador">
-							<h4 class="panel-title" id="nombreJugadorDefecto">Bienvenido</h4>
+						<div class="panel-heading">
+							<h4 class="panel-title" id="nombreJugador">Bienvenido</h4>
 						</div>
 						<div class="panel-body">
 							<div id="datosJugador"></div>
@@ -127,22 +155,24 @@
 					<div class="panel panel-primary" id="propiedades">
 						<div class="panel-heading">
 							<h4 class="panel-title">Propiedades</h4>
-						</div>						
-						<!--div class='btn-group' role='group'>
-						  	<button type='button' class='btn btn-default' onclick='hipotecar("hola")'>Hipotecar</button>
-
-							  	<select class="form-control" id="sel1">
-								    <option selected>Selecciona una propiedad </option>
-								    <option>1</option>
-								    <option>2</option>
-								    <option>3</option>
-								    <option>4</option>
-							  	</select>
-						</div-->
+						</div>
 					</div>
 				</div>
 
-				
+				<div class="col-md-2 col-md-push-0">
+					<!-- Panel -->
+					<div class="panel panel-primary">
+						<div class="panel-heading">
+							<h4 class="panel-title">Jugadores</h4>
+						</div>
+						<table id="jugadoresTabla" class="table table-hover"> 
+							<thead> 
+								<tr> <th>Color</th> <th>Nombre</th> </tr> 
+							</thead>
+						</table>
+					</div>
+				</div>
+
 			</div>
 			<!-- /.row -->
 
@@ -150,7 +180,7 @@
 			<footer class="margin-tb-3">
 				<div class="row">
 					<div class="col-lg-12">
-						<p>Procesos de Ingeniería del Software 2015/2016</p>
+						<blockquote><p>Alberto Mora Plata - Procesos de Ingeniería del Software 2015/2016 - UCLM</p></blockquote>
 					</div>
 				</div>
 			</footer>

@@ -5,6 +5,10 @@ var socket = io();
 var colorFicha = ["azul","rojo","verde","amarillo","rosa","naranja"];
 var ctx;
 
+// Constantes
+var PRECIO_EDIFICAR = 50
+var PRECIO_DEMOLER = PRECIO_EDIFICAR * 0.5
+
 // Fichas
 var ficha_coord = [];
 var fichas = []
@@ -23,7 +27,7 @@ function inicio(){
 	if ($.cookie("uid") == undefined)
 		mostrarBotonPedirFicha()
 	else{
-		$.getJSON(url+"getFicha/" + $.cookie("uid"), function (data){
+		$.getJSON(url+"refrescar/" + $.cookie("uid"), function (data){
 			if (data.error == 1){
 				reiniciarSesion(data.msg)
 			}
@@ -68,6 +72,7 @@ function quitarZonaDados(){$("#zonaDados").remove()}
 function quitarZonaAvisos(){$('#zonaAvisos').remove()}
 function quitarZonaPropiedades(){$("#zonaPropiedades").remove()}
 function quitarListaInfo(){$("#listaInfo").remove()}
+function quitarZonaJugadores(){$("#zonaJugadores").remove()}
 
 function mostrarBotonesFaseInicial(){
 	$("#botones").append(
@@ -78,12 +83,12 @@ function mostrarBotonesFaseInicial(){
 }
 
 function mostrarTirada(tirada){
-	var cadena = "<h4 id='zonaDados' ><b>DADOS: " + tirada[0] + " + " + tirada[1] + "</h4>"
+	var cadena = "<h4 id='zonaDados' ><strong>DADOS: " + tirada[0] + " + " + tirada[1] + "</strong>"
 
 	if (tirada[0] == tirada[1])
-		cadena = cadena + " <span class='label label-info'>Dobles</span></p>"
+		cadena = cadena + " <span class='label label-info'>Dobles</span></h4>"
 	else
-		cadena = cadena + "</p>"
+		cadena = cadena + "</h4>"
 
 	$("#zonaDados").remove()
 	$("#dados").append(cadena)
@@ -138,6 +143,8 @@ function habilitarBotonesDadosTirados(datosTirados){
 
 	if (datosTirados){
 		$('#lanzarDados_Btn').prop('disabled', true)
+		$('#usarTarjeta_Btn').prop('disabled', true)
+		$('#pagarSalidaCarcel_Btn').prop('disabled', true)
 		$('#pasarTurno_Btn').prop('disabled', false)
 	}
 	else{
@@ -150,10 +157,13 @@ function mostrarDatosCasilla(datosCasilla){
 	quitarZonaAvisos()
 	$("#avisos").append("<div id='zonaAvisos'></div>")
 
+	if (datosCasilla.infoPagoAFicha)
+		setAlert("danger", "Has pagado <strong>"+datosCasilla.infoPagoAFicha.cantidad+" pelotis a "+datosCasilla.infoPagoAFicha.receptor+"</strong> por el alquiler")
+
 	if (datosCasilla.cobroSalida)
 		setAlert("success", "Ha pasado por la casilla de Salida. Reciba 200 pelotis")
 
-	if (datosCasilla.estado != "Libre")
+	if ($.cookie("estadoCasilla") != "Libre")
 		$('#comprarPropiedad_Btn').prop('disabled', true)
 	else
 		setAlert("info", datosCasilla.nombre + " está libre. Cómprela por " + datosCasilla.precio + " pelotis")
@@ -184,34 +194,32 @@ DatosJugador:{
 		$("#datosJugador").append("<div id='zonaDatosJugador'></div>")
 
 		mostrarNombre(datosFicha.nombre)
-		mostrarColor(datosFicha.color)
+		mostrarColor($.cookie("color"))
 		mostrarSaldo(datosFicha.saldo)
+		if (datosFicha.cantidadDeudas > 0)
+			mostrarDeudas(datosFicha.saldo, datosFicha.cantidadDeudas)		
 		if (datosFicha.turnosCarcel > 0)
 			mostrarTurnosEnCarcel(datosFicha.turnosCarcel)
-		//mostrarPosicion(datosFicha.posicion)		
+
+		if ($.cookie("estadoCasilla") != "Libre")
+			$('#comprarPropiedad_Btn').prop('disabled', true)
+
 		mostrarPropiedades(datosFicha.propiedades, datosFicha.monopolios)
 
 		mostrarDatosPartida(datosFicha.datosPartida)
-
-		mostrarInfoFicha(datosFicha.info)
 	}
 
 	function mostrarDatosPartida(datosPartida){
 		posicionesDraw = datosPartida.posicionesFichas
 		propiedadesDraw = datosPartida.propiedadesGlobales
-		mostrarFasePartida(datosPartida.fasePartida)
 
-		dibujarTableroConDatos(datosPartida.numeroJugadores)	
-	}	
-
-	function mostrarFasePartida(fasePartida){
-		$("#zonaDatosJugador").append("<p id='fasePartida'>Fase de Partida: "+fasePartida+"</p>")	
+		dibujarTableroConDatos(datosPartida.fichas.length)
+		$.cookie("jugadores", JSON.stringify(datosPartida.fichas))
+		mostrarJugadores(datosPartida.fichas)
 	}
 
 	function mostrarNombre(nombre){
-		$('#nombreJugadorDefecto').remove()
-		$("#nombre").remove()
-		$("#nombreJugador").append("<h4 id='nombre' class='panel-title'>Bienvenido, "+nombre+"</h4>")
+		$("#nombreJugador").html("Bienvenido, "+nombre)
 	}
 
 	function mostrarColor(color){
@@ -219,15 +227,25 @@ DatosJugador:{
 	}
 
 	function mostrarSaldo(saldo){
-		if ($.cookie("saldo")){
-			if ($.cookie("saldo") < saldo)
-				$("#zonaDatosJugador").append("<h4><b>SALDO: "+saldo+" pelotis</b> <span class='label label-success'><span class='glyphicon glyphicon-arrow-up'/> "+(saldo-$.cookie("saldo"))+"</span></h4>")	
-			else if ($.cookie("saldo") > saldo)
-				$("#zonaDatosJugador").append("<h4><b>SALDO: "+saldo+" pelotis</b> <span class='label label-danger'><span class='glyphicon glyphicon-arrow-down'/> "+($.cookie("saldo")-saldo)+"</span></h4>")
-			else
-				$("#zonaDatosJugador").append("<h4><b>SALDO: "+saldo+" pelotis</b></h4>")
+		if (saldo == -1){
+			$("#zonaDatosJugador").append("<h4><strong>SALDO: </strong><span class='label label-danger'>Bancarrota</span></h4>")
+		}
+		else{
+			if ($.cookie("saldo")){
+				if ($.cookie("saldo") < saldo)
+					$("#zonaDatosJugador").append("<h4 id='info_saldo'><strong>SALDO: "+saldo+" pelotis</strong> <span class='label label-success'><span class='glyphicon glyphicon-arrow-up'/> "+(saldo-$.cookie("saldo"))+"</span></h4>")	
+				else if ($.cookie("saldo") > saldo)
+					$("#zonaDatosJugador").append("<h4 id='info_saldo'><strong>SALDO: "+saldo+" pelotis</strong> <span class='label label-danger'><span class='glyphicon glyphicon-arrow-down'/> "+($.cookie("saldo")-saldo)+"</span></h4>")
+				else
+					$("#zonaDatosJugador").append("<h4 id='info_saldo'><strong>SALDO: "+saldo+" pelotis</strong></h4>")
+			}		
+			$.cookie("saldo", saldo)
 		}		
-		$.cookie("saldo", saldo)		
+	}
+
+	function mostrarDeudas(saldo, cantidad){
+		showMsg("<span class='label label-danger'>ATENCIÓN</span> Debe "+cantidad+" pelotis. En caso de pases el turno sin pagar será declarado en bancarrota.")
+		$("#info_saldo").html("<strong>SALDO: "+saldo+" pelotis</strong> <span class='label label-danger'>Debe "+cantidad+" pelotis</span>")
 	}
 
 	function mostrarTurnosEnCarcel(turnosCarcel){
@@ -236,17 +254,20 @@ DatosJugador:{
 
 	function mostrarPosicion(posicion){
 		$("#zonaDatosJugador").append("<p>Posicion: "+posicion+"</p>")	
-	}	
+	}
 
-	function mostrarInfoFicha(info){
-		quitarListaInfo()
+	function mostrarJugadores(fichas){
+		quitarZonaJugadores()
+		$("#jugadoresTabla").append("<tbody id='zonaJugadores'></tbody>")
 
-		var lista = "<ul id='listaInfo'>"
-		info.forEach(function (v,i,array){
-			lista = lista + "<li>" + v + "</li>"})
-		lista = lista + "</ul>"
+		for (i in fichas){
+			$("#zonaJugadores").append("<tr id='jugador_"+fichas[i].color+"'>" +
+						"<th scope='row'><img height='30' width='30' src='client/assets/img/ficha_" + fichas[i].color + ".png'></th>" +						
+						"<td>" + fichas[i].nombre + "</td></tr>")
 
-		$("#infoFicha").append(lista)
+			if (fichas[i].enBancarrota)
+				$("#jugador_"+fichas[i].color).attr('class', 'danger')
+		}
 	}
 
 	function mostrarPropiedades(propiedades, monopolios){
@@ -264,9 +285,9 @@ DatosJugador:{
 				case "Calle":
 					if (vistos.indexOf(v.color) == -1){
 						if (monopolios.indexOf(v.color) == -1)
-							$("#zonaProp_" + v.tipo).append("<p><b>" + v.color.toUpperCase() + "</b></p><ul id='prop-" + v.color + "' class='list-group'></ul>")
+							$("#zonaProp_" + v.tipo).append("<p class='text-uppercase'><strong>" + v.color + "</strong></p><ul id='prop-" + v.color + "' class='list-group'></ul>")
 						else
-							$("#zonaProp_" + v.tipo).append("<p><b>" + v.color.toUpperCase() + "</b> <span class='label label-primary'><span class='glyphicon glyphicon-home'/> MONOPOLIO</span></p><ul id='prop-" + v.color + "' class='list-group'></ul>")
+							$("#zonaProp_" + v.tipo).append("<p class='text-uppercase'><strong>" + v.color + "</strong> <span class='label label-info'><span class='glyphicon glyphicon-home'/> MONOPOLIO</span></p><ul id='prop-" + v.color + "' class='list-group'></ul>")
 
 						vistos.push(v.color)
 					}
@@ -274,30 +295,50 @@ DatosJugador:{
 					var cadena = "<li class='list-group-item'>" + v.nombre
 					if (monopolios.indexOf(v.color) != -1)
 						cadena = cadena + " <div class='btn-group btn-group-xs' role='group'>" +
-							"<button id='demoler" + i + "_Btn' onclick='edificar()' class='btn btn-default btn-danger' title='Demoler'><span class='glyphicon glyphicon-minus'/></button>" +
-							"<button class='btn btn-default'><span class='glyphicon glyphicon-home'/> " + v.numCasas + "</button>" +
-							"<button id='edificar" + i + "_Btn' class='btn btn-default btn-success' title='Construir'><span class='glyphicon glyphicon-plus'/></button></div>"
+							"<button id='demoler" + i + "_Btn' onclick='edificar()' class='btn btn-default btn-danger' title='Demoler: +"+PRECIO_DEMOLER+" pelotis'><span class='glyphicon glyphicon-minus'/></button>" +
+							"<button id='numCasas" + i + "_Btn' class='btn btn-default'><span class='glyphicon glyphicon-home'/> " + v.numCasas + "</button>" +
+							"<button id='edificar" + i + "_Btn' class='btn btn-default btn-success' title='Construir: -"+PRECIO_EDIFICAR+" pelotis'><span class='glyphicon glyphicon-plus'/></button></div>"
 					else
 						cadena = cadena + " <button disabled class='btn btn-default btn-xs'><span class='glyphicon glyphicon-home'/> " + v.numCasas + "</button>"
 					
 					if (v.estado == "Hipotecada")
 						cadena = cadena + " <span class='label label-danger'>Hipotecada</span></li>"
-					else
-						cadena = cadena + " <button id='hipotecar" + i + "_Btn' class='btn btn-default btn-xs'>Hipotecar</button></li>"
+					else{
+						cadena = cadena + " <button id='hipotecar" + i + "_Btn' class='btn btn-default btn-xs' title='+ "+(v.precio*0.5)+" pelotis'>Hipotecar</button>" +
+							"<button id='vender" + i + "_Btn' class='btn btn-default btn-xs' title='Valor: "+v.precio+" pelotis'>Vender</button></li>"
+					}
 
 					$("#prop-" + v.color).append(cadena)
 
 					$('#edificar' + i + '_Btn').on("click",function(){edificarPropiedad($.cookie("uid"), v.nombre)})
-					$('#demoler' + i + '_Btn').on("click",function(){demolerPropiedad($.cookie("uid"), v.nombre)})
-					$('#hipotecar' + i + '_Btn').on("click",function(){hipotecarPropiedad($.cookie("uid"), v.nombre)})
+					$('#demoler' + i + '_Btn').on("click",function(){demolerPropiedad($.cookie("uid"), v.nombre)})					
+
+					switch (v.numCasas){
+						case 0:
+							$('#demoler' + i + '_Btn').prop('disabled', true)
+							$('#hipotecar' + i + '_Btn').on("click",function(){hipotecarPropiedad($.cookie("uid"), v.nombre)})
+							break;
+						case 5:
+							$('#edificar' + i + '_Btn').prop('disabled', true)
+							$('#hipotecar' + i + '_Btn').on("click",function(){showMsg("No puede hipotecar la propieda porque tiene un hotel")})
+							$('#numCasas' + i + '_Btn').html("<span class='glyphicon glyphicon-home'/> Hotel")
+							break;
+						default:
+							$('#hipotecar' + i + '_Btn').on("click",function(){showMsg("No puede hipotecar la propieda porque tiene "+v.numCasas+" casa/s")})
+					}
+
 					break;
 				default:
 					if (v.estado == "Hipotecada")
 						$("#zonaProp_" + v.tipo).append("<li class='list-group-item'>" + v.nombre +	" <span class='label label-danger'>Hipotecada</span></li>")
-					else
-						$("#zonaProp_" + v.tipo).append("<li class='list-group-item'>" + v.nombre + " <button id='hipotecar" + i + "_Btn' class='btn btn-default btn-xs'>Hipotecar</button></li>")
+					else{
+						$("#zonaProp_" + v.tipo).append("<li class='list-group-item'>" + v.nombre + " <button id='hipotecar" + i + "_Btn' class='btn btn-default btn-xs' title='+ "+(v.precio*0.5)+" pelotis'>Hipotecar</button>" +
+							"<button id='vender" + i + "_Btn' class='btn btn-default btn-xs' title='Vender a otro jugador'>Vender</button></li>")
+					}
 					$('#hipotecar' + i + '_Btn').on("click",function(){hipotecarPropiedad($.cookie("uid"), v.nombre)})			
-			}			
+			}
+
+			$('#vender' + i + '_Btn').on("click",function(){ofertarVentaPropiedad($.cookie("uid"), v.nombre)})
 		})
 	}
 }
@@ -305,20 +346,33 @@ DatosJugador:{
 FuncionesAuxiliares:{
 	function eliminarCookies(){
 		$.removeCookie("uid")
+		$.removeCookie("color")
 		$.removeCookie("datosTirada")
 		$.removeCookie("saldo")
+		$.removeCookie("estadoCasilla")
+		$.removeCookie("jugadores")
 	}
 
 	function showMsg(msg, callback){
-		$('#myModalMsg').remove()
-		$('#myModalBody').append("<p id='myModalMsg'>" + msg + "</p>")
+		$('#myModalBody').html("<p>" + msg + "</p>")
 
-		$('#myModalButton').remove()
-		$('#myModalFooter').append("<button id='myModalButton' type='button' class='btn btn-primary' data-dismiss='modal'>Aceptar</button>")
+		$('#myModalFooter').html("<button id='myModalButton' type='button' class='btn btn-primary' data-dismiss='modal'>Aceptar</button>")
 
 		if(callback) $('#myModalButton').on("click", callback)
 
 		$('#myModal').modal({ backdrop: 'static', keyboard: false })
+	}
+
+	function showMsgSiNo(header, msg, callback){
+		$('#modalSiNoHeader').html(header)
+		$('#modalSiNoBody').html("<p>" + msg + "</p>")
+
+		$('#modalSiNoFooter').html("<button id='modalSiNo_siButton' type='button' class='btn btn-primary' data-dismiss='modal'>Sí</button>" +
+								 "<button type='button' class='btn btn-default' data-dismiss='modal'>No</button>")
+
+		$('#modalSiNo_siButton').on("click", callback)
+
+		$('#modalSiNo').modal({ backdrop: 'static', keyboard: false })
 	}
 
 	function setAlert(tipo, msg){
@@ -333,10 +387,9 @@ FuncionesAuxiliares:{
 		eliminarCookies()
 		quitarZonaPedir()
 		quitarZonaInicial()
-		$("#nombre").remove()
-		$("#nombreJugadorDefecto").remove()
-		$("#nombreJugador").append("<h4 class='panel-title' id='nombreJugadorDefecto'>Bienvenido</h4>")	
+		$("#nombreJugador").html("Bienvenido")
 		quitarZonaDatosJugador()
+		quitarZonaJugadores()
 		quitarZonaMeToca()
 		quitarZonaDados()
 		quitarZonaPropiedades()
@@ -359,18 +412,51 @@ FuncionesAuxiliares:{
 
 		mostrarDatosJugador(datosFicha)
 	}
+
+	function mostrarGanador(nombreGanador){
+		$('#ganadoAlert').prop('hidden', false)
+		if (nombreGanador == false)
+			$('#ganadoAlert').html("<h3 class='text-center'><strong>¡¡Fin de la partida!! Nadie ha ganado</strong></h3>")
+		else
+			$('#ganadoAlert').html("<h3 class='text-center'><strong>¡¡Fin de la partida!! Ganador: "+nombreGanador+"</strong></h3>")
+	}
 }
 
 //Funciones para comunicar con el servidor
 
 Sockets: {
 	socket.on("cambioTurno", function (data){
-		refrescar($.cookie("uid"))
+		if ($.cookie("uid") != undefined)
+			refrescar($.cookie("uid"))
 	})
 
 	socket.on("nuevaPosicion", function (data){
-		if (data.uidFicha != $.cookie("uid"))
+		if ($.cookie("uid") != undefined && data.color != $.cookie("color"))
 			refrescar($.cookie("uid"))
+	})
+
+	socket.on("finPartida", function (data){
+		if ($.cookie("uid") != undefined){
+			refrescar($.cookie("uid"))
+			mostrarGanador(data.nombreGanador)
+		}			
+	})
+
+	socket.on("ofertaVentaPropiedad", function (data){
+		if ($.cookie("uid") != undefined && data.colorComprador == $.cookie("color")){
+			var callback = function(){aceptarOfertaVentaPropiedad($.cookie("uid"), data.nombrePropiedad, data.colorVendedor, data.cantidad)}
+			showMsgSiNo("Venta de propiedad",
+				"¿Acepta la venta que ofrece "+data.nombreVendedor+" de la propiedad "+data.nombrePropiedad+" por "+data.cantidad+" pelotis?", callback)
+		}
+	})
+
+	socket.on("ventaPropiedad", function (data){
+		if ($.cookie("uid") != undefined){
+			if (data.colorVendedor == $.cookie("color"))
+				showMsg(data.nombreComprador+" ha aceptado la venta de "+data.nombrePropiedad, function(){inicio()})
+			else
+				showMsg(data.nombreVendedor+" acaba de vender la propiedad "+data.nombrePropiedad+" a "+data.nombreComprador)
+		}
 	})
 }
 
@@ -382,6 +468,7 @@ function obtenerFicha(nombre){
 			else{
 				eliminarCookies()
 				$.cookie("uid", data.datosFicha.uid)
+				$.cookie("color", data.datosFicha.color)
 
 				quitarZonaPedir()				
 				mostrarBotonesFaseInicial()
@@ -412,22 +499,23 @@ function refrescar(uid){
 }
 
 function lanzarDados(uid){
-	//$.getJSON(url+"lanzarDados/"+uid, function (data){
-	$.getJSON(url+"lanzarDadosTest/"+uid+"/3/2", function (data){
+	$.getJSON(url+"lanzarDados/"+uid, function (data){
+	//$.getJSON(url+"lanzarDadosTest/"+uid+"/4/2", function (data){
 		if (data.error == 1)
 			reiniciarSesion(data.msg)
+		else if (data.error == 2)
+			showMsg(data.msg)
 		else{
 			$.removeCookie("datosTirada")
 			$.cookie("datosTirada", JSON.stringify(data.datosTirada))
+			$.cookie("estadoCasilla", data.datosCasilla.estado)
 			comprobarTurno(data.datosFicha)
 			habilitarBotonesDadosTirados(data.datosTirada.dadosTirados)
 			mostrarTirada(data.datosTirada.tirada)
 			mostrarDatosCasilla(data.datosCasilla)
 
-			if (data.datosTirada.salidaCarcel){
-				console.log("aaaaaaa")
+			if (data.datosTirada.salidaCarcel)
 				setAlert("info", "Sale de la cárcel")
-			}
 		}
 	})
 }
@@ -437,6 +525,7 @@ function comprarPropiedad(uid){
 		if (data.error == 1)
 			reiniciarSesion(data.msg)
 		else{
+			$.cookie("estadoCasilla","Comprada")
 			mostrarDatosJugador(data.datosFicha)
 		}
 	})
@@ -474,6 +563,54 @@ function hipotecarPropiedad(uid, nombrePropiedad){
 		})
 }
 
+function ofertarVentaPropiedad(uid, nombrePropiedad){	
+	var cadena = "<option value='' selected>¿A quién?</option>"
+	var lista = JSON.parse($.cookie("jugadores")) 
+	for (i in lista){
+		if ($.cookie("color") != lista[i].color && !lista[i].enBancarrota)
+			cadena +=  "<option value='"+lista[i].color+"'>Ficha "+lista[i].color+" - "+lista[i].nombre+"</option>"
+	}
+	$('#select_colorComprador').html(cadena)
+
+	$('#modalVentaPropiedadFooter').html("<button id='modalVentaPropiedad_EnviarButton' type='button' class='btn btn-primary' data-dismiss='modal'>Enviar oferta</button>" +
+		"<button type='button' class='btn btn-default' data-dismiss='modal'>Cancelar</button>")
+
+	$('#modalVentaPropiedad_EnviarButton').on("click", function(){
+		var colorComprador = $("#select_colorComprador").val()
+		var cantidad = $("#input_cantidadVenta").val()
+
+		if (colorComprador == ""){
+			showMsg("No has elegido ningún jugador", function(){
+				ofertarVentaPropiedad(uid, nombrePropiedad)
+			})
+		}
+		else{
+			$.getJSON(url+"ofertarVentaPropiedad/"+uid+"/"+nombrePropiedad+"/"+colorComprador+"/"+cantidad, function (data){
+				if (data.error == 1)
+					reiniciarSesion(data.msg)
+				else{			
+					showMsg("Ha enviado la oferta al comprador correctamente. Espere su respuesta")
+				}
+			})
+		}
+	})
+
+	$('#modalVentaPropiedad').modal({ backdrop: 'static', keyboard: false })
+}
+
+function aceptarOfertaVentaPropiedad(uid, nombrePropiedad, colorVendedor, cantidad){
+	$.getJSON(url+"aceptarOfertaVentaPropiedad/"+uid+"/"+nombrePropiedad+"/"+colorVendedor+"/"+cantidad, function (data){
+		if (data.error == 1)
+			reiniciarSesion(data.msg)
+		else{
+			if (data.error == 2)
+				showMsg(data.msg)
+			else
+				mostrarDatosJugador(data.datosFicha)
+		}
+	})
+}
+
 function pasarTurno(uid){
 	$.getJSON(url+"pasarTurno/"+uid, function (data){
 		if (data.error == 1)
@@ -499,10 +636,9 @@ function usarTarjetaLibreCarcel(uid){
 function pagarSalidaCarcel(uid){
 	$.getJSON(url+"pagarSalidaCarcel/"+uid, function (data){
 		if (data.error == 1)
-			if (data.msg = "Saldo insuficiente")
-				setAlert("info",data.msg)
-			else
-				reiniciarSesion(data.msg)
+			reiniciarSesion(data.msg)
+		else if (data.error == 1)
+			setAlert("info",data.msg)
 		else{
 			comprobarTurno(data.datosFicha)
 			setAlert("info", "Sale de la cárcel")

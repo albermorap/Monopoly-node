@@ -29,9 +29,14 @@ function comprobarJugador(uid, response){
 
 
 function getDatosFicha(ficha){
+	var cantidadDeudas = 0
+	var deudas = ficha.getDeudas()
+	for (i in deudas) cantidadDeudas += deudas[i].cantidad
+
 	return {"uid":ficha.getUsuario().getUid(), "nombre":ficha.getUsuario().getNombre(), "color":ficha.getColor(), "saldo":ficha.getSaldo(), 
-		"posicion":ficha.getPosicion(), "turno":ficha.getTurno().constructor.name, "info":ficha.getInfo(), "turnosCarcel":ficha.getTurnosEnCarcel(),
-		"tarjetaCarcel":ficha.tieneTarjetaLibreCarcel(), "propiedades":getPropiedades(ficha), "monopolios":ficha.getMonopolios(), "datosPartida":getDatosPartida()}
+		"posicion":ficha.getPosicion(), "turno":ficha.getTurno().constructor.name, "turnosCarcel":ficha.getTurnosEnCarcel(),
+		"tarjetaCarcel":ficha.tieneTarjetaLibreCarcel(), "propiedades":getPropiedades(ficha), "monopolios":ficha.getMonopolios(), "datosPartida":getDatosPartida(),
+		"cantidadDeudas":cantidadDeudas}
 }
 
 function getPropiedades(ficha){
@@ -39,16 +44,20 @@ function getPropiedades(ficha){
 	ficha.getPropiedades().forEach(function (v,i,array){
 		if (v.getPropiedad().constructor.name == "Calle")
 			lista.push({'posicion':partida.tablero.getPosicion(v.getPropiedad()), 'tipo':v.getPropiedad().getTipo(), 'nombre':v.getPropiedad().getNombre(),
-				'color':v.getPropiedad().getColor(), 'numCasas':v.getPropiedad().getNumCasas(), 'estado':v.getPropiedad().getEstado().constructor.name})
+				'color':v.getPropiedad().getColor(), 'numCasas':v.getPropiedad().getNumCasas(), 'estado':v.getPropiedad().getEstado().constructor.name,
+				'precio':v.getPropiedad().getPrecio()})
 		else
 			lista.push({'posicion':partida.tablero.getPosicion(v.getPropiedad()), 'tipo':v.getPropiedad().getTipo(), 'nombre':v.getPropiedad().getNombre(),
-				'estado':v.getPropiedad().getEstado().constructor.name})
+				'estado':v.getPropiedad().getEstado().constructor.name, 'precio':v.getPropiedad().getPrecio()})
 	})
 	return lista
 }
 
 function getDatosPartida(ficha){
-	return {"numeroJugadores":partida.getFichas().length, "fasePartida":partida.getFase().constructor.name,	"posicionesFichas":getPosicionesFichas(),
+	var listaFichas = []
+	partida.getFichas().forEach(function (v,i,array){listaFichas[i] = {'color':v.getColor(), 'nombre':v.getUsuario().getNombre(), 'enBancarrota':v.enBancarrota()}})
+
+	return {"fichas":listaFichas, "fasePartida":partida.getFase().constructor.name,	"posicionesFichas":getPosicionesFichas(),
 			"propiedadesGlobales":getPropiedadesPartida()}
 }
 
@@ -60,10 +69,10 @@ function getDatosCasilla(ficha){
 
 	if (temaCasilla.getEstado().constructor.name == "NoComprable")
 		return {"tipo":temaCasilla.getTipo(), "estado":temaCasilla.getEstado().constructor.name, "tarjetaCogida":ficha.getTarjetaCogida(), "impuesto":impuesto,
-				"cobroSalida":ficha.getCobroSalida(), "casillaALaCarcel":ficha.getCasillaALaCarcel()}
+				"cobroSalida":ficha.getCobroSalida(), "casillaALaCarcel":ficha.getCasillaALaCarcel(), "infoPagoAFicha":ficha.getInfoPagoAFicha()}
 	else
 		return {"tipo":temaCasilla.getTipo(), "estado":temaCasilla.getEstado().constructor.name, "nombre":temaCasilla.getNombre(), "precio":temaCasilla.getPrecio(),
-				"cobroSalida":ficha.getCobroSalida(), "tarjetaCogida":ficha.getTarjetaCogida(), "casillaALaCarcel":ficha.getCasillaALaCarcel()}
+				"cobroSalida":ficha.getCobroSalida(), "tarjetaCogida":ficha.getTarjetaCogida(), "casillaALaCarcel":ficha.getCasillaALaCarcel(), "infoPagoAFicha":ficha.getInfoPagoAFicha()}
 }
 
 function getPosicionesFichas(){
@@ -94,7 +103,7 @@ app.get("/reset", function (request, response) {
 	response.redirect("/")
 })
 
-app.get("/getFicha/:uid", function (request, response) {
+app.get("/refrescar/:uid", function (request, response) {
 	var ficha = comprobarJugador(request.params.uid, response)
 	if (ficha){
 		var jsonData = {"error":"0", "datosFicha":getDatosFicha(ficha)}
@@ -109,8 +118,10 @@ app.get("/nuevoJugador/:nombre", function (request, response) {
 
 	if (ficha)
 		jsonData = {"error":"0", "datosFicha":getDatosFicha(ficha)}
+	else if (partida.getFichas().length == 6)
+		jsonData = {"error":"1","msg":"Máximo número de jugadores. No hay fichas disponibles"}
 	else
-		jsonData = {"error":"1","msg":jugador.info}
+		jsonData = {"error":"1","msg":"No se pueden unir más jugadores a la partida " + partida.getNombre()}
 	response.send(jsonData)
 })
 
@@ -124,7 +135,8 @@ app.get("/empezarPartida/:uid", function (request, response) {
 	}	
 })
 
-app.get("/refrescar/:uid", function (request, response) {
+app.get("/empezarPartidaTest/:uid", function (request, response) {
+	partida.calcularPrimerTurno(true)
 	var ficha = comprobarJugador(request.params.uid, response)
 	if (ficha){
 		var jsonData = {"error":"0", "datosFicha":getDatosFicha(ficha)}
@@ -136,52 +148,39 @@ app.get("/lanzarDados/:uid", function (request, response) {
 	var jsonData
 	var ficha = comprobarJugador(request.params.uid, response)
 	if (ficha){
-		var turnoPrev = ficha.getTurnosEnCarcel()
-		var tirada = ficha.lanzarDados()
-		var salidaCarcel = false
-
-		if (turnoPrev > 0 && ficha.getTurnosEnCarcel() == 0) salidaCarcel = true
-
-		if (tirada){
-			jsonData = {"error":"0", "datosFicha":getDatosFicha(ficha),
-				"datosTirada":{"tirada":tirada, "dadosTirados":ficha.getTurno().dadosTirados}, "datosCasilla":getDatosCasilla(ficha), "salidaCarcel":salidaCarcel}
-		}
-		else
-			jsonData = {"error":"1", "msg":"Ya has lanzado los dados en tu turno."}
-		response.send(jsonData)
-		io.emit("nuevaPosicion",{juego:"ok", "uidFicha":ficha.getUsuario().getUid()})
-	}
-})
-
-app.get("/empezarPartidaTest/:uid", function (request, response) {
-	partida.calcularPrimerTurno(true)
-	var ficha = comprobarJugador(request.params.uid, response)
-	if (ficha){
-		var jsonData = {"error":"0", "datosFicha":getDatosFicha(ficha)}
-		response.send(jsonData)
+		lanzarDados(ficha, response)
 	}
 })
 
 app.get("/lanzarDadosTest/:uid/:tirada1/:tirada2", function (request, response) {
-	var jsonData
 	var ficha = comprobarJugador(request.params.uid, response)
 	if (ficha){
-		var turnoPrev = ficha.getTurnosEnCarcel()
-		var tirada = ficha.lanzarDados([parseInt(request.params.tirada1), parseInt(request.params.tirada2)])
-		var salidaCarcel = false
-
-		if (turnoPrev > 0 && ficha.getTurnosEnCarcel() == 0) salidaCarcel = true
-
-		if (tirada){
-			jsonData = {"error":"0", "datosFicha":getDatosFicha(ficha),
-				"datosTirada":{"tirada":tirada, "dadosTirados":ficha.getTurno().dadosTirados, "salidaCarcel":salidaCarcel}, "datosCasilla":getDatosCasilla(ficha)}
-		}
-		else
-			jsonData = {"error":"1", "msg":"Ya has lanzado los dados en tu turno."}
-		response.send(jsonData)
-		io.emit("nuevaPosicion",{juego:"ok", "uidFicha":ficha.getUsuario().getUid()})
+		var tiradaTest = [parseInt(request.params.tirada1), parseInt(request.params.tirada2)]
+		lanzarDados(ficha, response, tiradaTest)
 	}
 })
+
+function lanzarDados(ficha, response, tiradaTest){
+	var jsonData
+	var turnoPrev = ficha.getTurnosEnCarcel()
+	var tirada
+	if (tiradaTest)
+		tirada = ficha.lanzarDados(tiradaTest)
+	else
+		tirada = ficha.lanzarDados()
+
+	var salidaCarcel = false
+	if (turnoPrev > 0 && ficha.getTurnosEnCarcel() == 0) salidaCarcel = true
+
+	if (tirada){
+		jsonData = {"error":"0", "datosFicha":getDatosFicha(ficha),
+			"datosTirada":{"tirada":tirada, "dadosTirados":ficha.getTurno().dadosTirados}, "salidaCarcel":salidaCarcel, "datosCasilla":getDatosCasilla(ficha)}
+	}
+	else
+		jsonData = {"error":"2", "msg":"Ya has lanzado los dados en tu turno."}
+	response.send(jsonData)
+	io.emit("nuevaPosicion",{juego:"ok", "color":ficha.getColor()})
+}
 
 app.get("/comprarPropiedad/:uid", function (request, response) {
 	var ficha = comprobarJugador(request.params.uid, response)
@@ -226,6 +225,37 @@ app.get("/hipotecarPropiedad/:uid/:nombrePropiedad", function (request, response
 	}
 })
 
+app.get("/ofertarVentaPropiedad/:uid/:nombrePropiedad/:colorComprador/:cantidad", function (request, response) {
+	var ficha = comprobarJugador(request.params.uid, response)
+	if (ficha){
+		var jsonData = {"error":"0"}
+		response.send(jsonData)
+		io.emit("ofertaVentaPropiedad",{"colorComprador":request.params.colorComprador, "nombreVendedor":ficha.getUsuario().getNombre(), "colorVendedor":ficha.getColor(), 
+			"nombrePropiedad":request.params.nombrePropiedad, "cantidad":request.params.cantidad})
+	}
+})
+
+app.get("/aceptarOfertaVentaPropiedad/:uid/:nombrePropiedad/:colorVendedor/:cantidad", function (request, response) {
+	var ficha = comprobarJugador(request.params.uid, response)
+	if (ficha){
+		var vendedor = partida.getFichaPorColor(request.params.colorVendedor)
+		var titulo = vendedor.getPropiedad(request.params.nombrePropiedad)
+		vendedor.venderPropiedad(titulo, ficha, parseInt(request.params.cantidad))
+
+		var jsonData
+		// Si aún tiene la propiedad es que no se ha producido la venta
+		if (vendedor.getPropiedad(request.params.nombrePropiedad))
+			jsonData = {"error":"2", "msg":"No se ha podido llevar a cabo la venta de la propiedad porque el vendedor ha pasado su turno"}
+		else{
+			jsonData = {"error":"0", "datosFicha":getDatosFicha(ficha)}
+			io.emit("ventaPropiedad",{"nombreVendedor":vendedor.getUsuario().getNombre(), "colorVendedor":vendedor.getColor(), "nombreComprador":ficha.getUsuario().getNombre(), 
+					"nombrePropiedad":titulo.getPropiedad().getNombre()})
+		}
+
+		response.send(jsonData)
+	}
+})
+
 app.get("/pasarTurno/:uid", function (request, response) {
 	var ficha = comprobarJugador(request.params.uid, response)
 	if (ficha){
@@ -233,7 +263,16 @@ app.get("/pasarTurno/:uid", function (request, response) {
 
 		var jsonData = {"error":"0"}
 		response.send(jsonData)
-		io.emit("cambioTurno",{juego:"ok", "datosFicha":getDatosFicha(ficha)})
+		
+		if (partida.getFase().constructor.name == "FaseFinal"){
+			var ganador = partida.getGanador()
+			if (ganador)
+				io.emit("finPartida",{"nombreGanador":ganador.getUsuario().getNombre()})
+			else
+				io.emit("finPartida",{"nombreGanador":false})
+		}
+		else
+			io.emit("cambioTurno",{juego:"ok"})
 	}
 })
 
@@ -256,7 +295,7 @@ app.get("/pagarSalidaCarcel/:uid", function (request, response) {
 		if (ficha.getTurnosEnCarcel() == 0)
 			jsonData = {"error":"0", "datosFicha":getDatosFicha(ficha)}
 		else
-			jsonData = {"error":"1", "msg":"Saldo insuficiente"}
+			jsonData = {"error":"2", "msg":"Saldo insuficiente"}
 
 		response.send(jsonData)
 	}

@@ -219,13 +219,13 @@ describe("Monopoly",function(){
 				expect(partida.fichas.length).toEqual(numJugadores)
 			});			
 
-			it("Cuando un jugador alcanza los 20.000 pelotis, se acaba la partida", function(){
+			it("Cuando un jugador alcanza los 10.000 pelotis, se acaba la partida", function(){
 				var usr = new modelo.Usuario("Alberto")
 				usr.unirseAPartida(partida)
 				usr.fichas[0].empezarPartida()
 
 				usr.fichas[0].lanzarDados([1,2])
-				usr.fichas[0].cobrar(20000)
+				usr.fichas[0].cobrar(10000)
 				usr.fichas[0].pasarTurno()
 
 				expect(partida.getFase().constructor.name).toEqual("FaseFinal")
@@ -922,6 +922,36 @@ describe("Monopoly",function(){
 
 				});
 
+			});
+		});
+
+		describe("Sprint 6",function(){
+			var partida, ficha1, ficha2
+
+			beforeEach(function(){
+				partida = new modelo.Partida("Partida 1")
+				ficha1 = (new modelo.Usuario("Alberto")).unirseAPartida(partida)
+				ficha2 = (new modelo.Usuario("Pepe")).unirseAPartida(partida)
+				partida.calcularPrimerTurno(true) // El turno es de Alberto, no aleatorio
+			});
+
+			it("Un jugador puede vender una propiedad a otro", function(){
+				ficha1.lanzarDados([0,1])
+				ficha1.comprarPropiedad()
+
+				var titulo = ficha1.getPropiedades()[0]
+				var cantidadVenta = 250
+				var saldoAnterior1 = ficha1.getSaldo()
+				var saldoAnterior2 = ficha2.getSaldo()
+				ficha1.venderPropiedad(titulo, ficha2, cantidadVenta)
+
+				expect(ficha1.getPropiedades().length).toEqual(0)
+				expect(ficha2.getPropiedades().length).toEqual(1)
+				//expect(ficha2.getPropiedades()[0].getPropiedad().getNombre()).toEqual(titulo.getPropiedad().getNombre())
+				expect(ficha2.getPropiedades()[0]).toEqual(titulo)
+				expect(titulo.getPropietario()).toEqual(ficha2)
+				expect(ficha1.getSaldo()).toEqual(saldoAnterior1 + cantidadVenta)
+				expect(ficha2.getSaldo()).toEqual(saldoAnterior2 - cantidadVenta)
 			});
 		});
 	});

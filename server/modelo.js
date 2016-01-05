@@ -1,7 +1,10 @@
 Constantes: {
+	var SALDO_INICIAL = 1500
+	var MAX_SALDO = 10000
 	var DEUDA_NO_REQUERIDA = -1
 	var DEUDA_REQUERIDA = 0
 	var PRECIO_EDIFICAR = 50
+	var EN_BANCARROTA = -1
 }
 
 function FactoryMethod(){
@@ -63,7 +66,19 @@ function Partida(nombre){
 		if (ficha.length == 1)
 			return ficha[0]
 	}
+	this.getFichaPorColor = function(color){
+		for (i in this.fichas)
+			if (this.fichas[i].getColor() == color)
+				return this.fichas[i]
+	}
 	this.getFichas = function(){return this.fichas}
+	this.getGanador = function(){
+		if (this.fase.constructor.name == "FaseFinal")
+			for (i in this.fichas){
+				if (this.fichas[i].esGanador())
+					return this.fichas[i]
+			}
+	}
 
 	this.generarCajaTarjetas = function(){
 		var inicial = [new LibreCarcel(), new Avanzar(4), new Retroceder(4), new Pagar(50), new Cobrar(50)]
@@ -201,14 +216,19 @@ function Partida(nombre){
 		this.fichas[this.turno].setTurno(new NoMeToca()) // Quitamos turno
 
 		if (!this.comprobarGanador()){
-			this.turno = (this.turno + 1) % this.fichas.length
-
-			// Si está en bancarrota pasamos le saltamos
-			if (this.fichas[this.turno].enBancarrota())
+			// Si sólo hay un jugador y está e bancarrota el juego ha terminado
+			if (this.fichas.length == 1 && this.fichas[this.turno].enBancarrota())
+				this.finalizarPartida(undefined)
+			else{
 				this.turno = (this.turno + 1) % this.fichas.length
 
-			this.fichas[this.turno].setTurno(new MeToca()) // Damos el turno al siguiente
-			console.log(this.getNombre() + ":  TURNO DE - " + this.getFichaConTurno().getUsuario().getNombre())
+				// Si está en bancarrota le saltamos
+				if (this.fichas[this.turno].enBancarrota())
+					this.turno = (this.turno + 1) % this.fichas.length
+
+				this.fichas[this.turno].setTurno(new MeToca()) // Damos el turno al siguiente
+				console.log(this.getNombre() + ":  TURNO DE - " + this.getFichaConTurno().getUsuario().getNombre())
+			}
 		}
 	}
 
@@ -217,13 +237,17 @@ function Partida(nombre){
 		var hayGanador = false
 
 		// fichas >= 2 - Para que las partidad de un jugador no gane en el primer turno
-		if (this.fichas.length >= 2 && ganador.length == 1)
-			hayGanador = this.finalizarPartida(ganador[0])
+		if (this.fichas.length >= 2 && ganador.length == 1){
+			this.finalizarPartida(ganador[0])
+			hayGanador = true
+		}
 		else{
-			ganador = this.fichas.filter(function (v,i,array){return v.getSaldo() >= 20000})
+			ganador = this.fichas.filter(function (v,i,array){return v.getSaldo() >= MAX_SALDO})
 
-			if (ganador.length > 0)
-				hayGanador = this.finalizarPartida(ganador[0])
+			if (ganador.length > 0){
+				this.finalizarPartida(ganador[0])
+				hayGanador = true
+			}
 		}
 
 		return hayGanador
@@ -231,10 +255,13 @@ function Partida(nombre){
 
 	this.finalizarPartida = function(ganador){
 		this.fase = new FaseFinal()
-		this.fichas.forEach(function (v,i,array){v.setGanador(ganador == v)})
-		console.log(this.getNombre() + ":  FIN PARTIDA, GANADOR - " + ganador.getUsuario().getNombre())
-
-		return true
+		if (ganador){			
+			this.fichas.forEach(function (v,i,array){v.setGanador(ganador == v)})
+			console.log(this.getNombre() + ":  FIN PARTIDA, GANADOR - " + ganador.getUsuario().getNombre())
+		}
+		else{
+			console.log(this.getNombre() + ":  FIN PARTIDA, NO HA GANDO NADIE")
+		}
 	}
 }
 
@@ -389,7 +416,7 @@ Tablero: {
 			}
 
 			function Libre(){
-				this.caer = function(casilla, ficha){console.log(casilla.getNombre() + " está libre - " + casilla.getPrecio() + " pelotis.")}
+				this.caer = function(casilla, ficha){console.log("      "+casilla.getNombre() + " está libre - " + casilla.getPrecio() + " pelotis.")}
 				this.comprar = function(casilla, ficha){casilla.ejecutarCompra(ficha)}
 				this.edificar = function(casilla, ficha){console.log("Primero tienes que comprar La casilla " + casilla.getTipo())}
 				this.hipotecar = function(casilla,ficha){console.log("Primero tienes que comprar La casilla " + casilla.getTipo())}
@@ -443,6 +470,23 @@ Tablero: {
 					if (this.esPropietario(ficha))
 						this.propiedad.hipotecar(ficha)
 				}
+				this.venderPropiedad = function(ficha, comprador, cantidad){
+					if (this.esPropietario(ficha)){
+						if (comprador.pagar(cantidad, this.propietario)){
+							console.log("   Usuario " + ficha.getUsuario().getNombre() + ":  VENTA DE PROPIEDAD A - " + comprador.getUsuario().getNombre())
+							this.cambiarPropietario(comprador)							
+						}
+					}
+				}
+				this.cambiarPropietario = function(nuevoPropietario){
+					if (this.getPropietario()){
+						console.log("     Propiedad " + this.propiedad.getNombre() + ":  CAMBIO PROPIETARIO - Viejo: " + this.propietario.getUsuario().getNombre() + " Nuevo: " + nuevoPropietario.getUsuario().getNombre())
+						this.propietario.quitarPropiedad(this)
+						this.setPropietario(nuevoPropietario)						
+
+						this.propietario.getPartida().comprobarMonopolio(this.propietario, this.propiedad.getColor())
+					}
+				}
 
 				this.esPropietario = function(ficha){
 					if (this.propietario == ficha)
@@ -489,8 +533,7 @@ Tablero: {
 				this.calcularAlquiler = function(){return this.precio * 0.25 * (this.numCasas + 1)}
 				this.cobrarAlquiler = function(ficha){
 					var alquiler = this.getAlquiler()
-					ficha.setInfo("PAGAR ALQUILER - " + alquiler + " pelotis a " + this.getPropietario().getUsuario().getNombre())
-					console.log("   Usuario " + ficha.getUsuario().getNombre() + ":  PAGAR ALQUILER - " + alquiler + " pelotis")
+					console.log("   Usuario " + ficha.getUsuario().getNombre() + ":  PAGAR ALQUILER A "+this.getPropietario().getUsuario().getNombre()+" - " + alquiler + " pelotis")
 					ficha.pagar(alquiler, this.getPropietario())
 				}
 
@@ -508,7 +551,6 @@ Tablero: {
 					else
 						console.log("   Usuario " + ficha.getUsuario().getNombre() + ":  NO HAY EDIFICIOS")
 				}
-				this.hipotecar = function(ficha){this.estado.hipotecar(this, ficha)}
 
 				this.ejecutarEdificacion = function(ficha){
 					if (ficha.getMonopolios().indexOf(this.color) != -1){
@@ -549,7 +591,7 @@ Tablero: {
 
 					ficha.getPropiedades().forEach(
 						function (v,i,array){
-							if (v.getPropiedad() != calle && v.getPropiedad().getColor() == calle.getColor())
+							if (v.getPropiedad().getTipo() == "Calle" && v.getPropiedad() != calle && v.getPropiedad().getColor() == calle.getColor())
 								if (calle.getNumCasas()+1 > v.getPropiedad().getNumCasas()+1)
 									enOrden =  false			
 						}
@@ -558,6 +600,8 @@ Tablero: {
 					return enOrden
 				}
 
+
+				this.hipotecar = function(ficha){this.estado.hipotecar(this, ficha)}
 				this.ejecutarHipoteca = function(ficha){
 					if (this.numCasas == 0){
 						this.estado = new Hipotecada()
@@ -616,8 +660,8 @@ Tablero: {
 
 				this.edificar = function(ficha){console.log("La " + this.nombre + " no es edificable.")}
 				this.venderEdificio = function(ficha){console.log("La " + this.nombre + " no es edificable.")}
-				this.hipotecar = function(ficha){this.estado.hipotecar(this, ficha)}
 
+				this.hipotecar = function(ficha){this.estado.hipotecar(this, ficha)}
 				this.ejecutarHipoteca = function(ficha){
 					this.estado = new Hipotecada()
 					ficha.cobrar(PRECIO_EDIFICAR * 0.5)
@@ -821,6 +865,7 @@ Jugadores: {
 				ficha.setCobroSalida(false)
 				ficha.setTarjetaCogida(false)
 				ficha.casillaALaCarel = false
+				ficha.infoPagoAFicha = undefined
 
 				if (!this.dadosTirados){
 					var tirada
@@ -842,7 +887,6 @@ Jugadores: {
 								}
 								else{
 									partida.moverFicha(ficha, tirada[0] + tirada[1])
-									//ficha.setInfo("DADOS - " + "dobles, ¡TIRA OTRA VEZ!")
 								}
 							}
 							else{
@@ -922,6 +966,10 @@ Jugadores: {
 					if (this.puedeRelizarOperacion(ficha))
 						titulo.hipotecarPropiedad(ficha)
 				}
+				this.venderPropiedad = function(titulo, ficha, comprador, cantidad){
+					if (this.puedeRelizarOperacion(ficha))
+						titulo.venderPropiedad(ficha, comprador, cantidad)
+				}
 			}
 
 			this.pasarTurno = function(partida, ficha){
@@ -946,6 +994,7 @@ Jugadores: {
 			this.edificar = function(titulo, ficha){console.log("   Usuario " + ficha.getUsuario().getNombre() + ":  ESPERA TU TURNO")}
 			this.venderEdificio = function(titulo, ficha){console.log("   Usuario " + ficha.getUsuario().getNombre() + ":  ESPERA TU TURNO")}
 			this.hipotecarPropiedad = function(titulo, ficha){console.log("   Usuario " + ficha.getUsuario().getNombre() + ":  ESPERA TU TURNO")}
+			this.venderPropiedad = function(titulo, ficha, comprador, cantidad){console.log("   Usuario " + ficha.getUsuario().getNombre() + ":  ESPERA TU TURNO")}
 			this.pasarTurno = function(partida, ficha){console.log("   Usuario " + ficha.getUsuario().getNombre() + ":  ESPERA TU TURNO")}		
 		}
 	}
@@ -958,9 +1007,10 @@ Jugadores: {
 		this.tarjetaCogida
 		this.cobroSalida = false
 		this.casillaALaCarel = false
+		this.infoPagoAFicha
 
 		this.color = color
-		this.saldo = 1500
+		this.saldo = SALDO_INICIAL
 		this.posicion = 0
 		this.propiedades = []
 		this.monopolios = []
@@ -970,16 +1020,8 @@ Jugadores: {
 		this.deudas = [] // En caso de que el jugador pase turno con deudas pendientes se le declara en bancarrota
 		this.ganador // Undefined hasta que termine la partida
 		this.tarjetaLibreCarcel = false
-
-		this.getUsuario = function(){return this.usuario}
-		this.getPartida = function(){return this.partida}
-		this.getInfo = function(){return this.info}
-		this.setInfo = function(info){
-			if (this.info.length == 8){
-				this.info.shift()
-			}
-			this.info.push(info)
-		}
+		
+		// Información para web
 		this.setTarjetaCogida = function(tarjeta){this.tarjetaCogida = tarjeta}
 		this.getTarjetaCogida = function(){
 			if (this.tarjetaCogida)	return this.tarjetaCogida.msg
@@ -988,6 +1030,11 @@ Jugadores: {
 		this.setCobroSalida = function(valor){this.cobroSalida = valor}
 		this.getCobroSalida = function(){return this.cobroSalida}
 		this.getCasillaALaCarcel = function(){return this.casillaALaCarel}
+		this.getInfoPagoAFicha = function(){return this.infoPagoAFicha}
+		// Información para web
+
+		this.getUsuario = function(){return this.usuario}
+		this.getPartida = function(){return this.partida}
 		this.getColor = function(){return this.color}
 		this.getSaldo = function(){return this.saldo}
 		this.getPosicion = function(){return this.posicion}
@@ -998,6 +1045,10 @@ Jugadores: {
 		}
 		this.getPropiedades = function(){return this.propiedades}
 		this.asignarPropiedad = function(titulo){this.propiedades.push(titulo)}
+		this.quitarPropiedad = function(titulo){
+			var i = this.propiedades.indexOf(titulo)
+			if (i != -1) this.propiedades.splice(i,1)
+		}
 		this.getMonopolios = function(){return this.monopolios}
 		this.setMonopolio = function(color){
 			if (this.monopolios.indexOf(color) == -1)
@@ -1014,7 +1065,12 @@ Jugadores: {
 		this.setTarjetaLibreCarcel = function(valor){this.tarjetaLibreCarcel = valor}
 		this.tieneTarjetaLibreCarcel = function(){return this.tarjetaLibreCarcel}
 		this.getDeudas = function(){return this.deudas}
-		this.declararEnBancarrota = function(){this.bancarrota = true}
+		this.declararEnBancarrota = function(){
+			this.bancarrota = true
+			this.saldo = EN_BANCARROTA
+			this.posicion = -1 // Fuera del tablero
+			this.deudas = []
+		}
 		this.enBancarrota = function(){return this.bancarrota}
 		this.setGanador = function(resultado){this.ganador = resultado}
 		this.esGanador = function(){return this.ganador}
@@ -1028,14 +1084,17 @@ Jugadores: {
 		this.edificar = function(titulo){this.turno.edificar(titulo, this)}
 		this.venderEdificio = function(titulo){this.turno.venderEdificio(titulo, this)}
 		this.hipotecarPropiedad = function(titulo){this.turno.hipotecarPropiedad(titulo, this)}
+		this.venderPropiedad = function(titulo, comprador, cantidad){this.turno.venderPropiedad(titulo, this, comprador, cantidad)}
 		//this.hipotecarPropiedad = function(titulo){this.propiedades[this.propiedades.indexOf(titulo)].hipotecar()}
 		this.pasarTurno = function(){this.turno.pasarTurno(partida, this)}
 
 		this.pagar = function(cantidad, receptorDelPago){
 			var aux = this.saldo - cantidad
-			if (aux >= 0){
-				if (receptorDelPago && receptorDelPago.constructor.name == "Ficha")
+			if (aux >= 0){ // Puede pagar?
+				if (receptorDelPago && receptorDelPago.constructor.name == "Ficha"){
 					receptorDelPago.cobrar(cantidad)
+					this.infoPagoAFicha = {'receptor':receptorDelPago.getUsuario().getNombre(), 'cantidad':cantidad}
+				}
 
 				console.log("   Usuario " + this.getUsuario().getNombre() + ":  SALDO - " + this.saldo + " - " + cantidad + " = " + aux)
 				this.saldo = aux
@@ -1043,8 +1102,8 @@ Jugadores: {
 			}
 			else{
 				// Receptores:
-				// -1: es un pago que no sólo se anula
-				// 0: el receptor es el banco
+				// DEUDA_NO_REQUERIDA: es un pago opcional del jugador como por ejemplo la compra de una propiedad
+				// DEUDA_REQUERIDA: el receptor es el banco
 				// ficha: el receptor es otro jugador
 				if (receptorDelPago == DEUDA_NO_REQUERIDA)
 					console.log("   Usuario " + this.getUsuario().getNombre() + ":  SALDO INSUFICIENTE PARA LA OPERACIÓN")
