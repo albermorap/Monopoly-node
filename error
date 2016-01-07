@@ -1,0 +1,1248 @@
+.............Partida Partida 1:  NUEVO JUGADOR - Alberto
+Partida Partida 1:  NUEVO JUGADOR - Alberto
+Partida Partida 1:  NUEVO JUGADOR - Alberto
+Partida Partida 1:  NUEVO JUGADOR - Alberto
+Partida Partida 1:  NUEVO JUGADOR - Alberto
+Partida Partida 1:  NUEVO JUGADOR - Alberto
+.Partida Partida 1:  NUEVO JUGADOR - Alberto
+Partida Partida 1:  NUEVO JUGADOR - Alberto
+Partida Partida 1:  NUEVO JUGADOR - Alberto
+Partida Partida 1:  NUEVO JUGADOR - Alberto
+Partida Partida 1:  NUEVO JUGADOR - Alberto
+Partida Partida 1:  NUEVO JUGADOR - Alberto
+.Partida Partida 1:  NUEVO JUGADOR - Alberto
+   Usuario Alberto:  ESPERA TU TURNO
+.Partida Partida 1:  NUEVO JUGADOR - Alberto
+Partida Partida 1:  PRIMER TURNO - Alberto
+Partida Partida 1:  COMIENZA
+.Partida Partida 1:  NUEVO JUGADOR - Alberto
+Partida Partida 1:  PRIMER TURNO - Alberto
+Partida Partida 1:  COMIENZA
+   Usuario Alberto:  DADOS - 1 + 2
+   Usuario Alberto:  HA CAIDO EN CASILLA - 3
+      Plaza Lavapies está libre - 60 pelotis.
+   Usuario Alberto:  SALDO - 1500 + 10000 = 11500
+Partida Partida 1:  FIN PARTIDA, GANADOR - Alberto
+.Partida Partida 1:  NUEVO JUGADOR - Alberto
+Partida Partida 1:  NUEVO JUGADOR - Pepe
+Partida Partida 1:  PRIMER TURNO - Alberto
+   Usuario Alberto:  SALDO - 1500 - 1500 = 0
+   Usuario Alberto:  DADOS - 0 + 4
+   Usuario Alberto:  HA CAIDO EN CASILLA - 4
+   Usuario Alberto:  PAGAR IMPUESTO - 200 pelotis
+   Usuario Alberto:  SALDO INSUFICIENTE
+   Usuario Alberto:  DECLARADO EN BANCARROTA
+Partida Partida 1:  FIN PARTIDA, GANADOR - Pepe
+.Partida Partida 1:  NUEVO JUGADOR - Alberto
+Partida Partida 1:  NUEVO JUGADOR - Pepe
+Partida Partida 1:  PRIMER TURNO - Alberto
+   Usuario Pepe:  ESPERA TU TURNO
+.Partida Partida 1:  NUEVO JUGADOR - Alberto
+Partida Partida 1:  NUEVO JUGADOR - Pepe
+Partida Partida 1:  PRIMER TURNO - Alberto
+   Usuario Alberto:  TIRA LOS DADOS ANTES
+.Partida Partida 1:  NUEVO JUGADOR - Alberto
+Partida Partida 1:  NUEVO JUGADOR - Pepe
+Partida Partida 1:  PRIMER TURNO - Alberto
+   Usuario Alberto:  DADOS - 1 + 2
+   Usuario Alberto:  HA CAIDO EN CASILLA - 3
+      Plaza Lavapies está libre - 60 pelotis.
+Partida Partida 1:  TURNO DE - Pepe
+   Usuario Pepe:  DADOS - 1 + 2
+   Usuario Pepe:  HA CAIDO EN CASILLA - 3
+      Plaza Lavapies está libre - 60 pelotis.
+Partida Partida 1:  TURNO DE - Alberto
+.Partida Partida 1:  NUEVO JUGADOR - Alberto
+Partida Partida 1:  NUEVO JUGADOR - Pepe
+Partida Partida 1:  PRIMER TURNO - Alberto
+   Usuario Alberto:  DADOS - 2 + 2
+   Usuario Alberto:  HA CAIDO EN CASILLA - 4
+   Usuario Alberto:  PAGAR IMPUESTO - 200 pelotis
+   Usuario Alberto:  SALDO - 1500 - 200 = 1300
+   Usuario Alberto:  DADOS - 2 + 5
+   Usuario Alberto:  HA CAIDO EN CASILLA - 11
+      Glorieta de Bilbao está libre - 140 pelotis.
+.Partida Partida 1:  NUEVO JUGADOR - Alberto
+Partida Partida 1:  NUEVO JUGADOR - Pepe
+Partida Partida 1:  PRIMER TURNO - Alberto
+   Usuario Alberto:  DADOS - 0 + 1
+   Usuario Alberto:  HA CAIDO EN CASILLA - 1
+      Ronda de Valencia está libre - 60 pelotis.
+   Usuario Alberto:  HA CAIDO EN CASILLA - 10
+   Usuario Alberto:  ENCARCELADO POR 3 TURNOS
+Partida Partida 1:  TURNO DE - Pepe
+   Usuario Pepe:  DADOS - 0 + 1
+   Usuario Pepe:  HA CAIDO EN CASILLA - 1
+      Ronda de Valencia está libre - 60 pelotis.
+Partida Partida 1:  TURNO DE - Alberto
+   Usuario Alberto:  DADOS - 1 + 2
+   Usuario Alberto:  DADOS - no dobles, te quedan 2 turnos en la cárcel
+Partida Partida 1:  TURNO DE - Pepe
+   Usuario Pepe:  DADOS - 0 + 1
+   Usuario Pepe:  HA CAIDO EN CASILLA - 2
+   Usuario Pepe:  TARJETA PAGAR - 50 pelotis
+   Usuario Pepe:  SALDO - 1500 - 50 = 1450
+Partida Partida 1:  TURNO DE - Alberto
+   Usuario Alberto:  DADOS - 1 + 2
+   Usuario Alberto:  DADOS - no dobles, te quedan 1 turnos en la cárcel
+Partida Partida 1:  TURNO DE - Pepe
+   Usuario Pepe:  DADOS - 0 + 1
+   Usuario Pepe:  HA CAIDO EN CASILLA - 3
+      Plaza Lavapies está libre - 60 pelotis.
+Partida Partida 1:  TURNO DE - Alberto
+   Usuario Alberto:  DADOS - 1 + 2
+   Usuario Alberto:  SALES DE LA CÁRCEL - pagando 50 pelotis
+   Usuario Alberto:  SALDO - 1500 - 50 = 1450
+   Usuario Alberto:  HA CAIDO EN CASILLA - 13
+      Calle Alberto Aguilera está libre - 140 pelotis.
+Partida Partida 1:  TURNO DE - Pepe
+.Partida Partida 1:  NUEVO JUGADOR - Alberto
+Partida Partida 1:  NUEVO JUGADOR - Pepe
+Partida Partida 1:  PRIMER TURNO - Alberto
+   Usuario Alberto:  DADOS - 2 + 2
+   Usuario Alberto:  HA CAIDO EN CASILLA - 4
+   Usuario Alberto:  PAGAR IMPUESTO - 200 pelotis
+   Usuario Alberto:  SALDO - 1500 - 200 = 1300
+   Usuario Alberto:  DADOS - 2 + 2
+   Usuario Alberto:  HA CAIDO EN CASILLA - 8
+      Avenida Reina Victoria está libre - 100 pelotis.
+   Usuario Alberto:  DADOS - 2 + 2
+   Usuario Alberto:  DADOS - tres dobles, ¡A LA CÁRCEL!
+   Usuario Alberto:  HA CAIDO EN CASILLA - 10
+   Usuario Alberto:  ENCARCELADO POR 3 TURNOS
+Partida Partida 1:  TURNO DE - Pepe
+.Partida Partida 1:  NUEVO JUGADOR - Alberto
+Partida Partida 1:  NUEVO JUGADOR - Pepe
+Partida Partida 1:  PRIMER TURNO - Alberto
+   Usuario Alberto:  DADOS - 0 + 1
+   Usuario Alberto:  HA CAIDO EN CASILLA - 1
+      Ronda de Valencia está libre - 60 pelotis.
+   Usuario Alberto:  HA CAIDO EN CASILLA - 10
+   Usuario Alberto:  ENCARCELADO POR 3 TURNOS
+Partida Partida 1:  TURNO DE - Pepe
+   Usuario Pepe:  DADOS - 0 + 1
+   Usuario Pepe:  HA CAIDO EN CASILLA - 1
+      Ronda de Valencia está libre - 60 pelotis.
+Partida Partida 1:  TURNO DE - Alberto
+   Usuario Alberto:  DADOS - 1 + 1
+   Usuario Alberto:  DADOS - dobles, ¡SALES DE LA CÁRCEL!
+   Usuario Alberto:  HA CAIDO EN CASILLA - 12
+      Compañia de Electricidad está libre - 150 pelotis.
+   Usuario Alberto:  DADOS - lanzados ya
+.Partida Partida 1:  NUEVO JUGADOR - Alberto
+Partida Partida 1:  NUEVO JUGADOR - Pepe
+Partida Partida 1:  PRIMER TURNO - Alberto
+   Usuario Alberto:  DADOS - 0 + 2
+   Usuario Alberto:  HA CAIDO EN CASILLA - 2
+   Usuario Alberto:  TARJETA LIBRE CÁRCEL - obtiene la tarjeta
+   Usuario Alberto:  HA CAIDO EN CASILLA - 10
+   Usuario Alberto:  ENCARCELADO POR 3 TURNOS
+Partida Partida 1:  TURNO DE - Pepe
+   Usuario Pepe:  DADOS - 0 + 1
+   Usuario Pepe:  HA CAIDO EN CASILLA - 1
+      Ronda de Valencia está libre - 60 pelotis.
+Partida Partida 1:  TURNO DE - Alberto
+   Usuario Alberto:  SALE DE LA CÁRCEL CON TARJETA
+   Usuario Alberto:  DADOS - 1 + 2
+   Usuario Alberto:  HA CAIDO EN CASILLA - 13
+      Calle Alberto Aguilera está libre - 140 pelotis.
+.Partida Partida 1:  NUEVO JUGADOR - Alberto
+Partida Partida 1:  NUEVO JUGADOR - Pepe
+Partida Partida 1:  PRIMER TURNO - Alberto
+   Usuario Alberto:  SALDO INSUFICIENTE
+.Partida Partida 1:  NUEVO JUGADOR - Alberto
+Partida Partida 1:  NUEVO JUGADOR - Pepe
+Partida Partida 1:  PRIMER TURNO - Alberto
+   Usuario Alberto:  SALDO INSUFICIENTE
+.Partida Partida 1:  NUEVO JUGADOR - Alberto
+Partida Partida 1:  NUEVO JUGADOR - Pepe
+Partida Partida 1:  PRIMER TURNO - Alberto
+   Usuario Alberto:  SALDO - 1500 - 1500 = 0
+   Usuario Alberto:  DADOS - 0 + 1
+   Usuario Alberto:  HA CAIDO EN CASILLA - 1
+      Ronda de Valencia está libre - 60 pelotis.
+   Usuario Alberto:  SALDO INSUFICIENTE PARA LA OPERACIÓN
+.Partida Partida 1:  NUEVO JUGADOR - Alberto
+Partida Partida 1:  NUEVO JUGADOR - Pepe
+Partida Partida 1:  PRIMER TURNO - Alberto
+   Usuario Alberto:  DADOS - 0 + 1
+   Usuario Alberto:  HA CAIDO EN CASILLA - 1
+      Ronda de Valencia está libre - 60 pelotis.
+   Usuario Alberto:  SALDO - 1500 - 60 = 1440
+   Usuario Alberto:  PROPIEDAD COMPRADA - Ronda de Valencia
+Partida Partida 1:  TURNO DE - Pepe
+   Usuario Pepe:  SALDO - 1500 - 1500 = 0
+   Usuario Pepe:  DADOS - 0 + 1
+   Usuario Pepe:  HA CAIDO EN CASILLA - 1
+   Usuario Pepe:  PAGAR ALQUILER A Alberto - 15 pelotis
+   Usuario Pepe:  SALDO INSUFICIENTE PARA ALQUILER
+   Usuario Pepe:  SALDO - 0 + 15 = 15
+   Usuario Alberto:  SALDO - 1440 + 15 = 1455
+   Usuario Pepe:  SALDO - 15 - 15 = 0
+.Partida Partida 1:  NUEVO JUGADOR - Alberto
+Partida Partida 1:  NUEVO JUGADOR - Pepe
+Partida Partida 1:  PRIMER TURNO - Alberto
+   Usuario Alberto:  SALDO - 1500 - 1500 = 0
+   Usuario Alberto:  DADOS - 0 + 4
+   Usuario Alberto:  HA CAIDO EN CASILLA - 4
+   Usuario Alberto:  PAGAR IMPUESTO - 200 pelotis
+   Usuario Alberto:  SALDO INSUFICIENTE
+   Usuario Alberto:  DECLARADO EN BANCARROTA
+Partida Partida 1:  FIN PARTIDA, GANADOR - Pepe
+.Partida Partida 1:  NUEVO JUGADOR - Alberto
+Partida Partida 1:  NUEVO JUGADOR - Jesus
+Partida Partida 1:  PRIMER TURNO - Alberto
+   Usuario Alberto:  DADOS - 0 + 1
+   Usuario Alberto:  HA CAIDO EN CASILLA - 1
+      Ronda de Valencia está libre - 60 pelotis.
+.Partida Partida 1:  NUEVO JUGADOR - Alberto
+Partida Partida 1:  NUEVO JUGADOR - Jesus
+Partida Partida 1:  PRIMER TURNO - Alberto
+   Usuario Alberto:  HA CAIDO EN CASILLA - 39
+      Paseo del Prado está libre - 400 pelotis.
+   Usuario Alberto:  HA CAIDO EN CASILLA - 1
+   Usuario Alberto:  HA PASADO POR LA CASILLA DE SALIDA - cobra 200 pelotis
+   Usuario Alberto:  SALDO - 1500 + 200 = 1700
+      Ronda de Valencia está libre - 60 pelotis.
+.Partida Partida 1:  NUEVO JUGADOR - Alberto
+Partida Partida 1:  NUEVO JUGADOR - Jesus
+Partida Partida 1:  PRIMER TURNO - Alberto
+   Usuario Alberto:  HA CAIDO EN CASILLA - 0
+   Usuario Alberto:  HA PASADO POR LA CASILLA DE SALIDA - cobra 200 pelotis
+   Usuario Alberto:  SALDO - 1500 + 200 = 1700
+.Partida Partida 1:  NUEVO JUGADOR - Alberto
+Partida Partida 1:  NUEVO JUGADOR - Jesus
+Partida Partida 1:  PRIMER TURNO - Alberto
+   Usuario Alberto:  HA CAIDO EN CASILLA - 39
+      Paseo del Prado está libre - 400 pelotis.
+   Usuario Alberto:  HA CAIDO EN CASILLA - 1
+   Usuario Alberto:  HA PASADO POR LA CASILLA DE SALIDA - cobra 200 pelotis
+   Usuario Alberto:  SALDO - 1500 + 200 = 1700
+      Ronda de Valencia está libre - 60 pelotis.
+.Partida Partida 1:  NUEVO JUGADOR - Alberto
+Partida Partida 1:  NUEVO JUGADOR - Jesus
+Partida Partida 1:  PRIMER TURNO - Alberto
+   Usuario Alberto:  HA CAIDO EN CASILLA - 4
+   Usuario Alberto:  PAGAR IMPUESTO - 200 pelotis
+   Usuario Alberto:  SALDO - 1500 - 200 = 1300
+.Partida Partida 1:  NUEVO JUGADOR - Alberto
+Partida Partida 1:  NUEVO JUGADOR - Jesus
+Partida Partida 1:  PRIMER TURNO - Alberto
+   Usuario Alberto:  HA CAIDO EN CASILLA - 30
+   Usuario Alberto:  A LA CÁRCEL!!
+   Usuario Alberto:  HA CAIDO EN CASILLA - 10
+   Usuario Alberto:  ENCARCELADO POR 3 TURNOS
+Partida Partida 1:  TURNO DE - Jesus
+.Partida Partida 1:  NUEVO JUGADOR - Alberto
+Partida Partida 1:  NUEVO JUGADOR - Jesus
+Partida Partida 1:  PRIMER TURNO - Alberto
+   Usuario Alberto:  DADOS - 0 + 1
+   Usuario Alberto:  HA CAIDO EN CASILLA - 1
+      Ronda de Valencia está libre - 60 pelotis.
+   Usuario Alberto:  SALDO - 1500 - 60 = 1440
+   Usuario Alberto:  PROPIEDAD COMPRADA - Ronda de Valencia
+.Partida Partida 1:  NUEVO JUGADOR - Alberto
+Partida Partida 1:  NUEVO JUGADOR - Jesus
+Partida Partida 1:  PRIMER TURNO - Alberto
+   Usuario Alberto:  DADOS - 0 + 1
+   Usuario Alberto:  HA CAIDO EN CASILLA - 1
+      Ronda de Valencia está libre - 60 pelotis.
+   Usuario Alberto:  SALDO - 1500 - 60 = 1440
+   Usuario Alberto:  PROPIEDAD COMPRADA - Ronda de Valencia
+Partida Partida 1:  TURNO DE - Jesus
+   Usuario Jesus:  DADOS - 0 + 1
+   Usuario Jesus:  HA CAIDO EN CASILLA - 1
+   Usuario Jesus:  PAGAR ALQUILER A Alberto - 15 pelotis
+   Usuario Alberto:  SALDO - 1440 + 15 = 1455
+   Usuario Jesus:  SALDO - 1500 - 15 = 1485
+La Ronda de Valencia ya está comprada.
+.Partida Partida 1:  NUEVO JUGADOR - Alberto
+Partida Partida 1:  NUEVO JUGADOR - Jesus
+Partida Partida 1:  PRIMER TURNO - Alberto
+   Usuario Alberto:  DADOS - 0 + 1
+   Usuario Alberto:  HA CAIDO EN CASILLA - 1
+      Ronda de Valencia está libre - 60 pelotis.
+   Usuario Alberto:  SALDO - 1500 - 60 = 1440
+   Usuario Alberto:  PROPIEDAD COMPRADA - Ronda de Valencia
+Partida Partida 1:  TURNO DE - Jesus
+   Usuario Jesus:  DADOS - 0 + 1
+   Usuario Jesus:  HA CAIDO EN CASILLA - 1
+   Usuario Jesus:  PAGAR ALQUILER A Alberto - 15 pelotis
+   Usuario Alberto:  SALDO - 1440 + 15 = 1455
+   Usuario Jesus:  SALDO - 1500 - 15 = 1485
+.Partida Partida 1:  NUEVO JUGADOR - Alberto
+Partida Partida 1:  NUEVO JUGADOR - Jesus
+Partida Partida 1:  PRIMER TURNO - Alberto
+   Usuario Alberto:  DADOS - 0 + 1
+   Usuario Alberto:  HA CAIDO EN CASILLA - 1
+      Ronda de Valencia está libre - 60 pelotis.
+   Usuario Alberto:  SALDO - 1500 - 60 = 1440
+   Usuario Alberto:  PROPIEDAD COMPRADA - Ronda de Valencia
+   Usuario Alberto:  SALDO - 1440 + 60 = 1500
+Partida Partida 1:  TURNO DE - Jesus
+   Usuario Jesus:  DADOS - 0 + 40
+   Usuario Jesus:  HA CAIDO EN CASILLA - 0
+   Usuario Jesus:  HA PASADO POR LA CASILLA DE SALIDA - cobra 200 pelotis
+   Usuario Jesus:  SALDO - 1500 + 200 = 1700
+Partida Partida 1:  TURNO DE - Alberto
+   Usuario Alberto:  DADOS - 0 + 2
+   Usuario Alberto:  HA CAIDO EN CASILLA - 3
+      Plaza Lavapies está libre - 60 pelotis.
+   Usuario Alberto:  SALDO - 1500 - 60 = 1440
+   Usuario Alberto:  PROPIEDAD COMPRADA - Plaza Lavapies
+   Usuario Alberto:  MONOPOLIO - marron
+   Usuario Alberto:  SALDO - 1440 + 60 = 1500
+Partida Partida 1:  TURNO DE - Jesus
+   Usuario Jesus:  DADOS - 0 + 40
+   Usuario Jesus:  HA CAIDO EN CASILLA - 0
+   Usuario Jesus:  HA PASADO POR LA CASILLA DE SALIDA - cobra 200 pelotis
+   Usuario Jesus:  SALDO - 1700 + 200 = 1900
+Partida Partida 1:  TURNO DE - Alberto
+   Usuario Alberto:  DADOS - 0 + 3
+   Usuario Alberto:  HA CAIDO EN CASILLA - 6
+      Glorieta Cuatro Caminos está libre - 100 pelotis.
+   Usuario Alberto:  SALDO - 1500 - 100 = 1400
+   Usuario Alberto:  PROPIEDAD COMPRADA - Glorieta Cuatro Caminos
+   Usuario Alberto:  SALDO - 1400 + 100 = 1500
+Partida Partida 1:  TURNO DE - Jesus
+   Usuario Jesus:  DADOS - 0 + 40
+   Usuario Jesus:  HA CAIDO EN CASILLA - 0
+   Usuario Jesus:  HA PASADO POR LA CASILLA DE SALIDA - cobra 200 pelotis
+   Usuario Jesus:  SALDO - 1900 + 200 = 2100
+Partida Partida 1:  TURNO DE - Alberto
+   Usuario Alberto:  DADOS - 0 + 2
+   Usuario Alberto:  HA CAIDO EN CASILLA - 8
+      Avenida Reina Victoria está libre - 100 pelotis.
+   Usuario Alberto:  SALDO - 1500 - 100 = 1400
+   Usuario Alberto:  PROPIEDAD COMPRADA - Avenida Reina Victoria
+   Usuario Alberto:  SALDO - 1400 + 100 = 1500
+Partida Partida 1:  TURNO DE - Jesus
+   Usuario Jesus:  DADOS - 0 + 40
+   Usuario Jesus:  HA CAIDO EN CASILLA - 0
+   Usuario Jesus:  HA PASADO POR LA CASILLA DE SALIDA - cobra 200 pelotis
+   Usuario Jesus:  SALDO - 2100 + 200 = 2300
+Partida Partida 1:  TURNO DE - Alberto
+   Usuario Alberto:  DADOS - 0 + 1
+   Usuario Alberto:  HA CAIDO EN CASILLA - 9
+      Calle Bravo Murillo está libre - 120 pelotis.
+   Usuario Alberto:  SALDO - 1500 - 120 = 1380
+   Usuario Alberto:  PROPIEDAD COMPRADA - Calle Bravo Murillo
+   Usuario Alberto:  MONOPOLIO - azulClaro
+   Usuario Alberto:  SALDO - 1380 + 120 = 1500
+Partida Partida 1:  TURNO DE - Jesus
+   Usuario Jesus:  DADOS - 0 + 40
+   Usuario Jesus:  HA CAIDO EN CASILLA - 0
+   Usuario Jesus:  HA PASADO POR LA CASILLA DE SALIDA - cobra 200 pelotis
+   Usuario Jesus:  SALDO - 2300 + 200 = 2500
+Partida Partida 1:  TURNO DE - Alberto
+   Usuario Alberto:  DADOS - 0 + 2
+   Usuario Alberto:  HA CAIDO EN CASILLA - 11
+      Glorieta de Bilbao está libre - 140 pelotis.
+   Usuario Alberto:  SALDO - 1500 - 140 = 1360
+   Usuario Alberto:  PROPIEDAD COMPRADA - Glorieta de Bilbao
+   Usuario Alberto:  SALDO - 1360 + 140 = 1500
+Partida Partida 1:  TURNO DE - Jesus
+   Usuario Jesus:  DADOS - 0 + 40
+   Usuario Jesus:  HA CAIDO EN CASILLA - 0
+   Usuario Jesus:  HA PASADO POR LA CASILLA DE SALIDA - cobra 200 pelotis
+   Usuario Jesus:  SALDO - 2500 + 200 = 2700
+Partida Partida 1:  TURNO DE - Alberto
+   Usuario Alberto:  DADOS - 0 + 2
+   Usuario Alberto:  HA CAIDO EN CASILLA - 13
+      Calle Alberto Aguilera está libre - 140 pelotis.
+   Usuario Alberto:  SALDO - 1500 - 140 = 1360
+   Usuario Alberto:  PROPIEDAD COMPRADA - Calle Alberto Aguilera
+   Usuario Alberto:  SALDO - 1360 + 140 = 1500
+Partida Partida 1:  TURNO DE - Jesus
+   Usuario Jesus:  DADOS - 0 + 40
+   Usuario Jesus:  HA CAIDO EN CASILLA - 0
+   Usuario Jesus:  HA PASADO POR LA CASILLA DE SALIDA - cobra 200 pelotis
+   Usuario Jesus:  SALDO - 2700 + 200 = 2900
+Partida Partida 1:  TURNO DE - Alberto
+   Usuario Alberto:  DADOS - 0 + 1
+   Usuario Alberto:  HA CAIDO EN CASILLA - 14
+      Calle Fuencarral está libre - 160 pelotis.
+   Usuario Alberto:  SALDO - 1500 - 160 = 1340
+   Usuario Alberto:  PROPIEDAD COMPRADA - Calle Fuencarral
+   Usuario Alberto:  MONOPOLIO - rosa
+   Usuario Alberto:  SALDO - 1340 + 160 = 1500
+Partida Partida 1:  TURNO DE - Jesus
+   Usuario Jesus:  DADOS - 0 + 40
+   Usuario Jesus:  HA CAIDO EN CASILLA - 0
+   Usuario Jesus:  HA PASADO POR LA CASILLA DE SALIDA - cobra 200 pelotis
+   Usuario Jesus:  SALDO - 2900 + 200 = 3100
+Partida Partida 1:  TURNO DE - Alberto
+   Usuario Alberto:  DADOS - 0 + 2
+   Usuario Alberto:  HA CAIDO EN CASILLA - 16
+      Avenida Felipe II está libre - 180 pelotis.
+   Usuario Alberto:  SALDO - 1500 - 180 = 1320
+   Usuario Alberto:  PROPIEDAD COMPRADA - Avenida Felipe II
+   Usuario Alberto:  SALDO - 1320 + 180 = 1500
+Partida Partida 1:  TURNO DE - Jesus
+   Usuario Jesus:  DADOS - 0 + 40
+   Usuario Jesus:  HA CAIDO EN CASILLA - 0
+   Usuario Jesus:  HA PASADO POR LA CASILLA DE SALIDA - cobra 200 pelotis
+   Usuario Jesus:  SALDO - 3100 + 200 = 3300
+Partida Partida 1:  TURNO DE - Alberto
+   Usuario Alberto:  DADOS - 0 + 2
+   Usuario Alberto:  HA CAIDO EN CASILLA - 18
+      Calle Velazquez está libre - 180 pelotis.
+   Usuario Alberto:  SALDO - 1500 - 180 = 1320
+   Usuario Alberto:  PROPIEDAD COMPRADA - Calle Velazquez
+   Usuario Alberto:  SALDO - 1320 + 180 = 1500
+Partida Partida 1:  TURNO DE - Jesus
+   Usuario Jesus:  DADOS - 0 + 40
+   Usuario Jesus:  HA CAIDO EN CASILLA - 0
+   Usuario Jesus:  HA PASADO POR LA CASILLA DE SALIDA - cobra 200 pelotis
+   Usuario Jesus:  SALDO - 3300 + 200 = 3500
+Partida Partida 1:  TURNO DE - Alberto
+   Usuario Alberto:  DADOS - 0 + 1
+   Usuario Alberto:  HA CAIDO EN CASILLA - 19
+      Calle Serrano está libre - 200 pelotis.
+   Usuario Alberto:  SALDO - 1500 - 200 = 1300
+   Usuario Alberto:  PROPIEDAD COMPRADA - Calle Serrano
+   Usuario Alberto:  MONOPOLIO - naranja
+   Usuario Alberto:  SALDO - 1300 + 200 = 1500
+Partida Partida 1:  TURNO DE - Jesus
+   Usuario Jesus:  DADOS - 0 + 40
+   Usuario Jesus:  HA CAIDO EN CASILLA - 0
+   Usuario Jesus:  HA PASADO POR LA CASILLA DE SALIDA - cobra 200 pelotis
+   Usuario Jesus:  SALDO - 3500 + 200 = 3700
+Partida Partida 1:  TURNO DE - Alberto
+   Usuario Alberto:  DADOS - 0 + 2
+   Usuario Alberto:  HA CAIDO EN CASILLA - 21
+      Avenida de America está libre - 220 pelotis.
+   Usuario Alberto:  SALDO - 1500 - 220 = 1280
+   Usuario Alberto:  PROPIEDAD COMPRADA - Avenida de America
+   Usuario Alberto:  SALDO - 1280 + 220 = 1500
+Partida Partida 1:  TURNO DE - Jesus
+   Usuario Jesus:  DADOS - 0 + 40
+   Usuario Jesus:  HA CAIDO EN CASILLA - 0
+   Usuario Jesus:  HA PASADO POR LA CASILLA DE SALIDA - cobra 200 pelotis
+   Usuario Jesus:  SALDO - 3700 + 200 = 3900
+Partida Partida 1:  TURNO DE - Alberto
+   Usuario Alberto:  DADOS - 0 + 2
+   Usuario Alberto:  HA CAIDO EN CASILLA - 23
+      Calle Maria de Molina está libre - 220 pelotis.
+   Usuario Alberto:  SALDO - 1500 - 220 = 1280
+   Usuario Alberto:  PROPIEDAD COMPRADA - Calle Maria de Molina
+   Usuario Alberto:  SALDO - 1280 + 220 = 1500
+Partida Partida 1:  TURNO DE - Jesus
+   Usuario Jesus:  DADOS - 0 + 40
+   Usuario Jesus:  HA CAIDO EN CASILLA - 0
+   Usuario Jesus:  HA PASADO POR LA CASILLA DE SALIDA - cobra 200 pelotis
+   Usuario Jesus:  SALDO - 3900 + 200 = 4100
+Partida Partida 1:  TURNO DE - Alberto
+   Usuario Alberto:  DADOS - 0 + 1
+   Usuario Alberto:  HA CAIDO EN CASILLA - 24
+      Calle Cea Bermudez está libre - 240 pelotis.
+   Usuario Alberto:  SALDO - 1500 - 240 = 1260
+   Usuario Alberto:  PROPIEDAD COMPRADA - Calle Cea Bermudez
+   Usuario Alberto:  MONOPOLIO - rojo
+   Usuario Alberto:  SALDO - 1260 + 240 = 1500
+Partida Partida 1:  TURNO DE - Jesus
+   Usuario Jesus:  DADOS - 0 + 40
+   Usuario Jesus:  HA CAIDO EN CASILLA - 0
+   Usuario Jesus:  HA PASADO POR LA CASILLA DE SALIDA - cobra 200 pelotis
+   Usuario Jesus:  SALDO - 4100 + 200 = 4300
+Partida Partida 1:  TURNO DE - Alberto
+   Usuario Alberto:  DADOS - 0 + 2
+   Usuario Alberto:  HA CAIDO EN CASILLA - 26
+      Avenida Los Reyez Catolicos está libre - 260 pelotis.
+   Usuario Alberto:  SALDO - 1500 - 260 = 1240
+   Usuario Alberto:  PROPIEDAD COMPRADA - Avenida Los Reyez Catolicos
+   Usuario Alberto:  SALDO - 1240 + 260 = 1500
+Partida Partida 1:  TURNO DE - Jesus
+   Usuario Jesus:  DADOS - 0 + 40
+   Usuario Jesus:  HA CAIDO EN CASILLA - 0
+   Usuario Jesus:  HA PASADO POR LA CASILLA DE SALIDA - cobra 200 pelotis
+   Usuario Jesus:  SALDO - 4300 + 200 = 4500
+Partida Partida 1:  TURNO DE - Alberto
+   Usuario Alberto:  DADOS - 0 + 1
+   Usuario Alberto:  HA CAIDO EN CASILLA - 27
+      Calle Bailen está libre - 260 pelotis.
+   Usuario Alberto:  SALDO - 1500 - 260 = 1240
+   Usuario Alberto:  PROPIEDAD COMPRADA - Calle Bailen
+   Usuario Alberto:  SALDO - 1240 + 260 = 1500
+Partida Partida 1:  TURNO DE - Jesus
+   Usuario Jesus:  DADOS - 0 + 40
+   Usuario Jesus:  HA CAIDO EN CASILLA - 0
+   Usuario Jesus:  HA PASADO POR LA CASILLA DE SALIDA - cobra 200 pelotis
+   Usuario Jesus:  SALDO - 4500 + 200 = 4700
+Partida Partida 1:  TURNO DE - Alberto
+   Usuario Alberto:  DADOS - 0 + 2
+   Usuario Alberto:  HA CAIDO EN CASILLA - 29
+      Plaza de España está libre - 280 pelotis.
+   Usuario Alberto:  SALDO - 1500 - 280 = 1220
+   Usuario Alberto:  PROPIEDAD COMPRADA - Plaza de España
+   Usuario Alberto:  MONOPOLIO - amarillo
+   Usuario Alberto:  SALDO - 1220 + 280 = 1500
+Partida Partida 1:  TURNO DE - Jesus
+   Usuario Jesus:  DADOS - 0 + 40
+   Usuario Jesus:  HA CAIDO EN CASILLA - 0
+   Usuario Jesus:  HA PASADO POR LA CASILLA DE SALIDA - cobra 200 pelotis
+   Usuario Jesus:  SALDO - 4700 + 200 = 4900
+Partida Partida 1:  TURNO DE - Alberto
+   Usuario Alberto:  DADOS - 0 + 2
+   Usuario Alberto:  HA CAIDO EN CASILLA - 31
+      Puerta del Sol está libre - 300 pelotis.
+   Usuario Alberto:  SALDO - 1500 - 300 = 1200
+   Usuario Alberto:  PROPIEDAD COMPRADA - Puerta del Sol
+   Usuario Alberto:  SALDO - 1200 + 300 = 1500
+Partida Partida 1:  TURNO DE - Jesus
+   Usuario Jesus:  DADOS - 0 + 40
+   Usuario Jesus:  HA CAIDO EN CASILLA - 0
+   Usuario Jesus:  HA PASADO POR LA CASILLA DE SALIDA - cobra 200 pelotis
+   Usuario Jesus:  SALDO - 4900 + 200 = 5100
+Partida Partida 1:  TURNO DE - Alberto
+   Usuario Alberto:  DADOS - 0 + 1
+   Usuario Alberto:  HA CAIDO EN CASILLA - 32
+      Calle Alcala está libre - 300 pelotis.
+   Usuario Alberto:  SALDO - 1500 - 300 = 1200
+   Usuario Alberto:  PROPIEDAD COMPRADA - Calle Alcala
+   Usuario Alberto:  SALDO - 1200 + 300 = 1500
+Partida Partida 1:  TURNO DE - Jesus
+   Usuario Jesus:  DADOS - 0 + 40
+   Usuario Jesus:  HA CAIDO EN CASILLA - 0
+   Usuario Jesus:  HA PASADO POR LA CASILLA DE SALIDA - cobra 200 pelotis
+   Usuario Jesus:  SALDO - 5100 + 200 = 5300
+Partida Partida 1:  TURNO DE - Alberto
+   Usuario Alberto:  DADOS - 0 + 2
+   Usuario Alberto:  HA CAIDO EN CASILLA - 34
+      Gran Via está libre - 320 pelotis.
+   Usuario Alberto:  SALDO - 1500 - 320 = 1180
+   Usuario Alberto:  PROPIEDAD COMPRADA - Gran Via
+   Usuario Alberto:  MONOPOLIO - verde
+   Usuario Alberto:  SALDO - 1180 + 320 = 1500
+Partida Partida 1:  TURNO DE - Jesus
+   Usuario Jesus:  DADOS - 0 + 40
+   Usuario Jesus:  HA CAIDO EN CASILLA - 0
+   Usuario Jesus:  HA PASADO POR LA CASILLA DE SALIDA - cobra 200 pelotis
+   Usuario Jesus:  SALDO - 5300 + 200 = 5500
+Partida Partida 1:  TURNO DE - Alberto
+   Usuario Alberto:  DADOS - 0 + 3
+   Usuario Alberto:  HA CAIDO EN CASILLA - 37
+      Paseo de la Castellana está libre - 380 pelotis.
+   Usuario Alberto:  SALDO - 1500 - 380 = 1120
+   Usuario Alberto:  PROPIEDAD COMPRADA - Paseo de la Castellana
+   Usuario Alberto:  SALDO - 1120 + 380 = 1500
+Partida Partida 1:  TURNO DE - Jesus
+   Usuario Jesus:  DADOS - 0 + 40
+   Usuario Jesus:  HA CAIDO EN CASILLA - 0
+   Usuario Jesus:  HA PASADO POR LA CASILLA DE SALIDA - cobra 200 pelotis
+   Usuario Jesus:  SALDO - 5500 + 200 = 5700
+Partida Partida 1:  TURNO DE - Alberto
+   Usuario Alberto:  DADOS - 0 + 2
+   Usuario Alberto:  HA CAIDO EN CASILLA - 39
+      Paseo del Prado está libre - 400 pelotis.
+   Usuario Alberto:  SALDO - 1500 - 400 = 1100
+   Usuario Alberto:  PROPIEDAD COMPRADA - Paseo del Prado
+   Usuario Alberto:  MONOPOLIO - azul
+   Usuario Alberto:  SALDO - 1100 + 400 = 1500
+Partida Partida 1:  TURNO DE - Jesus
+   Usuario Jesus:  DADOS - 0 + 40
+   Usuario Jesus:  HA CAIDO EN CASILLA - 0
+   Usuario Jesus:  HA PASADO POR LA CASILLA DE SALIDA - cobra 200 pelotis
+   Usuario Jesus:  SALDO - 5700 + 200 = 5900
+Partida Partida 1:  TURNO DE - Alberto
+.Partida Partida 1:  NUEVO JUGADOR - Alberto
+Partida Partida 1:  NUEVO JUGADOR - Jesus
+Partida Partida 1:  PRIMER TURNO - Alberto
+   Usuario Alberto:  DADOS - 0 + 1
+   Usuario Alberto:  HA CAIDO EN CASILLA - 1
+      Ronda de Valencia está libre - 60 pelotis.
+   Usuario Alberto:  SALDO - 1500 - 60 = 1440
+   Usuario Alberto:  PROPIEDAD COMPRADA - Ronda de Valencia
+Partida Partida 1:  TURNO DE - Jesus
+   Usuario Jesus:  DADOS - 0 + 1
+   Usuario Jesus:  HA CAIDO EN CASILLA - 1
+   Usuario Jesus:  PAGAR ALQUILER A Alberto - 15 pelotis
+   Usuario Alberto:  SALDO - 1440 + 15 = 1455
+   Usuario Jesus:  SALDO - 1500 - 15 = 1485
+Partida Partida 1:  TURNO DE - Alberto
+   Usuario Alberto:  SALDO - 1455 + 60 = 1515
+   Usuario Jesus:  SALDO - 1485 + 15 = 1500
+   Usuario Alberto:  DADOS - 0 + 2
+   Usuario Alberto:  HA CAIDO EN CASILLA - 3
+      Plaza Lavapies está libre - 60 pelotis.
+   Usuario Alberto:  SALDO - 1515 - 60 = 1455
+   Usuario Alberto:  PROPIEDAD COMPRADA - Plaza Lavapies
+   Usuario Alberto:  MONOPOLIO - marron
+Partida Partida 1:  TURNO DE - Jesus
+   Usuario Jesus:  DADOS - 0 + 2
+   Usuario Jesus:  HA CAIDO EN CASILLA - 3
+   Usuario Jesus:  PAGAR ALQUILER A Alberto - 15 pelotis
+   Usuario Alberto:  SALDO - 1455 + 15 = 1470
+   Usuario Jesus:  SALDO - 1500 - 15 = 1485
+Partida Partida 1:  TURNO DE - Alberto
+   Usuario Alberto:  SALDO - 1470 + 60 = 1530
+   Usuario Jesus:  SALDO - 1485 + 15 = 1500
+   Usuario Alberto:  DADOS - 0 + 3
+   Usuario Alberto:  HA CAIDO EN CASILLA - 6
+      Glorieta Cuatro Caminos está libre - 100 pelotis.
+   Usuario Alberto:  SALDO - 1530 - 100 = 1430
+   Usuario Alberto:  PROPIEDAD COMPRADA - Glorieta Cuatro Caminos
+Partida Partida 1:  TURNO DE - Jesus
+   Usuario Jesus:  DADOS - 0 + 3
+   Usuario Jesus:  HA CAIDO EN CASILLA - 6
+   Usuario Jesus:  PAGAR ALQUILER A Alberto - 25 pelotis
+   Usuario Alberto:  SALDO - 1430 + 25 = 1455
+   Usuario Jesus:  SALDO - 1500 - 25 = 1475
+Partida Partida 1:  TURNO DE - Alberto
+   Usuario Alberto:  SALDO - 1455 + 100 = 1555
+   Usuario Jesus:  SALDO - 1475 + 25 = 1500
+   Usuario Alberto:  DADOS - 0 + 2
+   Usuario Alberto:  HA CAIDO EN CASILLA - 8
+      Avenida Reina Victoria está libre - 100 pelotis.
+   Usuario Alberto:  SALDO - 1555 - 100 = 1455
+   Usuario Alberto:  PROPIEDAD COMPRADA - Avenida Reina Victoria
+Partida Partida 1:  TURNO DE - Jesus
+   Usuario Jesus:  DADOS - 0 + 2
+   Usuario Jesus:  HA CAIDO EN CASILLA - 8
+   Usuario Jesus:  PAGAR ALQUILER A Alberto - 25 pelotis
+   Usuario Alberto:  SALDO - 1455 + 25 = 1480
+   Usuario Jesus:  SALDO - 1500 - 25 = 1475
+Partida Partida 1:  TURNO DE - Alberto
+   Usuario Alberto:  SALDO - 1480 + 100 = 1580
+   Usuario Jesus:  SALDO - 1475 + 25 = 1500
+   Usuario Alberto:  DADOS - 0 + 1
+   Usuario Alberto:  HA CAIDO EN CASILLA - 9
+      Calle Bravo Murillo está libre - 120 pelotis.
+   Usuario Alberto:  SALDO - 1580 - 120 = 1460
+   Usuario Alberto:  PROPIEDAD COMPRADA - Calle Bravo Murillo
+   Usuario Alberto:  MONOPOLIO - azulClaro
+Partida Partida 1:  TURNO DE - Jesus
+   Usuario Jesus:  DADOS - 0 + 1
+   Usuario Jesus:  HA CAIDO EN CASILLA - 9
+   Usuario Jesus:  PAGAR ALQUILER A Alberto - 30 pelotis
+   Usuario Alberto:  SALDO - 1460 + 30 = 1490
+   Usuario Jesus:  SALDO - 1500 - 30 = 1470
+Partida Partida 1:  TURNO DE - Alberto
+   Usuario Alberto:  SALDO - 1490 + 120 = 1610
+   Usuario Jesus:  SALDO - 1470 + 30 = 1500
+   Usuario Alberto:  DADOS - 0 + 2
+   Usuario Alberto:  HA CAIDO EN CASILLA - 11
+      Glorieta de Bilbao está libre - 140 pelotis.
+   Usuario Alberto:  SALDO - 1610 - 140 = 1470
+   Usuario Alberto:  PROPIEDAD COMPRADA - Glorieta de Bilbao
+Partida Partida 1:  TURNO DE - Jesus
+   Usuario Jesus:  DADOS - 0 + 2
+   Usuario Jesus:  HA CAIDO EN CASILLA - 11
+   Usuario Jesus:  PAGAR ALQUILER A Alberto - 35 pelotis
+   Usuario Alberto:  SALDO - 1470 + 35 = 1505
+   Usuario Jesus:  SALDO - 1500 - 35 = 1465
+Partida Partida 1:  TURNO DE - Alberto
+   Usuario Alberto:  SALDO - 1505 + 140 = 1645
+   Usuario Jesus:  SALDO - 1465 + 35 = 1500
+   Usuario Alberto:  DADOS - 0 + 2
+   Usuario Alberto:  HA CAIDO EN CASILLA - 13
+      Calle Alberto Aguilera está libre - 140 pelotis.
+   Usuario Alberto:  SALDO - 1645 - 140 = 1505
+   Usuario Alberto:  PROPIEDAD COMPRADA - Calle Alberto Aguilera
+Partida Partida 1:  TURNO DE - Jesus
+   Usuario Jesus:  DADOS - 0 + 2
+   Usuario Jesus:  HA CAIDO EN CASILLA - 13
+   Usuario Jesus:  PAGAR ALQUILER A Alberto - 35 pelotis
+   Usuario Alberto:  SALDO - 1505 + 35 = 1540
+   Usuario Jesus:  SALDO - 1500 - 35 = 1465
+Partida Partida 1:  TURNO DE - Alberto
+   Usuario Alberto:  SALDO - 1540 + 140 = 1680
+   Usuario Jesus:  SALDO - 1465 + 35 = 1500
+   Usuario Alberto:  DADOS - 0 + 1
+   Usuario Alberto:  HA CAIDO EN CASILLA - 14
+      Calle Fuencarral está libre - 160 pelotis.
+   Usuario Alberto:  SALDO - 1680 - 160 = 1520
+   Usuario Alberto:  PROPIEDAD COMPRADA - Calle Fuencarral
+   Usuario Alberto:  MONOPOLIO - rosa
+Partida Partida 1:  TURNO DE - Jesus
+   Usuario Jesus:  DADOS - 0 + 1
+   Usuario Jesus:  HA CAIDO EN CASILLA - 14
+   Usuario Jesus:  PAGAR ALQUILER A Alberto - 40 pelotis
+   Usuario Alberto:  SALDO - 1520 + 40 = 1560
+   Usuario Jesus:  SALDO - 1500 - 40 = 1460
+Partida Partida 1:  TURNO DE - Alberto
+   Usuario Alberto:  SALDO - 1560 + 160 = 1720
+   Usuario Jesus:  SALDO - 1460 + 40 = 1500
+   Usuario Alberto:  DADOS - 0 + 2
+   Usuario Alberto:  HA CAIDO EN CASILLA - 16
+      Avenida Felipe II está libre - 180 pelotis.
+   Usuario Alberto:  SALDO - 1720 - 180 = 1540
+   Usuario Alberto:  PROPIEDAD COMPRADA - Avenida Felipe II
+Partida Partida 1:  TURNO DE - Jesus
+   Usuario Jesus:  DADOS - 0 + 2
+   Usuario Jesus:  HA CAIDO EN CASILLA - 16
+   Usuario Jesus:  PAGAR ALQUILER A Alberto - 45 pelotis
+   Usuario Alberto:  SALDO - 1540 + 45 = 1585
+   Usuario Jesus:  SALDO - 1500 - 45 = 1455
+Partida Partida 1:  TURNO DE - Alberto
+   Usuario Alberto:  SALDO - 1585 + 180 = 1765
+   Usuario Jesus:  SALDO - 1455 + 45 = 1500
+   Usuario Alberto:  DADOS - 0 + 2
+   Usuario Alberto:  HA CAIDO EN CASILLA - 18
+      Calle Velazquez está libre - 180 pelotis.
+   Usuario Alberto:  SALDO - 1765 - 180 = 1585
+   Usuario Alberto:  PROPIEDAD COMPRADA - Calle Velazquez
+Partida Partida 1:  TURNO DE - Jesus
+   Usuario Jesus:  DADOS - 0 + 2
+   Usuario Jesus:  HA CAIDO EN CASILLA - 18
+   Usuario Jesus:  PAGAR ALQUILER A Alberto - 45 pelotis
+   Usuario Alberto:  SALDO - 1585 + 45 = 1630
+   Usuario Jesus:  SALDO - 1500 - 45 = 1455
+Partida Partida 1:  TURNO DE - Alberto
+   Usuario Alberto:  SALDO - 1630 + 180 = 1810
+   Usuario Jesus:  SALDO - 1455 + 45 = 1500
+   Usuario Alberto:  DADOS - 0 + 1
+   Usuario Alberto:  HA CAIDO EN CASILLA - 19
+      Calle Serrano está libre - 200 pelotis.
+   Usuario Alberto:  SALDO - 1810 - 200 = 1610
+   Usuario Alberto:  PROPIEDAD COMPRADA - Calle Serrano
+   Usuario Alberto:  MONOPOLIO - naranja
+Partida Partida 1:  TURNO DE - Jesus
+   Usuario Jesus:  DADOS - 0 + 1
+   Usuario Jesus:  HA CAIDO EN CASILLA - 19
+   Usuario Jesus:  PAGAR ALQUILER A Alberto - 50 pelotis
+   Usuario Alberto:  SALDO - 1610 + 50 = 1660
+   Usuario Jesus:  SALDO - 1500 - 50 = 1450
+Partida Partida 1:  TURNO DE - Alberto
+   Usuario Alberto:  SALDO - 1660 + 200 = 1860
+   Usuario Jesus:  SALDO - 1450 + 50 = 1500
+   Usuario Alberto:  DADOS - 0 + 2
+   Usuario Alberto:  HA CAIDO EN CASILLA - 21
+      Avenida de America está libre - 220 pelotis.
+   Usuario Alberto:  SALDO - 1860 - 220 = 1640
+   Usuario Alberto:  PROPIEDAD COMPRADA - Avenida de America
+Partida Partida 1:  TURNO DE - Jesus
+   Usuario Jesus:  DADOS - 0 + 2
+   Usuario Jesus:  HA CAIDO EN CASILLA - 21
+   Usuario Jesus:  PAGAR ALQUILER A Alberto - 55 pelotis
+   Usuario Alberto:  SALDO - 1640 + 55 = 1695
+   Usuario Jesus:  SALDO - 1500 - 55 = 1445
+Partida Partida 1:  TURNO DE - Alberto
+   Usuario Alberto:  SALDO - 1695 + 220 = 1915
+   Usuario Jesus:  SALDO - 1445 + 55 = 1500
+   Usuario Alberto:  DADOS - 0 + 2
+   Usuario Alberto:  HA CAIDO EN CASILLA - 23
+      Calle Maria de Molina está libre - 220 pelotis.
+   Usuario Alberto:  SALDO - 1915 - 220 = 1695
+   Usuario Alberto:  PROPIEDAD COMPRADA - Calle Maria de Molina
+Partida Partida 1:  TURNO DE - Jesus
+   Usuario Jesus:  DADOS - 0 + 2
+   Usuario Jesus:  HA CAIDO EN CASILLA - 23
+   Usuario Jesus:  PAGAR ALQUILER A Alberto - 55 pelotis
+   Usuario Alberto:  SALDO - 1695 + 55 = 1750
+   Usuario Jesus:  SALDO - 1500 - 55 = 1445
+Partida Partida 1:  TURNO DE - Alberto
+   Usuario Alberto:  SALDO - 1750 + 220 = 1970
+   Usuario Jesus:  SALDO - 1445 + 55 = 1500
+   Usuario Alberto:  DADOS - 0 + 1
+   Usuario Alberto:  HA CAIDO EN CASILLA - 24
+      Calle Cea Bermudez está libre - 240 pelotis.
+   Usuario Alberto:  SALDO - 1970 - 240 = 1730
+   Usuario Alberto:  PROPIEDAD COMPRADA - Calle Cea Bermudez
+   Usuario Alberto:  MONOPOLIO - rojo
+Partida Partida 1:  TURNO DE - Jesus
+   Usuario Jesus:  DADOS - 0 + 1
+   Usuario Jesus:  HA CAIDO EN CASILLA - 24
+   Usuario Jesus:  PAGAR ALQUILER A Alberto - 60 pelotis
+   Usuario Alberto:  SALDO - 1730 + 60 = 1790
+   Usuario Jesus:  SALDO - 1500 - 60 = 1440
+Partida Partida 1:  TURNO DE - Alberto
+   Usuario Alberto:  SALDO - 1790 + 240 = 2030
+   Usuario Jesus:  SALDO - 1440 + 60 = 1500
+   Usuario Alberto:  DADOS - 0 + 2
+   Usuario Alberto:  HA CAIDO EN CASILLA - 26
+      Avenida Los Reyez Catolicos está libre - 260 pelotis.
+   Usuario Alberto:  SALDO - 2030 - 260 = 1770
+   Usuario Alberto:  PROPIEDAD COMPRADA - Avenida Los Reyez Catolicos
+Partida Partida 1:  TURNO DE - Jesus
+   Usuario Jesus:  DADOS - 0 + 2
+   Usuario Jesus:  HA CAIDO EN CASILLA - 26
+   Usuario Jesus:  PAGAR ALQUILER A Alberto - 65 pelotis
+   Usuario Alberto:  SALDO - 1770 + 65 = 1835
+   Usuario Jesus:  SALDO - 1500 - 65 = 1435
+Partida Partida 1:  TURNO DE - Alberto
+   Usuario Alberto:  SALDO - 1835 + 260 = 2095
+   Usuario Jesus:  SALDO - 1435 + 65 = 1500
+   Usuario Alberto:  DADOS - 0 + 1
+   Usuario Alberto:  HA CAIDO EN CASILLA - 27
+      Calle Bailen está libre - 260 pelotis.
+   Usuario Alberto:  SALDO - 2095 - 260 = 1835
+   Usuario Alberto:  PROPIEDAD COMPRADA - Calle Bailen
+Partida Partida 1:  TURNO DE - Jesus
+   Usuario Jesus:  DADOS - 0 + 1
+   Usuario Jesus:  HA CAIDO EN CASILLA - 27
+   Usuario Jesus:  PAGAR ALQUILER A Alberto - 65 pelotis
+   Usuario Alberto:  SALDO - 1835 + 65 = 1900
+   Usuario Jesus:  SALDO - 1500 - 65 = 1435
+Partida Partida 1:  TURNO DE - Alberto
+   Usuario Alberto:  SALDO - 1900 + 260 = 2160
+   Usuario Jesus:  SALDO - 1435 + 65 = 1500
+   Usuario Alberto:  DADOS - 0 + 2
+   Usuario Alberto:  HA CAIDO EN CASILLA - 29
+      Plaza de España está libre - 280 pelotis.
+   Usuario Alberto:  SALDO - 2160 - 280 = 1880
+   Usuario Alberto:  PROPIEDAD COMPRADA - Plaza de España
+   Usuario Alberto:  MONOPOLIO - amarillo
+Partida Partida 1:  TURNO DE - Jesus
+   Usuario Jesus:  DADOS - 0 + 2
+   Usuario Jesus:  HA CAIDO EN CASILLA - 29
+   Usuario Jesus:  PAGAR ALQUILER A Alberto - 70 pelotis
+   Usuario Alberto:  SALDO - 1880 + 70 = 1950
+   Usuario Jesus:  SALDO - 1500 - 70 = 1430
+Partida Partida 1:  TURNO DE - Alberto
+   Usuario Alberto:  SALDO - 1950 + 280 = 2230
+   Usuario Jesus:  SALDO - 1430 + 70 = 1500
+   Usuario Alberto:  DADOS - 0 + 2
+   Usuario Alberto:  HA CAIDO EN CASILLA - 31
+      Puerta del Sol está libre - 300 pelotis.
+   Usuario Alberto:  SALDO - 2230 - 300 = 1930
+   Usuario Alberto:  PROPIEDAD COMPRADA - Puerta del Sol
+Partida Partida 1:  TURNO DE - Jesus
+   Usuario Jesus:  DADOS - 0 + 2
+   Usuario Jesus:  HA CAIDO EN CASILLA - 31
+   Usuario Jesus:  PAGAR ALQUILER A Alberto - 75 pelotis
+   Usuario Alberto:  SALDO - 1930 + 75 = 2005
+   Usuario Jesus:  SALDO - 1500 - 75 = 1425
+Partida Partida 1:  TURNO DE - Alberto
+   Usuario Alberto:  SALDO - 2005 + 300 = 2305
+   Usuario Jesus:  SALDO - 1425 + 75 = 1500
+   Usuario Alberto:  DADOS - 0 + 1
+   Usuario Alberto:  HA CAIDO EN CASILLA - 32
+      Calle Alcala está libre - 300 pelotis.
+   Usuario Alberto:  SALDO - 2305 - 300 = 2005
+   Usuario Alberto:  PROPIEDAD COMPRADA - Calle Alcala
+Partida Partida 1:  TURNO DE - Jesus
+   Usuario Jesus:  DADOS - 0 + 1
+   Usuario Jesus:  HA CAIDO EN CASILLA - 32
+   Usuario Jesus:  PAGAR ALQUILER A Alberto - 75 pelotis
+   Usuario Alberto:  SALDO - 2005 + 75 = 2080
+   Usuario Jesus:  SALDO - 1500 - 75 = 1425
+Partida Partida 1:  TURNO DE - Alberto
+   Usuario Alberto:  SALDO - 2080 + 300 = 2380
+   Usuario Jesus:  SALDO - 1425 + 75 = 1500
+   Usuario Alberto:  DADOS - 0 + 2
+   Usuario Alberto:  HA CAIDO EN CASILLA - 34
+      Gran Via está libre - 320 pelotis.
+   Usuario Alberto:  SALDO - 2380 - 320 = 2060
+   Usuario Alberto:  PROPIEDAD COMPRADA - Gran Via
+   Usuario Alberto:  MONOPOLIO - verde
+Partida Partida 1:  TURNO DE - Jesus
+   Usuario Jesus:  DADOS - 0 + 2
+   Usuario Jesus:  HA CAIDO EN CASILLA - 34
+   Usuario Jesus:  PAGAR ALQUILER A Alberto - 80 pelotis
+   Usuario Alberto:  SALDO - 2060 + 80 = 2140
+   Usuario Jesus:  SALDO - 1500 - 80 = 1420
+Partida Partida 1:  TURNO DE - Alberto
+   Usuario Alberto:  SALDO - 2140 + 320 = 2460
+   Usuario Jesus:  SALDO - 1420 + 80 = 1500
+   Usuario Alberto:  DADOS - 0 + 3
+   Usuario Alberto:  HA CAIDO EN CASILLA - 37
+      Paseo de la Castellana está libre - 380 pelotis.
+   Usuario Alberto:  SALDO - 2460 - 380 = 2080
+   Usuario Alberto:  PROPIEDAD COMPRADA - Paseo de la Castellana
+Partida Partida 1:  TURNO DE - Jesus
+   Usuario Jesus:  DADOS - 0 + 3
+   Usuario Jesus:  HA CAIDO EN CASILLA - 37
+   Usuario Jesus:  PAGAR ALQUILER A Alberto - 95 pelotis
+   Usuario Alberto:  SALDO - 2080 + 95 = 2175
+   Usuario Jesus:  SALDO - 1500 - 95 = 1405
+Partida Partida 1:  TURNO DE - Alberto
+   Usuario Alberto:  SALDO - 2175 + 380 = 2555
+   Usuario Jesus:  SALDO - 1405 + 95 = 1500
+   Usuario Alberto:  DADOS - 0 + 2
+   Usuario Alberto:  HA CAIDO EN CASILLA - 39
+      Paseo del Prado está libre - 400 pelotis.
+   Usuario Alberto:  SALDO - 2555 - 400 = 2155
+   Usuario Alberto:  PROPIEDAD COMPRADA - Paseo del Prado
+   Usuario Alberto:  MONOPOLIO - azul
+Partida Partida 1:  TURNO DE - Jesus
+   Usuario Jesus:  DADOS - 0 + 2
+   Usuario Jesus:  HA CAIDO EN CASILLA - 39
+   Usuario Jesus:  PAGAR ALQUILER A Alberto - 100 pelotis
+   Usuario Alberto:  SALDO - 2155 + 100 = 2255
+   Usuario Jesus:  SALDO - 1500 - 100 = 1400
+Partida Partida 1:  TURNO DE - Alberto
+   Usuario Alberto:  SALDO - 2255 + 400 = 2655
+   Usuario Jesus:  SALDO - 1400 + 100 = 1500
+.Partida Partida 1:  NUEVO JUGADOR - Alberto
+Partida Partida 1:  NUEVO JUGADOR - Jesus
+Partida Partida 1:  PRIMER TURNO - Alberto
+   Usuario Alberto:  DADOS - 0 + 5
+   Usuario Alberto:  HA CAIDO EN CASILLA - 5
+      Estacion de Goya está libre - 200 pelotis.
+   Usuario Alberto:  SALDO - 1500 - 200 = 1300
+   Usuario Alberto:  PROPIEDAD COMPRADA - Estacion de Goya
+   Usuario Alberto:  SALDO - 1300 + 200 = 1500
+Partida Partida 1:  TURNO DE - Jesus
+   Usuario Jesus:  DADOS - 0 + 40
+   Usuario Jesus:  HA CAIDO EN CASILLA - 0
+   Usuario Jesus:  HA PASADO POR LA CASILLA DE SALIDA - cobra 200 pelotis
+   Usuario Jesus:  SALDO - 1500 + 200 = 1700
+Partida Partida 1:  TURNO DE - Alberto
+   Usuario Alberto:  DADOS - 0 + 10
+   Usuario Alberto:  HA CAIDO EN CASILLA - 15
+      Estacion de las Delicias está libre - 200 pelotis.
+   Usuario Alberto:  SALDO - 1500 - 200 = 1300
+   Usuario Alberto:  PROPIEDAD COMPRADA - Estacion de las Delicias
+   Usuario Alberto:  SALDO - 1300 + 200 = 1500
+Partida Partida 1:  TURNO DE - Jesus
+   Usuario Jesus:  DADOS - 0 + 40
+   Usuario Jesus:  HA CAIDO EN CASILLA - 0
+   Usuario Jesus:  HA PASADO POR LA CASILLA DE SALIDA - cobra 200 pelotis
+   Usuario Jesus:  SALDO - 1700 + 200 = 1900
+Partida Partida 1:  TURNO DE - Alberto
+   Usuario Alberto:  DADOS - 0 + 10
+   Usuario Alberto:  HA CAIDO EN CASILLA - 25
+      Estacion del Mediodia está libre - 200 pelotis.
+   Usuario Alberto:  SALDO - 1500 - 200 = 1300
+   Usuario Alberto:  PROPIEDAD COMPRADA - Estacion del Mediodia
+   Usuario Alberto:  SALDO - 1300 + 200 = 1500
+Partida Partida 1:  TURNO DE - Jesus
+   Usuario Jesus:  DADOS - 0 + 40
+   Usuario Jesus:  HA CAIDO EN CASILLA - 0
+   Usuario Jesus:  HA PASADO POR LA CASILLA DE SALIDA - cobra 200 pelotis
+   Usuario Jesus:  SALDO - 1900 + 200 = 2100
+Partida Partida 1:  TURNO DE - Alberto
+   Usuario Alberto:  DADOS - 0 + 10
+   Usuario Alberto:  HA CAIDO EN CASILLA - 35
+      Estacion del Norte está libre - 200 pelotis.
+   Usuario Alberto:  SALDO - 1500 - 200 = 1300
+   Usuario Alberto:  PROPIEDAD COMPRADA - Estacion del Norte
+   Usuario Alberto:  SALDO - 1300 + 200 = 1500
+Partida Partida 1:  TURNO DE - Jesus
+   Usuario Jesus:  DADOS - 0 + 40
+   Usuario Jesus:  HA CAIDO EN CASILLA - 0
+   Usuario Jesus:  HA PASADO POR LA CASILLA DE SALIDA - cobra 200 pelotis
+   Usuario Jesus:  SALDO - 2100 + 200 = 2300
+Partida Partida 1:  TURNO DE - Alberto
+.Partida Partida 1:  NUEVO JUGADOR - Alberto
+Partida Partida 1:  NUEVO JUGADOR - Jesus
+Partida Partida 1:  PRIMER TURNO - Alberto
+   Usuario Alberto:  DADOS - 0 + 5
+   Usuario Alberto:  HA CAIDO EN CASILLA - 5
+      Estacion de Goya está libre - 200 pelotis.
+   Usuario Alberto:  SALDO - 1500 - 200 = 1300
+   Usuario Alberto:  PROPIEDAD COMPRADA - Estacion de Goya
+   Usuario Alberto:  SALDO - 1300 + 200 = 1500
+Partida Partida 1:  TURNO DE - Jesus
+   Usuario Jesus:  DADOS - 0 + 40
+   Usuario Jesus:  HA CAIDO EN CASILLA - 0
+   Usuario Jesus:  HA PASADO POR LA CASILLA DE SALIDA - cobra 200 pelotis
+   Usuario Jesus:  SALDO - 1500 + 200 = 1700
+Partida Partida 1:  TURNO DE - Alberto
+   Usuario Alberto:  DADOS - 0 + 10
+   Usuario Alberto:  HA CAIDO EN CASILLA - 15
+      Estacion de las Delicias está libre - 200 pelotis.
+   Usuario Alberto:  SALDO - 1500 - 200 = 1300
+   Usuario Alberto:  PROPIEDAD COMPRADA - Estacion de las Delicias
+   Usuario Alberto:  SALDO - 1300 + 200 = 1500
+Partida Partida 1:  TURNO DE - Jesus
+   Usuario Jesus:  DADOS - 0 + 40
+   Usuario Jesus:  HA CAIDO EN CASILLA - 0
+   Usuario Jesus:  HA PASADO POR LA CASILLA DE SALIDA - cobra 200 pelotis
+   Usuario Jesus:  SALDO - 1700 + 200 = 1900
+Partida Partida 1:  TURNO DE - Alberto
+   Usuario Alberto:  DADOS - 0 + 10
+   Usuario Alberto:  HA CAIDO EN CASILLA - 25
+      Estacion del Mediodia está libre - 200 pelotis.
+   Usuario Alberto:  SALDO - 1500 - 200 = 1300
+   Usuario Alberto:  PROPIEDAD COMPRADA - Estacion del Mediodia
+   Usuario Alberto:  SALDO - 1300 + 200 = 1500
+Partida Partida 1:  TURNO DE - Jesus
+   Usuario Jesus:  DADOS - 0 + 40
+   Usuario Jesus:  HA CAIDO EN CASILLA - 0
+   Usuario Jesus:  HA PASADO POR LA CASILLA DE SALIDA - cobra 200 pelotis
+   Usuario Jesus:  SALDO - 1900 + 200 = 2100
+Partida Partida 1:  TURNO DE - Alberto
+   Usuario Alberto:  DADOS - 0 + 10
+   Usuario Alberto:  HA CAIDO EN CASILLA - 35
+      Estacion del Norte está libre - 200 pelotis.
+   Usuario Alberto:  SALDO - 1500 - 200 = 1300
+   Usuario Alberto:  PROPIEDAD COMPRADA - Estacion del Norte
+   Usuario Alberto:  SALDO - 1300 + 200 = 1500
+Partida Partida 1:  TURNO DE - Jesus
+   Usuario Jesus:  DADOS - 0 + 40
+   Usuario Jesus:  HA CAIDO EN CASILLA - 0
+   Usuario Jesus:  HA PASADO POR LA CASILLA DE SALIDA - cobra 200 pelotis
+   Usuario Jesus:  SALDO - 2100 + 200 = 2300
+Partida Partida 1:  TURNO DE - Alberto
+.Partida Partida 1:  NUEVO JUGADOR - Alberto
+Partida Partida 1:  NUEVO JUGADOR - Jesus
+Partida Partida 1:  PRIMER TURNO - Alberto
+   Usuario Alberto:  DADOS - 0 + 5
+   Usuario Alberto:  HA CAIDO EN CASILLA - 5
+      Estacion de Goya está libre - 200 pelotis.
+   Usuario Alberto:  SALDO - 1500 - 200 = 1300
+   Usuario Alberto:  PROPIEDAD COMPRADA - Estacion de Goya
+Partida Partida 1:  TURNO DE - Jesus
+   Usuario Jesus:  DADOS - 0 + 5
+   Usuario Jesus:  HA CAIDO EN CASILLA - 5
+   Usuario Jesus:  PAGAR ALQUILER - 50 pelotis
+   Usuario Alberto:  SALDO - 1300 + 50 = 1350
+   Usuario Jesus:  SALDO - 1500 - 50 = 1450
+Partida Partida 1:  TURNO DE - Alberto
+   Usuario Alberto:  SALDO - 1350 + 200 = 1550
+   Usuario Jesus:  SALDO - 1450 + 50 = 1500
+   Usuario Alberto:  DADOS - 0 + 10
+   Usuario Alberto:  HA CAIDO EN CASILLA - 15
+      Estacion de las Delicias está libre - 200 pelotis.
+   Usuario Alberto:  SALDO - 1550 - 200 = 1350
+   Usuario Alberto:  PROPIEDAD COMPRADA - Estacion de las Delicias
+Partida Partida 1:  TURNO DE - Jesus
+   Usuario Jesus:  DADOS - 0 + 10
+   Usuario Jesus:  HA CAIDO EN CASILLA - 15
+   Usuario Jesus:  PAGAR ALQUILER - 100 pelotis
+   Usuario Alberto:  SALDO - 1350 + 100 = 1450
+   Usuario Jesus:  SALDO - 1500 - 100 = 1400
+Partida Partida 1:  TURNO DE - Alberto
+   Usuario Alberto:  SALDO - 1450 + 200 = 1650
+   Usuario Jesus:  SALDO - 1400 + 100 = 1500
+   Usuario Alberto:  DADOS - 0 + 10
+   Usuario Alberto:  HA CAIDO EN CASILLA - 25
+      Estacion del Mediodia está libre - 200 pelotis.
+   Usuario Alberto:  SALDO - 1650 - 200 = 1450
+   Usuario Alberto:  PROPIEDAD COMPRADA - Estacion del Mediodia
+Partida Partida 1:  TURNO DE - Jesus
+   Usuario Jesus:  DADOS - 0 + 10
+   Usuario Jesus:  HA CAIDO EN CASILLA - 25
+   Usuario Jesus:  PAGAR ALQUILER - 150 pelotis
+   Usuario Alberto:  SALDO - 1450 + 150 = 1600
+   Usuario Jesus:  SALDO - 1500 - 150 = 1350
+Partida Partida 1:  TURNO DE - Alberto
+   Usuario Alberto:  SALDO - 1600 + 200 = 1800
+   Usuario Jesus:  SALDO - 1350 + 150 = 1500
+   Usuario Alberto:  DADOS - 0 + 10
+   Usuario Alberto:  HA CAIDO EN CASILLA - 35
+      Estacion del Norte está libre - 200 pelotis.
+   Usuario Alberto:  SALDO - 1800 - 200 = 1600
+   Usuario Alberto:  PROPIEDAD COMPRADA - Estacion del Norte
+Partida Partida 1:  TURNO DE - Jesus
+   Usuario Jesus:  DADOS - 0 + 10
+   Usuario Jesus:  HA CAIDO EN CASILLA - 35
+   Usuario Jesus:  PAGAR ALQUILER - 200 pelotis
+   Usuario Alberto:  SALDO - 1600 + 200 = 1800
+   Usuario Jesus:  SALDO - 1500 - 200 = 1300
+Partida Partida 1:  TURNO DE - Alberto
+   Usuario Alberto:  SALDO - 1800 + 200 = 2000
+   Usuario Jesus:  SALDO - 1300 + 200 = 1500
+.Partida Partida 1:  NUEVO JUGADOR - Alberto
+Partida Partida 1:  PRIMER TURNO - Alberto
+.Partida Partida 1:  NUEVO JUGADOR - Alberto
+Partida Partida 1:  PRIMER TURNO - Alberto
+   Usuario Alberto:  DADOS - 0 + 2
+   Usuario Alberto:  HA CAIDO EN CASILLA - 2
+   Usuario Alberto:  TARJETA LIBRE CÁRCEL - obtiene la tarjeta
+.Partida Partida 1:  NUEVO JUGADOR - Alberto
+Partida Partida 1:  PRIMER TURNO - Alberto
+   Usuario Alberto:  DADOS - 0 + 2
+   Usuario Alberto:  HA CAIDO EN CASILLA - 2
+   Usuario Alberto:  TARJETA LIBRE CÁRCEL - obtiene la tarjeta
+.Partida Partida 1:  NUEVO JUGADOR - Alberto
+Partida Partida 1:  PRIMER TURNO - Alberto
+   Usuario Alberto:  DADOS - 0 + 2
+   Usuario Alberto:  HA CAIDO EN CASILLA - 2
+   Usuario Alberto:  TARJETA RETROCEDER - 5 casillas
+   Usuario Alberto:  HA CAIDO EN CASILLA - 37
+      Paseo de la Castellana está libre - 380 pelotis.
+.Partida Partida 1:  NUEVO JUGADOR - Alberto
+Partida Partida 1:  PRIMER TURNO - Alberto
+   Usuario Alberto:  DADOS - 0 + 1
+   Usuario Alberto:  HA CAIDO EN CASILLA - 1
+      Ronda de Valencia está libre - 60 pelotis.
+   Usuario Alberto:  SALDO - 1500 - 60 = 1440
+   Usuario Alberto:  PROPIEDAD COMPRADA - Ronda de Valencia
+Partida Partida 1:  TURNO DE - Alberto
+   Usuario Alberto:  DADOS - 0 + 2
+   Usuario Alberto:  HA CAIDO EN CASILLA - 3
+      Plaza Lavapies está libre - 60 pelotis.
+   Usuario Alberto:  SALDO - 1440 - 60 = 1380
+   Usuario Alberto:  PROPIEDAD COMPRADA - Plaza Lavapies
+   Usuario Alberto:  MONOPOLIO - marron
+.Partida Partida 1:  NUEVO JUGADOR - Alberto
+Partida Partida 1:  PRIMER TURNO - Alberto
+   Usuario Alberto:  DADOS - 0 + 1
+   Usuario Alberto:  HA CAIDO EN CASILLA - 1
+      Ronda de Valencia está libre - 60 pelotis.
+   Usuario Alberto:  SALDO - 1500 - 60 = 1440
+   Usuario Alberto:  PROPIEDAD COMPRADA - Ronda de Valencia
+   Usuario Alberto:  SALDO - 1440 + 30 = 1470
+   Usuario Alberto:  PROPIEDAD HIPOTECADA - Ronda de Valencia
+.Partida Partida 1:  NUEVO JUGADOR - Alberto
+Partida Partida 1:  PRIMER TURNO - Alberto
+   Usuario Alberto:  DADOS - 0 + 1
+   Usuario Alberto:  HA CAIDO EN CASILLA - 1
+      Ronda de Valencia está libre - 60 pelotis.
+   Usuario Alberto:  SALDO - 1500 - 60 = 1440
+   Usuario Alberto:  PROPIEDAD COMPRADA - Ronda de Valencia
+Partida Partida 1:  TURNO DE - Alberto
+   Usuario Alberto:  DADOS - 0 + 2
+   Usuario Alberto:  HA CAIDO EN CASILLA - 3
+      Plaza Lavapies está libre - 60 pelotis.
+   Usuario Alberto:  SALDO - 1440 - 60 = 1380
+   Usuario Alberto:  PROPIEDAD COMPRADA - Plaza Lavapies
+   Usuario Alberto:  MONOPOLIO - marron
+   Usuario Alberto:  SALDO - 1380 + 30 = 1410
+   Usuario Alberto:  PROPIEDAD HIPOTECADA - Ronda de Valencia
+.Partida Partida 1:  NUEVO JUGADOR - Alberto
+Partida Partida 1:  PRIMER TURNO - Alberto
+   Usuario Alberto:  DADOS - 0 + 1
+   Usuario Alberto:  HA CAIDO EN CASILLA - 1
+      Ronda de Valencia está libre - 60 pelotis.
+   Usuario Alberto:  SALDO - 1500 - 60 = 1440
+   Usuario Alberto:  PROPIEDAD COMPRADA - Ronda de Valencia
+Partida Partida 1:  TURNO DE - Alberto
+   Usuario Alberto:  DADOS - 0 + 2
+   Usuario Alberto:  HA CAIDO EN CASILLA - 3
+      Plaza Lavapies está libre - 60 pelotis.
+   Usuario Alberto:  SALDO - 1440 - 60 = 1380
+   Usuario Alberto:  PROPIEDAD COMPRADA - Plaza Lavapies
+   Usuario Alberto:  MONOPOLIO - marron
+   Usuario Alberto:  SALDO - 1380 - 50 = 1330
+   Usuario Alberto:  CASA CONSTRUIDA - Ronda de Valencia: 1
+   Usuario Alberto:  IMPOSIBLE HIPOTECAR - Ronda de Valencia: hay 1 edificios
+.Partida Partida 1:  NUEVO JUGADOR - Alberto
+Partida Partida 1:  PRIMER TURNO - Alberto
+   Usuario Alberto:  DADOS - 0 + 1
+   Usuario Alberto:  HA CAIDO EN CASILLA - 1
+      Ronda de Valencia está libre - 60 pelotis.
+   Usuario Alberto:  SALDO - 1500 - 60 = 1440
+   Usuario Alberto:  PROPIEDAD COMPRADA - Ronda de Valencia
+   Usuario Alberto:  IMPOSIBLE EDIFICAR - Ronda de Valencia: no tiene el monopolio marron
+.Partida Partida 1:  NUEVO JUGADOR - Alberto
+Partida Partida 1:  PRIMER TURNO - Alberto
+   Usuario Alberto:  DADOS - 0 + 1
+   Usuario Alberto:  HA CAIDO EN CASILLA - 1
+      Ronda de Valencia está libre - 60 pelotis.
+   Usuario Alberto:  SALDO - 1500 - 60 = 1440
+   Usuario Alberto:  PROPIEDAD COMPRADA - Ronda de Valencia
+Partida Partida 1:  TURNO DE - Alberto
+   Usuario Alberto:  DADOS - 0 + 2
+   Usuario Alberto:  HA CAIDO EN CASILLA - 3
+      Plaza Lavapies está libre - 60 pelotis.
+   Usuario Alberto:  SALDO - 1440 - 60 = 1380
+   Usuario Alberto:  PROPIEDAD COMPRADA - Plaza Lavapies
+   Usuario Alberto:  MONOPOLIO - marron
+   Usuario Alberto:  SALDO - 1380 - 50 = 1330
+   Usuario Alberto:  CASA CONSTRUIDA - Ronda de Valencia: 1
+.Partida Partida 1:  NUEVO JUGADOR - Alberto
+Partida Partida 1:  PRIMER TURNO - Alberto
+   Usuario Alberto:  DADOS - 0 + 1
+   Usuario Alberto:  HA CAIDO EN CASILLA - 1
+      Ronda de Valencia está libre - 60 pelotis.
+   Usuario Alberto:  SALDO - 1500 - 60 = 1440
+   Usuario Alberto:  PROPIEDAD COMPRADA - Ronda de Valencia
+Partida Partida 1:  TURNO DE - Alberto
+   Usuario Alberto:  DADOS - 0 + 2
+   Usuario Alberto:  HA CAIDO EN CASILLA - 3
+      Plaza Lavapies está libre - 60 pelotis.
+   Usuario Alberto:  SALDO - 1440 - 60 = 1380
+   Usuario Alberto:  PROPIEDAD COMPRADA - Plaza Lavapies
+   Usuario Alberto:  MONOPOLIO - marron
+   Usuario Alberto:  SALDO - 1380 - 50 = 1330
+   Usuario Alberto:  CASA CONSTRUIDA - Ronda de Valencia: 1
+   Usuario Alberto:  IMPOSIBLE EDIFICAR - tiene que edificar en orden
+.Partida Partida 1:  NUEVO JUGADOR - Alberto
+Partida Partida 1:  PRIMER TURNO - Alberto
+   Usuario Alberto:  DADOS - 0 + 1
+   Usuario Alberto:  HA CAIDO EN CASILLA - 1
+      Ronda de Valencia está libre - 60 pelotis.
+   Usuario Alberto:  SALDO - 1500 - 60 = 1440
+   Usuario Alberto:  PROPIEDAD COMPRADA - Ronda de Valencia
+Partida Partida 1:  TURNO DE - Alberto
+   Usuario Alberto:  DADOS - 0 + 2
+   Usuario Alberto:  HA CAIDO EN CASILLA - 3
+      Plaza Lavapies está libre - 60 pelotis.
+   Usuario Alberto:  SALDO - 1440 - 60 = 1380
+   Usuario Alberto:  PROPIEDAD COMPRADA - Plaza Lavapies
+   Usuario Alberto:  MONOPOLIO - marron
+   Usuario Alberto:  SALDO - 1380 - 50 = 1330
+   Usuario Alberto:  CASA CONSTRUIDA - Ronda de Valencia: 1
+   Usuario Alberto:  SALDO - 1330 - 50 = 1280
+   Usuario Alberto:  CASA CONSTRUIDA - Plaza Lavapies: 1
+   Usuario Alberto:  SALDO - 1280 - 50 = 1230
+   Usuario Alberto:  CASA CONSTRUIDA - Ronda de Valencia: 2
+   Usuario Alberto:  SALDO - 1230 - 50 = 1180
+   Usuario Alberto:  CASA CONSTRUIDA - Plaza Lavapies: 2
+   Usuario Alberto:  SALDO - 1180 - 50 = 1130
+   Usuario Alberto:  CASA CONSTRUIDA - Ronda de Valencia: 3
+   Usuario Alberto:  SALDO - 1130 - 50 = 1080
+   Usuario Alberto:  CASA CONSTRUIDA - Plaza Lavapies: 3
+   Usuario Alberto:  SALDO - 1080 - 50 = 1030
+   Usuario Alberto:  CASA CONSTRUIDA - Ronda de Valencia: 4
+   Usuario Alberto:  SALDO - 1030 - 50 = 980
+   Usuario Alberto:  CASA CONSTRUIDA - Plaza Lavapies: 4
+   Usuario Alberto:  SALDO - 980 - 50 = 930
+   Usuario Alberto:  HOTEL CONSTRUIDO - Ronda de Valencia
+   Usuario Alberto:  SALDO - 930 - 50 = 880
+   Usuario Alberto:  HOTEL CONSTRUIDO - Plaza Lavapies
+   Usuario Alberto:  IMPOSIBLE EDIFICAR - Ronda de Valencia: ya tiene hotel
+.Partida Partida 1:  NUEVO JUGADOR - Alberto
+Partida Partida 1:  PRIMER TURNO - Alberto
+   Usuario Alberto:  DADOS - 0 + 1
+   Usuario Alberto:  HA CAIDO EN CASILLA - 1
+      Ronda de Valencia está libre - 60 pelotis.
+   Usuario Alberto:  SALDO - 1500 - 60 = 1440
+   Usuario Alberto:  PROPIEDAD COMPRADA - Ronda de Valencia
+Partida Partida 1:  TURNO DE - Alberto
+   Usuario Alberto:  DADOS - 0 + 2
+   Usuario Alberto:  HA CAIDO EN CASILLA - 3
+      Plaza Lavapies está libre - 60 pelotis.
+   Usuario Alberto:  SALDO - 1440 - 60 = 1380
+   Usuario Alberto:  PROPIEDAD COMPRADA - Plaza Lavapies
+   Usuario Alberto:  MONOPOLIO - marron
+   Usuario Alberto:  SALDO - 1380 - 50 = 1330
+   Usuario Alberto:  CASA CONSTRUIDA - Ronda de Valencia: 1
+   Usuario Alberto:  SALDO - 1330 + 25 = 1355
+   Usuario Alberto:  NO HAY EDIFICIOS
+.Partida Partida 1:  NUEVO JUGADOR - Alberto
+Partida Partida 1:  NUEVO JUGADOR - Pepe
+Partida Partida 1:  PRIMER TURNO - Alberto
+   Usuario Alberto:  DADOS - 0 + 1
+   Usuario Alberto:  HA CAIDO EN CASILLA - 1
+      Ronda de Valencia está libre - 60 pelotis.
+   Usuario Alberto:  SALDO - 1500 - 60 = 1440
+   Usuario Alberto:  PROPIEDAD COMPRADA - Ronda de Valencia
+   Usuario Alberto:  SALDO - 1440 + 250 = 1690
+   Usuario Pepe:  SALDO - 1500 - 250 = 1250
+   Usuario Alberto:  VENTA DE PROPIEDAD A - Pepe
+     Propiedad Ronda de Valencia:  CAMBIO PROPIETARIO - Viejo: Alberto Nuevo: Pepe
+.Partida Partida 1:  NUEVO JUGADOR - Alberto
+Partida Partida 1:  Se necesitan al menos 2 jugadores
+Partida Partida 1:  NUEVO JUGADOR - Pepe
+Partida Partida 1:  PRIMER TURNO - Alberto
+Partida Partida 1:  COMIENZA
+.Partida Partida 1:  NUEVO JUGADOR - Alberto
+Partida Partida 1:  NUEVO JUGADOR - Pepe
+Partida Partida 1:  PRIMER TURNO - Alberto
+   Usuario Alberto:  DADOS - 0 + 1
+   Usuario Alberto:  HA CAIDO EN CASILLA - 1
+      Ronda de Valencia está libre - 60 pelotis.
+   Usuario Alberto:  SALDO - 1500 - 60 = 1440
+   Usuario Alberto:  PROPIEDAD COMPRADA - Ronda de Valencia
+   Usuario Alberto:  SALDO - 1440 + 30 = 1470
+   Usuario Alberto:  PROPIEDAD HIPOTECADA - Ronda de Valencia
+Partida Partida 1:  COMIENZA LA SUBASTA DE Ronda de Valencia
+Partida Partida 1:  SUBASTA - TURNO DE Alberto
+Partida Partida 1:  SUBASTA - NO ES TU TURNO
+F
+
+Failures:
+
+  1) Monopoly Movimiento por el tablero Sprint 6 Se pueden llevar a cabo subastas
+   Message:
+     Expected undefined to equal { usuario : { fichas : [ <circular reference: Object> ], getNombre : Function, getUid : Function, getInfo : Function, setInfo : Function, unirseAPartida : Function }, partida : { nombre : 'Partida 1', minNumeroJugadores : 1, tablero : { numeroCasillas : 40, numeroColoresCalles : [  ], agregarCasilla : Function, getCasilla : Function, getPosicion : Function, iniciar : Function, casillas : [ { tema : { tipo : 'Salida', estado : { caer : Function, comprar : Function, edificar : Function, hipotecar : Function }, getTipo : Function, getEstado : Function, caer : Function, comprar : Function, edificar : Function }, getTema : Function, getTipo : Function, caer : Function, comprar : Function }, { tema : { tipo : 'Calle', color : 'marron', nombre : 'Ronda de Valencia', precio : 60, estado : { caer : Function, comprar : Function, edificar : Function, hipotecar : Function }, numCasas : 0, titulo : { propiedad : <circular reference: Object>, valorHipotecario : 50, getPropiedad : Function, getPropietario : Function, setPropietario : Function, getAlquiler : Function, edificar : Function, venderEdificio : Function, hipotecarPropiedad : Function, venderPropiedad : Function, cambiarPropietario : Function, esPropietario : Function, propietario : <circular reference: Object> }, getTipo : Function, getNombre : Function, getColor : Function, getPrecio : Function, setPrecio : Function, getEstado : Function, getAlquiler : Function, getPropietario : Function, getNumCasas : Function, caer : Function, comprar : Function, ejecutarCompra : Function, calcularAlquiler : Function, cobrarAlquiler : Function, edificar : Function, venderEdificio : Function, ejecutarEdificacion : Function, comprobarOrdenDeEdificacion : Function, hipotecar : Function, ejecutarHipoteca : Function }, getTema : Function, getTipo : Function, caer : Function, comprar : Function }, { tema : { tipo : 'Tarjeta', clase : 'comunidad', estado : { caer : Function, comprar : Function, edificar : Function, hipotecar : Function }, getTipo : Function, getClase : Function, getEstado : Function, caer : Function, comprar : Function, edificar : Function }, getTema : Function, getTipo : Function, caer : Function, comprar : Function }, { tema : { tipo : 'Calle', color : 'marron', nombre : 'Plaza Lavapies', precio : 60, estado : { caer : Function, comprar : Function, edificar : Function, hipotecar : Function }, numCasas : 0, titulo : { propiedad : <circular reference: Object>, valorHipotecario : 50, getPropiedad : Function, getPropietario : Function, setPropietario : Function, getAlquiler : Function, edificar : Function, venderEdificio : Function, hipotecarPropiedad : Function, venderPropiedad : Function, cambiarPropietario : Function, esPropietario : Function }, getTipo : Function, getNombre : Function, getColor : Function, getPrecio : Function, setPrecio : Function, getEstado : Function, getAlquiler : Function, getPropietario : Function, getNumCasas : Function, caer : Function, comprar : Function, ejecutarCompra : Function, calcularAlquiler : Function, cobrarAlquiler : Function, edificar : Function, venderEdificio : Function, ejecutarEdificacion : Function, comprobarOrdenDeEdificacion : Function, hipotecar : Function, ejecutarHipoteca : Function }, getTema : Function, getTipo : Function, caer : Function, comprar : Function }, { tema : { tipo : 'Impuesto', dinero : 200, estado : { caer : Function, comprar : Function, edificar : Function, hipotecar : Function }, getTipo : Function, getDinero : Function, getEstado : Function, caer : Function, comprar : Function, edificar : Function }, getTema : Function, getTipo : Function, caer : Function, comprar : Function }, { tema : { tipo : 'Estacion', nombre : 'Estacion de Goya', precio : 200, estado : { caer : Function, comprar : Function, edificar : Function, hipotecar : Function }, titulo : { propiedad : <circular reference: Object>, valorHipotecario : 50, getPropiedad : Function, getPropietario : Function, setPropietario : Function, getAlquiler : Function, edificar : Function, venderEdificio : Function, hipotecarPropiedad : Function, venderPropiedad : Function, cambiarPropietario : Function, esPropietario : Function }, getTipo : Function, getNombre : Function, getPrecio : Function, getEstado : Function, getAlquiler : Function, getPropietario : Function, caer : Function, comprar : Function, ejecutarCompra : Function, calcularAlquiler : Function, cobrarAlquiler : Function, edificar : Function, venderEdificio : Function, hipotecar : Function, ejecutarHipoteca : Function }, getTema : Function, getTipo : Function, caer : Function, comprar : Function }, { tema : { tipo : 'Calle', color : 'azulClaro', nombre : 'Glorieta Cuatro Caminos', precio : 100, estado : { caer : Function, comprar : Function, edificar : Function, hipotecar : Function }, numCasas : 0, titulo : { propiedad : <circular reference: Object>, valorHipotecario : 50, getPropiedad : Function, getPropietario : Function, setPropietario : Function, getAlquiler : Function, edificar : Function, venderEdificio : Function, hipotecarPropiedad : Function, venderPropiedad : Function, cambiarPropietario : Function, esPropietario : Function }, getTipo : Function, getNombre : Function, getColor : Function, getPrecio : Function, setPrecio : Function, getEstado : Function, getAlquiler : Function, getPropietario : Function, getNumCasas : Function, caer : Function, comprar : Function, ejecutarCompra : Function, calcularAlquiler : Function, cobrarAlquiler : Function, edificar : Function, venderEdificio : Function, ejecutarEdificacion : Function, comprobarOrdenDeEdificacion : Function, hipotecar : Function, ejecutarHipoteca : Function }, getTema : Function, getTipo : Function, caer : Function, comprar : Function }, { tema : { tipo : 'Tarjeta', clase : 'suerte', estado : { caer : Function, comprar : Function, edificar : Function, hipotecar : Function }, getTipo : Function, getClase : Function, getEstado : Function, caer : Function, comprar : Function, edificar : Function }, getTema : Function, getTipo : Function, caer : Function, comprar : Function }, { tema : { tipo : 'Calle', color : 'azulClaro', nombre : 'Avenida Reina Victoria', precio : 100, estado : { caer : Function, comprar : Function, edificar : Function, hipotecar : Function }, numCasas : 0, titulo : { propiedad : <circular reference: Object>, valorHipotecario : 50, getPropiedad : Function, getPropietario : Function, setPropietario : Function, getAlquiler : Function, edificar : Function, venderEdificio : Function, hipotecarPropiedad : Function, venderPropiedad : Function, cambiarPropietario : Function, esPropietario : Function }, getTipo : Function, getNombre : Function, getColor : Function, getPrecio : Function, setPrecio : Function, getEstado : Function, getAlquiler : Function, getPropietario : Function, getNumCasas : Function, caer : Function, comprar : Function, ejecutarCompra : Function, calcularAlquiler : Function, cobrarAlquiler : Function, edificar : Function, venderEdificio : Function, ejecutarEdificacion : Function, comprobarOrdenDeEdificacion : Function, hipotecar : Function, ejecutarHipoteca : Function }, getTema : Function, getTipo : Function, caer : Function, comprar : Function }, { tema : { tipo : 'Calle', color : 'azulClaro', nombre : 'Calle Bravo Murillo', precio : 120, estado : { caer : Function, comprar : Function, edificar : Function, hipotecar : Function }, numCasas : 0, titulo : { propiedad : <circular reference: Object>, valorHipotecario : 50, getPropiedad : Function, getPropietario : Function, setPropietario : Function, getAlquiler : Function, edificar : Function, venderEdificio : Function, hipotecarPropiedad : Function, venderPropiedad : Function, cambiarPropietario : Function, esPropietario : Function }, getTipo : Function, getNombre : Function, getColor : Function, getPrecio : Function, setPrecio : Function, getEstado : Function, getAlquiler : Function, getPropietario : Function, getNumCasas : Function, caer : Function, comprar : Function, ejecutarCompra : Function, calcularAlquiler : Function, cobrarAlquiler : Function, edificar : Function, venderEdificio : Function, ejecutarEdificacion : Function, comprobarOrdenDeEdificacion : Function, hipotecar : Function, ejecutarHipoteca : Function }, getTema : Function, getTipo : Function, caer : Function, comprar : Function }, { tema : { tipo : 'Carcel', estado : { caer : Function, comprar : Function, edificar : Function, hipotecar : Function }, getTipo : Function, getEstado : Function, caer : Function, comprar : Function, edificar : Function }, getTema : Function, getTipo : Function, caer : Function, comprar : Function }, { tema : { tipo : 'Calle', color : 'rosa', nombre : 'Glorieta de Bilbao', precio : 140, estado : { caer : Function, comprar : Function, edificar : Function, hipotecar : Function }, numCasas : 0, titulo : { propiedad : <circular reference: Object>, valorHipotecario : 50, getPropiedad : Function, getPropietario : Function, setPropietario : Function, getAlquiler : Function, edificar : Function, venderEdificio : Function, hipotecarPropiedad : Function, venderPropiedad : Function, cambiarPropietario : Function, esPropietario : Function }, getTipo : Function, getNombre : Function, getColor : Function, getPrecio : Function, setPrecio : Function, getEstado : Function, getAlquiler : Function, getPropietario : Function, getNumCasas : Function, caer : Function, comprar : Function, ejecutarCompra : Function, calcularAlquiler : Function, cobrarAlquiler : Function, edificar : Function, venderEdificio : Function, ejecutarEdificacion : Function, comprobarOrdenDeEdificacion : Function, hipotecar : Function, ejecutarHipoteca : Function }, getTema : Function, getTipo : Function, caer : Function, comprar : Function }, { tema : { tipo : 'ServicioPublico', nombre : 'Compañia de Electricidad', precio : 150, estado : { caer : Function, comprar : Function, edificar : Function, hipotecar : Function }, titulo : { propiedad : <circular reference: Object>, valorHipotecario : 50, getPropiedad : Function, getPropietario : Function, setPropietario : Function, getAlquiler : Function, edificar : Function, venderEdificio : Function, hipotecarPropiedad : Function, venderPropiedad : Function, cambiarPropietario : Function, esPropietario : Function }, getTipo : Function, getNombre : Function, getPrecio : Function, getEstado : Function, getAlquiler : Function, getPropietario : Function, caer : Function, comprar : Function, ejecutarCompra : Function, calcularAlquiler : Function, cobrarAlquiler : Function, edificar : Function, venderEdificio : Function, hipotecar : Function, ejecutarHipoteca : Function }, getTema : Function, getTipo : Function, caer : Function, comprar : Function }, { tema : { tipo : 'Calle', color : 'rosa', nombre : 'Calle Alberto Aguilera', precio : 140, estado : { caer : Function, comprar : Function, edificar : Function, hipotecar : Function }, numCasas : 0, titulo : { propiedad : <circular reference: Object>, valorHipotecario : 50, getPropiedad : Function, getPropietario : Function, setPropietario : Function, getAlquiler : Function, edificar : Function, venderEdificio : Function, hipotecarPropiedad : Function, venderPropiedad : Function, cambiarPropietario : Function, esPropietario : Function }, getTipo : Function, getNombre : Function, getColor : Function, getPrecio : Function, setPrecio : Function, getEstado : Function, getAlquiler : Function, getPropietario : Function, getNumCasas : Function, caer : Function, comprar : Function, ejecutarCompra : Function, calcularAlquiler : Function, cobrarAlquiler : Function, edificar : Function, venderEdificio : Function, ejecutarEdificacion : Function, comprobarOrdenDeEdificacion : Function, hipotecar : Function, ejecutarHipoteca : Function }, getTema : Function, getTipo : Function, caer : Function, comprar : Function }, { tema : { tipo : 'Calle', color : 'rosa', nombre : 'Calle Fuencarral', precio : 160, estado : { caer : Function, comprar : Function, edificar : Function, hipotecar : Function }, numCasas : 0, titulo : { propiedad : <circular reference: Object>, valorHipotecario : 50, getPropiedad : Function, getPropietario : Function, setPropietario : Function, getAlquiler : Function, edificar : Function, venderEdificio : Function, hipotecarPropiedad : Function, venderPropiedad : Function, cambiarPropietario : Function, esPropietario : Function }, getTipo : Function, getNombre : Function, getColor : Function, getPrecio : Function, setPrecio : Function, getEstado : Function, getAlquiler : Function, getPropietario : Function, getNumCasas : Function, caer : Function, comprar : Function, ejecutarCompra : Function, calcularAlquiler : Function, cobrarAlquiler : Function, edificar : Function, venderEdificio : Function, ejecutarEdificacion : Function, comprobarOrdenDeEdificacion : Function, hipotecar : Function, ejecutarHipoteca : Function }, getTema : Function, getTipo : Function, caer : Function, comprar : Function }, { tema : { tipo : 'Estacion', nombre : 'Estacion de las Delicias', precio : 200, estado : { caer : Function, comprar : Function, edificar : Function, hipotecar : Function }, titulo : { propiedad : <circular reference: Object>, valorHipotecario : 50, getPropiedad : Function, getPropietario : Function, setPropietario : Function, getAlquiler : Function, edificar : Function, venderEdificio : Function, hipotecarPropiedad : Function, venderPropiedad : Function, cambiarPropietario : Function, esPropietario : Function }, getTipo : Function, getNombre : Function, getPrecio : Function, getEstado : Function, getAlquiler : Function, getPropietario : Function, caer : Function, comprar : Function, ejecutarCompra : Function, calcularAlquiler : Function, cobrarAlquiler : Function, edificar : Function, venderEdificio : Function, hipotecar : Function, ejecutarHipoteca : Function }, getTema : Function, getTipo : Function, caer : Function, comprar : Function }, { tema : { tipo : 'Calle', color : 'naranja', nombre : 'Avenida Felipe II', precio : 180, estado : { caer : Function, comprar : Function, edificar : Function, hipotecar : Function }, numCasas : 0, titulo : { propiedad : <circular reference: Object>, valorHipotecario : 50, getPropiedad : Function, getPropietario : Function, setPropietario : Function, getAlquiler : Function, edificar : Function, venderEdificio : Function, hipotecarPropiedad : Function, venderPropiedad : Function, cambiarPropietario : Function, esPropietario : Function }, getTipo : Function, getNombre : Function, getColor : Function, getPrecio : Function, setPrecio : Function, getEstado : Function, getAlquiler : Function, getPropietario : Function, getNumCasas : Function, caer : Function, comprar : Function, ejecutarCompra : Function, calcularAlquiler : Function, cobrarAlquiler : Function, edificar : Function, venderEdificio : Function, ejecutarEdificacion : Function, comprobarOrdenDeEdificacion : Function, hipotecar : Function, ejecutarHipoteca : Function }, getTema : Function, getTipo : Function, caer : Function, comprar : Function }, { tema : { tipo : 'Tarjeta', clase : 'comunidad', estado : { caer : Function, comprar : Function, edificar : Function, hipotecar : Function }, getTipo : Function, getClase : Function, getEstado : Function, caer : Function, comprar : Function, edificar : Function }, getTema : Function, getTipo : Function, caer : Function, comprar : Function }, { tema : { tipo : 'Calle', color : 'naranja', nombre : 'Calle Velazquez', precio : 180, estado : { caer : Function, comprar : Function, edificar : Function, hipotecar : Function }, numCasas : 0, titulo : { propiedad : <circular reference: Object>, valorHipotecario : 50, getPropiedad : Function, getPropietario : Function, setPropietario : Function, getAlquiler : Function, edificar : Function, venderEdificio : Function, hipotecarPropiedad : Function, venderPropiedad : Function, cambiarPropietario : Function, esPropietario : Function }, getTipo : Function, getNombre : Function, getColor : Function, getPrecio : Function, setPrecio : Function, getEstado : Function, getAlquiler : Function, getPropietario : Function, getNumCasas : Function, caer : Function, comprar : Function, ejecutarCompra : Function, calcularAlquiler : Function, cobrarAlquiler : Function, edificar : Function, venderEdificio : Function, ejecutarEdificacion : Function, comprobarOrdenDeEdificacion : Function, hipotecar : Function, ejecutarHipoteca : Function }, getTema : Function, getTipo : Function, caer : Function, comprar : Function }, { tema : { tipo : 'Calle', color : 'naranja', nombre : 'Calle Serrano', precio : 200, estado : { caer : Function, comprar : Function, edificar : Function, hipotecar : Function }, numCasas : 0, titulo : { propiedad : <circular reference: Object>, valorHipotecario : 50, getPropiedad : Function, getPropietario : Function, setPropietario : Function, getAlquiler : Function, edificar : Function, venderEdificio : Function, hipotecarPropiedad : Function, venderPropiedad : Function, cambiarPropietario : Function, esPropietario : Function }, getTipo : Function, getNombre : Function, getColor : Function, getPrecio : Function, setPrecio : Function, getEstado : Function, getAlquiler : Function, getPropietario : Function, getNumCasas : Function, caer : Function, comprar : Function, ejecutarCompra : Function, calcularAlquiler : Function, cobrarAlquiler : Function, edificar : Function, venderEdificio : Function, ejecutarEdificacion : Function, comprobarOrdenDeEdificacion : Function, hipotecar : Function, ejecutarHipoteca : Function }, getTema : Function, getTipo : Function, caer : Function, comprar : Function }, { tema : { tipo : 'Parking', estado : { caer : Function, comprar : Function, edificar : Function, hipotecar : Function }, getTipo : Function, getEstado : Function, caer : Function, comprar : Function, edificar : Function }, getTema : Function, getTipo : Function, caer : Function, comprar : Function }, { tema : { tipo : 'Calle', color : 'rojo', nombre : 'Avenida de America', precio : 220, estado : { caer : Function, comprar : Function, edificar : Function, hipotecar : Function }, numCasas : 0, titulo : { propiedad : <circular reference: Object>, valorHipotecario : 50, getPropiedad : Function, getPropietario : Function, setPropietario : Function, getAlquiler : Function, edificar : Function, venderEdificio : Function, hipotecarPropiedad : Function, venderPropiedad : Function, cambiarPropietario : Function, esPropietario : Function }, getTipo : Function, getNombre : Function, getColor : Function, getPrecio : Function, setPrecio : Function, getEstado : Function, getAlquiler : Function, getPropietario : Function, getNumCasas : Function, caer : Function, comprar : Function, ejecutarCompra : Function, calcularAlquiler : Function, cobrarAlquiler : Function, edificar : Function, venderEdificio : Function, ejecutarEdificacion : Function, comprobarOrdenDeEdificacion : Function, hipotecar : Function, ejecutarHipoteca : Function }, getTema : Function, getTipo : Function, caer : Function, comprar : Function }, { tema : { tipo : 'Tarjeta', clase : 'suerte', estado : { caer : Function, comprar : Function, edificar : Function, hipotecar : Function }, getTipo : Function, getClase : Function, getEstado : Function, caer : Function, comprar : Function, edificar : Function }, getTema : Function, getTipo : Function, caer : Function, comprar : Function }, { tema : { tipo : 'Calle', color : 'rojo', nombre : 'Calle Maria de Molina', precio : 220, estado : { caer : Function, comprar : Function, edificar : Function, hipotecar : Function }, numCasas : 0, titulo : { propiedad : <circular reference: Object>, valorHipotecario : 50, getPropiedad : Function, getPropietario : Function, setPropietario : Function, getAlquiler : Function, edificar : Function, venderEdificio : Function, hipotecarPropiedad : Function, venderPropiedad : Function, cambiarPropietario : Function, esPropietario : Function }, getTipo : Function, getNombre : Function, getColor : Function, getPrecio : Function, setPrecio : Function, getEstado : Function, getAlquiler : Function, getPropietario : Function, getNumCasas : Function, caer : Function, comprar : Function, ejecutarCompra : Function, calcularAlquiler : Function, cobrarAlquiler : Function, edificar : Function, venderEdificio : Function, ejecutarEdificacion : Function, comprobarOrdenDeEdificacion : Function, hipotecar : Function, ejecutarHipoteca : Function }, getTema : Function, getTipo : Function, caer : Function, comprar : Function }, { tema : { tipo : 'Calle', color : 'rojo', nombre : 'Calle Cea Bermudez', precio : 240, estado : { caer : Function, comprar : Function, edificar : Function, hipotecar : Function }, numCasas : 0, titulo : { propiedad : <circular reference: Object>, valorHipotecario : 50, getPropiedad : Function, getPropietario : Function, setPropietario : Function, getAlquiler : Function, edificar : Function, venderEdificio : Function, hipotecarPropiedad : Function, venderPropiedad : Function, cambiarPropietario : Function, esPropietario : Function }, getTipo : Function, getNombre : Function, getColor : Function, getPrecio : Function, setPrecio : Function, getEstado : Function, getAlquiler : Function, getPropietario : Function, getNumCasas : Function, caer : Function, comprar : Function, ejecutarCompra : Function, calcularAlquiler : Function, cobrarAlquiler : Function, edificar : Function, venderEdificio : Function, ejecutarEdificacion : Function, comprobarOrdenDeEdificacion : Function, hipotecar : Function, ejecutarHipoteca : Function }, getTema : Function, getTipo : Function, caer : Function, comprar : Function }, { tema : { tipo : 'Estacion', nombre : 'Estacion del Mediodia', precio : 200, estado : { caer : Function, comprar : Function, edificar : Function, hipotecar : Function }, titulo : { propiedad : <circular reference: Object>, valorHipotecario : 50, getPropiedad : Function, getPropietario : Function, setPropietario : Function, getAlquiler : Function, edificar : Function, venderEdificio : Function, hipotecarPropiedad : Function, venderPropiedad : Function, cambiarPropietario : Function, esPropietario : Function }, getTipo : Function, getNombre : Function, getPrecio : Function, getEstado : Function, getAlquiler : Function, getPropietario : Function, caer : Function, comprar : Function, ejecutarCompra : Function, calcularAlquiler : Function, cobrarAlquiler : Function, edificar : Function, venderEdificio : Function, hipotecar : Function, ejecutarHipoteca : Function }, getTema : Function, getTipo : Function, caer : Function, comprar : Function }, { tema : { tipo : 'Calle', color : 'amarillo', nombre : 'Avenida Los Reyez Catolicos', precio : 260, estado : { caer : Function, comprar : Function, edificar : Function, hipotecar : Function }, numCasas : 0, titulo : { propiedad : <circular reference: Object>, valorHipotecario : 50, getPropiedad : Function, getPropietario : Function, setPropietario : Function, getAlquiler : Function, edificar : Function, venderEdificio : Function, hipotecarPropiedad : Function, venderPropiedad : Function, cambiarPropietario : Function, esPropietario : Function }, getTipo : Function, getNombre : Function, getColor : Function, getPrecio : Function, setPrecio : Function, getEstado : Function, getAlquiler : Function, getPropietario : Function, getNumCasas : Function, caer : Function, comprar : Function, ejecutarCompra : Function, calcularAlquiler : Function, cobrarAlquiler : Function, edificar : Function, venderEdificio : Function, ejecutarEdificacion : Function, comprobarOrdenDeEdificacion : Function, hipotecar : Function, ejecutarHipoteca : Function }, getTema : Function, getTipo : Function, caer : Function, comprar : Function }, { tema : { tipo : 'Calle', color : 'amarillo', nombre : 'Calle Bailen', precio : 260, estado : { caer : Function, comprar : Function, edificar : Function, hipotecar : Function }, numCasas : 0, titulo : { propiedad : <circular reference: Object>, valorHipotecario : 50, getPropiedad : Function, getPropietario : Function, setPropietario : Function, getAlquiler : Function, edificar : Function, venderEdificio : Function, hipotecarPropiedad : Function, venderPropiedad : Function, cambiarPropietario : Function, esPropietario : Function }, getTipo : Function, getNombre : Function, getColor : Function, getPrecio : Function, setPrecio : Function, getEstado : Function, getAlquiler : Function, getPropietario : Function, getNumCasas : Function, caer : Function, comprar : Function, ejecutarCompra : Function, calcularAlquiler : Function, cobrarAlquiler : Function, edificar : Function, venderEdificio : Function, ejecutarEdificacion : Function, comprobarOrdenDeEdificacion : Function, hipotecar : Function, ejecutarHipoteca : Function }, getTema : Function, getTipo : Function, caer : Function, comprar : Function }, { tema : { tipo : 'ServicioPublico', nombre : 'Compañia de Aguas', precio : 150, estado : { caer : Function, comprar : Function, edificar : Function, hipotecar : Function }, titulo : { propiedad : <circular reference: Object>, valorHipotecario : 50, getPropiedad : Function, getPropietario : Function, setPropietario : Function, getAlquiler : Function, edificar : Function, venderEdificio : Function, hipotecarPropiedad : Function, venderPropiedad : Function, cambiarPropietario : Function, esPropietario : Function }, getTipo : Function, getNombre : Function, getPrecio : Function, getEstado : Function, getAlquiler : Function, getPropietario : Function, caer : Function, comprar : Function, ejecutarCompra : Function, calcularAlquiler : Function, cobrarAlquiler : Function, edificar : Function, venderEdificio : Function, hipotecar : Function, ejecutarHipoteca : Function }, getTema : Function, getTipo : Function, caer : Function, comprar : Function }, { tema : { tipo : 'Calle', color : 'amarillo', nombre : 'Plaza de España', precio : 280, estado : { caer : Function, comprar : Function, edificar : Function, hipotecar : Function }, numCasas : 0, titulo : { propiedad : <circular reference: Object>, valorHipotecario : 50, getPropiedad : Function, getPropietario : Function, setPropietario : Function, getAlquiler : Function, edificar : Function, venderEdificio : Function, hipotecarPropiedad : Function, venderPropiedad : Function, cambiarPropietario : Function, esPropietario : Function }, getTipo : Function, getNombre : Function, getColor : Function, getPrecio : Function, setPrecio : Function, getEstado : Function, getAlquiler : Function, getPropietario : Function, getNumCasas : Function, caer : Function, comprar : Function, ejecutarCompra : Function, calcularAlquiler : Function, cobrarAlquiler : Function, edificar : Function, venderEdificio : Function, ejecutarEdificacion : Function, comprobarOrdenDeEdificacion : Function, hipotecar : Function, ejecutarHipoteca : Function }, getTema : Function, getTipo : Function, caer : Function, comprar : Function }, { tema : { tipo : 'IrCarcel', estado : { caer : Function, comprar : Function, edificar : Function, hipotecar : Function }, getTipo : Function, getEstado : Function, caer : Function, comprar : Function, edificar : Function }, getTema : Function, getTipo : Function, caer : Function, comprar : Function }, { tema : { tipo : 'Calle', color : 'verde', nombre : 'Puerta del Sol', precio : 300, estado : { caer : Function, comprar : Function, edificar : Function, hipotecar : Function }, numCasas : 0, titulo : { propiedad : <circular reference: Object>, valorHipotecario : 50, getPropiedad : Function, getPropietario : Function, setPropietario : Function, getAlquiler : Function, edificar : Function, venderEdificio : Function, hipotecarPropiedad : Function, venderPropiedad : Function, cambiarPropietario : Function, esPropietario : Function }, getTipo : Function, getNombre : Function, getColor : Function, getPrecio : Function, setPrecio : Function, getEstado : Function, getAlquiler : Function, getPropietario : Function, getNumCasas : Function, caer : Function, comprar : Function, ejecutarCompra : Function, calcularAlquiler : Function, cobrarAlquiler : Function, edificar : Function, venderEdificio : Function, ejecutarEdificacion : Function, comprobarOrdenDeEdificacion : Function, hipotecar : Function, ejecutarHipoteca : Function }, getTema : Function, getTipo : Function, caer : Function, comprar : Function }, { tema : { tipo : 'Calle', color : 'verde', nombre : 'Calle Alcala', precio : 300, estado : { caer : Function, comprar : Function, edificar : Function, hipotecar : Function }, numCasas : 0, titulo : { propiedad : <circular reference: Object>, valorHipotecario : 50, getPropiedad : Function, getPropietario : Function, setPropietario : Function, getAlquiler : Function, edificar : Function, venderEdificio : Function, hipotecarPropiedad : Function, venderPropiedad : Function, cambiarPropietario : Function, esPropietario : Function }, getTipo : Function, getNombre : Function, getColor : Function, getPrecio : Function, setPrecio : Function, getEstado : Function, getAlquiler : Function, getPropietario : Function, getNumCasas : Function, caer : Function, comprar : Function, ejecutarCompra : Function, calcularAlquiler : Function, cobrarAlquiler : Function, edificar : Function, venderEdificio : Function, ejecutarEdificacion : Function, comprobarOrdenDeEdificacion : Function, hipotecar : Function, ejecutarHipoteca : Function }, getTema : Function, getTipo : Function, caer : Function, comprar : Function }, { tema : { tipo : 'Tarjeta', clase : 'comunidad', estado : { caer : Function, comprar : Function, edificar : Function, hipotecar : Function }, getTipo : Function, getClase : Function, getEstado : Function, caer : Function, comprar : Function, edificar : Function }, getTema : Function, getTipo : Function, caer : Function, comprar : Function }, { tema : { tipo : 'Calle', color : 'verde', nombre : 'Gran Via', precio : 320, estado : { caer : Function, comprar : Function, edificar : Function, hipotecar : Function }, numCasas : 0, titulo : { propiedad : <circular reference: Object>, valorHipotecario : 50, getPropiedad : Function, getPropietario : Function, setPropietario : Function, getAlquiler : Function, edificar : Function, venderEdificio : Function, hipotecarPropiedad : Function, venderPropiedad : Function, cambiarPropietario : Function, esPropietario : Function }, getTipo : Function, getNombre : Function, getColor : Function, getPrecio : Function, setPrecio : Function, getEstado : Function, getAlquiler : Function, getPropietario : Function, getNumCasas : Function, caer : Function, comprar : Function, ejecutarCompra : Function, calcularAlquiler : Function, cobrarAlquiler : Function, edificar : Function, venderEdificio : Function, ejecutarEdificacion : Function, comprobarOrdenDeEdificacion : Function, hipotecar : Function, ejecutarHipoteca : Function }, getTema : Function, getTipo : Function, caer : Function, comprar : Function }, { tema : { tipo : 'Estacion', nombre : 'Estacion del Norte', precio : 200, estado : { caer : Function, comprar : Function, edificar : Function, hipotecar : Function }, titulo : { propiedad : <circular reference: Object>, valorHipotecario : 50, getPropiedad : Function, getPropietario : Function, setPropietario : Function, getAlquiler : Function, edificar : Function, venderEdificio : Function, hipotecarPropiedad : Function, venderPropiedad : Function, cambiarPropietario : Function, esPropietario : Function }, getTipo : Function, getNombre : Function, getPrecio : Function, getEstado : Function, getAlquiler : Function, getPropietario : Function, caer : Function, comprar : Function, ejecutarCompra : Function, calcularAlquiler : Function, cobrarAlquiler : Function, edificar : Function, venderEdificio : Function, hipotecar : Function, ejecutarHipoteca : Function }, getTema : Function, getTipo : Function, caer : Function, comprar : Function }, { tema : { tipo : 'Tarjeta', clase : 'suerte', estado : { caer : Function, comprar : Function, edificar : Function, hipotecar : Function }, getTipo : Function, getClase : Function, getEstado : Function, caer : Function, comprar : Function, edificar : Function }, getTema : Function, getTipo : Function, caer : Function, comprar : Function }, { tema : { tipo : 'Calle', color : 'azul', nombre : 'Paseo de la Castellana', precio : 380, estado : { caer : Function, comprar : Function, edificar : Function, hipotecar : Function }, numCasas : 0, titulo : { propiedad : <circular reference: Object>, valorHipotecario : 50, getPropiedad : Function, getPropietario : Function, setPropietario : Function, getAlquiler : Function, edificar : Function, venderEdificio : Function, hipotecarPropiedad : Function, venderPropiedad : Function, cambiarPropietario : Function, esPropietario : Function }, getTipo : Function, getNombre : Function, getColor : Function, getPrecio : Function, setPrecio : Function, getEstado : Function, getAlquiler : Function, getPropietario : Function, getNumCasas : Function, caer : Function, comprar : Function, ejecutarCompra : Function, calcularAlquiler : Function, cobrarAlquiler : Function, edificar : Function, venderEdificio : Function, ejecutarEdificacion : Function, comprobarOrdenDeEdificacion : Function, hipotecar : Function, ejecutarHipoteca : Function }, getTema : Function, getTipo : Function, caer : Function, comprar : Function }, { tema : { tipo : 'Impuesto', dinero : 100, estado : { caer : Function, comprar : Function, edificar : Function, hipotecar : Function }, getTipo : Function, getDinero : Function, getEstado : Function, caer : Function, comprar : Function, edificar : Function }, getTema : Function, getTipo : Function, caer : Function, comprar : Function }, { tema : { tipo : 'Calle', color : 'azul', nombre : 'Paseo del Prado', precio : 400, estado : { caer : Function, comprar : Function, edificar : Function, hipotecar : Function }, numCasas : 0, titulo : { propiedad : <circular reference: Object>, valorHipotecario : 50, getPropiedad : Function, getPropietario : Function, setPropietario : Function, getAlquiler : Function, edificar : Function, venderEdificio : Function, hipotecarPropiedad : Function, venderPropiedad : Function, cambiarPropietario : Function, esPropietario : Function }, getTipo : Function, getNombre : Function, getColor : Function, getPrecio : Function, setPrecio : Function, getEstado : Function, getAlquiler : Function, getPropietario : Function, getNumCasas : Function, caer : Function, comprar : Function, ejecutarCompra : Function, calcularAlquiler : Function, cobrarAlquiler : Function, edificar : Function, venderEdificio : Function, ejecutarEdificacion : Function, comprobarOrdenDeEdificacion : Function, hipotecar : Function, ejecutarHipoteca : Function }, getTema : Function, getTipo : Function, caer : Function, comprar : Function } ] }, dado : { lanzar : Function }, fichas : [ <circular reference: Object>, { usuario : { fichas : [ <circular reference: Object> ], getNombre : Function, getUid : Function, getInfo : Function, setInfo : Function, unirseAPartida : Function }, partida : <circular reference: Object>, info : [  ], cobroSalida : false, casillaALaCarel : false, color : 'rojo', saldo : 1500, posicion : 0, propiedades : [  ], monopolios : [  ], turno : { lanzarDados : Function, usarTarjetaLibreCarcel : Function, pagarSalidaCarcel : Function, comprarPropiedad : Function, edificar : Function, venderEdificio : Function, hipotecarPropiedad : Function, comenzarSubasta : Function, venderPropiedad : Function, pasarTurno : Function }, turnosEnCarcel : 0, bancarrota : false, deudas : [  ], tarjetaLibreCarcel : false, setTarjetaCogida : Function, getTarjetaCogida : Function, setCobroSalida : Function, getCobroSalida : Function, getCasillaALaCarcel : Function, getInfoPagoAFicha : Function, getUsuario : Function, getPartida : Function, getColor : Function, getSaldo : Function, getPosicion : Function, setPosicion : Function, getPropiedad : Function, getPropiedades : Function, asignarPropiedad : Function, quitarPropiedad : Function, getMonopolios : Function, setMonopolio : Function, quitarMonopolio : Function, getTurno : Function, setTurno : Function, getTurnosEnCarcel : Function, setTurnosEnCarcel : Function, setTarjetaLibreCarcel : Function, tieneTarjetaLibreCarcel : Function, getDeudas : Function, declararEnBancarrota : Function, enBancarrota : Function, setGanador : Function, esGanador : Function, empezarPartida : Function, lanzarDados : Function, usarTarjetaLibreCarcel : Function, pagarSalidaCarcel : Function, comprarPropiedad : Function, edificar : Function, venderEdificio : Function, hipotecarPropiedad : Function, venderPropiedad : Function, pasarTurno : Function, pagar : Function, pagarDeudas : Function, cobrar : Function, encarcelar : Function, comenzarSubasta : Function, pujar : Function, salirDeSubasta : Function } ], coloresFichas : [ 'azul', 'rojo', 'verde', 'amarillo', 'rosa', 'naranja' ], fase : { tituloASubastar : { propiedad : { tipo : 'Calle', color : 'marron', nombre : 'Ronda de Valencia', precio : 60, estado : { caer : Function, comprar : Function, edificar : Function, hipotecar : Function }, numCasas : 0, titulo : <circular reference: Object>, getTipo : Function, getNombre : Function, getColor : Function, getPrecio : Function, setPrecio : Function, getEstado : Function, getAlquiler : Function, getPropietario : Function, getNumCasas : Function, caer : Function, comprar : Function, ejecutarCompra : Function, calcularAlquiler : Function, cobrarAlquiler : Function, edificar : Function, venderEdificio : Function, ejecutarEdificacion : Function, comprobarOrdenDeEdificacion : Function, hipotecar : Function, ejecutarHipoteca : Function }, valorHipotecario : 50, getPropiedad : Function, getPropietario : Function, setPropietario : Function, getAlquiler : Function, edificar : Function, venderEdificio : Function, hipotecarPropiedad : Function, venderPropiedad : Function, cambiarPropietario : Function, esPropietario : Function, propietario : <circular reference: Object> }, participantes : [ <circular reference: Object>, { usuario : { fichas : [ <circular reference: Object> ], getNombre : Function, getUid : Function, getInfo : Function, setInfo : Function, unirseAPartida : Function }, partida : <circular reference: Object>, info : [  ], cobroSalida : false, casillaALaCarel : false, color : 'rojo', saldo : 1500, posicion : 0, propiedades : [  ], monopolios : [  ], turno : { lanzarDados : Function, usarTarjetaLibreCarcel : Function, pagarSalidaCarcel : Function, comprarPropiedad : Function, edificar : Function, venderEdificio : Function, hipotecarPropiedad : Function, comenzarSubasta : Function, venderPropiedad : Function, pasarTurno : Function }, turnosEnCarcel : 0, bancarrota : false, deudas : [  ], tarjetaLibreCarcel : false, setTarjetaCogida : Function, getTarjetaCogida : Function, setCobroSalida : Function, getCobroSalida : Function, getCasillaALaCarcel : Function, getInfoPagoAFicha : Function, getUsuario : Function, getPartida : Function, getColor : Function, getSaldo : Function, getPosicion : Function, setPosicion : Function, getPropiedad : Function, getPropiedades : Function, asignarPropiedad : Function, quitarPropiedad : Function, getMonopolios : Function, setMonopolio : Function, quitarMonopolio : Function, getTurno : Function, setTurno : Function, getTurnosEnCarcel : Function, setTurnosEnCarcel : Function, setTarjetaLibreCarcel : Function, tieneTarjetaLibreCarcel : Function, getDeudas : Function, declararEnBancarrota : Function, enBancarrota : Function, setGanador : Function, esGanador : Function, empezarPartida : Function, lanzarDados : Function, usarTarjetaLibreCarcel : Function, pagarSalidaCarcel : Function, comprarPropiedad : Function, edificar : Function, venderEdificio : Function, hipotecarPropiedad : Function, venderPropiedad : Function, pasarTurno : Function, pagar : Function, pagarDeudas : Function, cobrar : Function, encarcelar : Function, comenzarSubasta : Function, pujar : Function, salirDeSubasta : Function } ], pujaGanadora : { jugador : undefined, cantidad : -1 }, turno : 0, solicitarNuevoJugador : Function, empezar : Function, lanzarDados : Function, comenzarSubasta : Function, pujar : Function }, turno : 0, getNombre : Function, getMinNumJugadores : Function, getFase : Function, getTurno : Function, getFichaConTurno : Function, getNumCasas : Function, getNumHoteles : Function, getFicha : Function, getFichaPorColor : Function, getFichas : Function, getGanador : Function, generarCajaTarjetas : Function, getTarjeta : Function, solicitarNuevoJugador : Function, crearJugador : Function, empezar : Function, calcularPrimerTurno : Function, solicitarLanzarDados : Function, lanzarDados : Function, moverFicha : Function, comprarPropiedad : Function, comprarCasa : Function, comprarHotel : Function, devolverCasa : Function, devolverHotel : Function, comprobarMonopolio : Function, cobrarDineroSalida : Function, cambiarTurno : Function, comprobarGanador : Function, finalizarPartida : Function, comenzarSubasta : Function, pujar : Function, realizarPuja : Function, cajaTarjetasComunidad : [ { msg : 'Paga 50 pelotis', cantidad : 50, ejecutar : Function }, { msg : 'Avanza 4 casillas', numCasillas : 4, ejecutar : Function }, { msg : 'Retrocede 4 casillas', numCasillas : 4, ejecutar : Function }, { msg : 'TARJETA LIBRE DE CÁRCEL: Con esta tarjeta podrás salir de la cárcel', ejecutar : Function }, { msg : 'Cobra 50 pelotis', cantidad : 50, ejecutar : Function } ], cajaTarjetasSuerte : [ { msg : 'Avanza 4 casillas', numCasillas : 4, ejecutar : Function }, { msg : 'Paga 50 pelotis', cantidad : 50, ejecutar : Function }, { msg : 'Retrocede 4 casillas', numCasillas : 4, ejecutar : Function }, { msg : 'Cobra 50 pelotis', cantidad : 50, ejecutar : Function }, { msg : 'TARJETA LIBRE DE CÁRCEL: Con esta tarjeta podrás salir de la cárcel', ejecutar : Function } ] }, info : [  ], cobroSalida : false, casillaALaCarel : false, color : 'azul', saldo : 1470, posicion : 1, propiedades : [ { propiedad : { tipo : 'Calle', color : 'marron', nombre : 'Ronda de Valencia', precio : 60, estado : { caer : Function, comprar : Function, edificar : Function, hipotecar : Function }, numCasas : 0, titulo : <circular reference: Object>, getTipo : Function, getNombre : Function, getColor : Function, getPrecio : Function, setPrecio : Function, getEstado : Function, getAlquiler : Function, getPropietario : Function, getNumCasas : Function, caer : Function, comprar : Function, ejecutarCompra : Function, calcularAlquiler : Function, cobrarAlquiler : Function, edificar : Function, venderEdificio : Function, ejecutarEdificacion : Function, comprobarOrdenDeEdificacion : Function, hipotecar : Function, ejecutarHipoteca : Function }, valorHipotecario : 50, getPropiedad : Function, getPropietario : Function, setPropietario : Function, getAlquiler : Function, edificar : Function, venderEdificio : Function, hipotecarPropiedad : Function, venderPropiedad : Function, cambiarPropietario : Function, esPropietario : Function, propietario : <circular reference: Object> } ], monopolios : [  ], turno : { dadosTirados : true, dobles : 0, lanzarDados : Function, puedeRelizarOperacion : Function, usarTarjetaLibreCarcel : Function, pagarSalidaCarcel : Function, comprarPropiedad : Function, edificar : Function, venderEdificio : Function, hipotecarPropiedad : Function, venderPropiedad : Function, comenzarSubasta : Function, pasarTurno : Function }, turnosEnCarcel : 0, bancarrota : false, deudas : [  ], tarjetaLibreCarcel : false, setTarjetaCogida : Function, getTarjetaCogida : Function, setCobroSalida : Function, getCobroSalida : Function, getCasillaALaCarcel : Function, getInfoPagoAFicha : Function, getUsuario : Function, getPartida : Function, getColor : Function, getSaldo : Function, getPosicion : Function, setPosicion : Function, getPropiedad : Function, getPropiedades : Function, asignarPropiedad : Function, quitarPropiedad : Function, getMonopolios : Function, setMonopolio : Function, quitarMonopolio : Function, getTurno : Function, setTurno : Function, getTurnosEnCarcel : Function, setTurnosEnCarcel : Function, setTarjetaLibreCarcel : Function, tieneTarjetaLibreCarcel : Function, getDeudas : Function, declararEnBancarrota : Function, enBancarrota : Function, setGanador : Function, esGanador : Function, empezarPartida : Function, lanzarDados : Function, usarTarjetaLibreCarcel : Function, pagarSalidaCarcel : Function, comprarPropiedad : Function, edificar : Function, venderEdificio : Function, hipotecarPropiedad : Function, venderPropiedad : Function, pasarTurno : Function, pagar : Function, pagarDeudas : Function, cobrar : Function, encarcelar : Function, comenzarSubasta : Function, pujar : Function, salirDeSubasta : Function, tarjetaCogida : false, infoPagoAFicha : undefined }.
+   Stacktrace:
+     Error: Expected undefined to equal { usuario : { fichas : [ <circular reference: Object> ], getNombre : Function, getUid : Function, getInfo : Function, setInfo : Function, unirseAPartida : Function }, partida : { nombre : 'Partida 1', minNumeroJugadores : 1, tablero : { numeroCasillas : 40, numeroColoresCalles : [  ], agregarCasilla : Function, getCasilla : Function, getPosicion : Function, iniciar : Function, casillas : [ { tema : { tipo : 'Salida', estado : { caer : Function, comprar : Function, edificar : Function, hipotecar : Function }, getTipo : Function, getEstado : Function, caer : Function, comprar : Function, edificar : Function }, getTema : Function, getTipo : Function, caer : Function, comprar : Function }, { tema : { tipo : 'Calle', color : 'marron', nombre : 'Ronda de Valencia', precio : 60, estado : { caer : Function, comprar : Function, edificar : Function, hipotecar : Function }, numCasas : 0, titulo : { propiedad : <circular reference: Object>, valorHipotecario : 50, getPropiedad : Function, getPropietario : Function, setPropietario : Function, getAlquiler : Function, edificar : Function, venderEdificio : Function, hipotecarPropiedad : Function, venderPropiedad : Function, cambiarPropietario : Function, esPropietario : Function, propietario : <circular reference: Object> }, getTipo : Function, getNombre : Function, getColor : Function, getPrecio : Function, setPrecio : Function, getEstado : Function, getAlquiler : Function, getPropietario : Function, getNumCasas : Function, caer : Function, comprar : Function, ejecutarCompra : Function, calcularAlquiler : Function, cobrarAlquiler : Function, edificar : Function, venderEdificio : Function, ejecutarEdificacion : Function, comprobarOrdenDeEdificacion : Function, hipotecar : Function, ejecutarHipoteca : Function }, getTema : Function, getTipo : Function, caer : Function, comprar : Function }, { tema : { tipo : 'Tarjeta', clase : 'comunidad', estado : { caer : Function, comprar : Function, edificar : Function, hipotecar : Function }, getTipo : Function, getClase : Function, getEstado : Function, caer : Function, comprar : Function, edificar : Function }, getTema : Function, getTipo : Function, caer : Function, comprar : Function }, { tema : { tipo : 'Calle', color : 'marron', nombre : 'Plaza Lavapies', precio : 60, estado : { caer : Function, comprar : Function, edificar : Function, hipotecar : Function }, numCasas : 0, titulo : { propiedad : <circular reference: Object>, valorHipotecario : 50, getPropiedad : Function, getPropietario : Function, setPropietario : Function, getAlquiler : Function, edificar : Function, venderEdificio : Function, hipotecarPropiedad : Function, venderPropiedad : Function, cambiarPropietario : Function, esPropietario : Function }, getTipo : Function, getNombre : Function, getColor : Function, getPrecio : Function, setPrecio : Function, getEstado : Function, getAlquiler : Function, getPropietario : Function, getNumCasas : Function, caer : Function, comprar : Function, ejecutarCompra : Function, calcularAlquiler : Function, cobrarAlquiler : Function, edificar : Function, venderEdificio : Function, ejecutarEdificacion : Function, comprobarOrdenDeEdificacion : Function, hipotecar : Function, ejecutarHipoteca : Function }, getTema : Function, getTipo : Function, caer : Function, comprar : Function }, { tema : { tipo : 'Impuesto', dinero : 200, estado : { caer : Function, comprar : Function, edificar : Function, hipotecar : Function }, getTipo : Function, getDinero : Function, getEstado : Function, caer : Function, comprar : Function, edificar : Function }, getTema : Function, getTipo : Function, caer : Function, comprar : Function }, { tema : { tipo : 'Estacion', nombre : 'Estacion de Goya', precio : 200, estado : { caer : Function, comprar : Function, edificar : Function, hipotecar : Function }, titulo : { propiedad : <circular reference: Object>, valorHipotecario : 50, getPropiedad : Function, getPropietario : Function, setPropietario : Function, getAlquiler : Function, edificar : Function, venderEdificio : Function, hipotecarPropiedad : Function, venderPropiedad : Function, cambiarPropietario : Function, esPropietario : Function }, getTipo : Function, getNombre : Function, getPrecio : Function, getEstado : Function, getAlquiler : Function, getPropietario : Function, caer : Function, comprar : Function, ejecutarCompra : Function, calcularAlquiler : Function, cobrarAlquiler : Function, edificar : Function, venderEdificio : Function, hipotecar : Function, ejecutarHipoteca : Function }, getTema : Function, getTipo : Function, caer : Function, comprar : Function }, { tema : { tipo : 'Calle', color : 'azulClaro', nombre : 'Glorieta Cuatro Caminos', precio : 100, estado : { caer : Function, comprar : Function, edificar : Function, hipotecar : Function }, numCasas : 0, titulo : { propiedad : <circular reference: Object>, valorHipotecario : 50, getPropiedad : Function, getPropietario : Function, setPropietario : Function, getAlquiler : Function, edificar : Function, venderEdificio : Function, hipotecarPropiedad : Function, venderPropiedad : Function, cambiarPropietario : Function, esPropietario : Function }, getTipo : Function, getNombre : Function, getColor : Function, getPrecio : Function, setPrecio : Function, getEstado : Function, getAlquiler : Function, getPropietario : Function, getNumCasas : Function, caer : Function, comprar : Function, ejecutarCompra : Function, calcularAlquiler : Function, cobrarAlquiler : Function, edificar : Function, venderEdificio : Function, ejecutarEdificacion : Function, comprobarOrdenDeEdificacion : Function, hipotecar : Function, ejecutarHipoteca : Function }, getTema : Function, getTipo : Function, caer : Function, comprar : Function }, { tema : { tipo : 'Tarjeta', clase : 'suerte', estado : { caer : Function, comprar : Function, edificar : Function, hipotecar : Function }, getTipo : Function, getClase : Function, getEstado : Function, caer : Function, comprar : Function, edificar : Function }, getTema : Function, getTipo : Function, caer : Function, comprar : Function }, { tema : { tipo : 'Calle', color : 'azulClaro', nombre : 'Avenida Reina Victoria', precio : 100, estado : { caer : Function, comprar : Function, edificar : Function, hipotecar : Function }, numCasas : 0, titulo : { propiedad : <circular reference: Object>, valorHipotecario : 50, getPropiedad : Function, getPropietario : Function, setPropietario : Function, getAlquiler : Function, edificar : Function, venderEdificio : Function, hipotecarPropiedad : Function, venderPropiedad : Function, cambiarPropietario : Function, esPropietario : Function }, getTipo : Function, getNombre : Function, getColor : Function, getPrecio : Function, setPrecio : Function, getEstado : Function, getAlquiler : Function, getPropietario : Function, getNumCasas : Function, caer : Function, comprar : Function, ejecutarCompra : Function, calcularAlquiler : Function, cobrarAlquiler : Function, edificar : Function, venderEdificio : Function, ejecutarEdificacion : Function, comprobarOrdenDeEdificacion : Function, hipotecar : Function, ejecutarHipoteca : Function }, getTema : Function, getTipo : Function, caer : Function, comprar : Function }, { tema : { tipo : 'Calle', color : 'azulClaro', nombre : 'Calle Bravo Murillo', precio : 120, estado : { caer : Function, comprar : Function, edificar : Function, hipotecar : Function }, numCasas : 0, titulo : { propiedad : <circular reference: Object>, valorHipotecario : 50, getPropiedad : Function, getPropietario : Function, setPropietario : Function, getAlquiler : Function, edificar : Function, venderEdificio : Function, hipotecarPropiedad : Function, venderPropiedad : Function, cambiarPropietario : Function, esPropietario : Function }, getTipo : Function, getNombre : Function, getColor : Function, getPrecio : Function, setPrecio : Function, getEstado : Function, getAlquiler : Function, getPropietario : Function, getNumCasas : Function, caer : Function, comprar : Function, ejecutarCompra : Function, calcularAlquiler : Function, cobrarAlquiler : Function, edificar : Function, venderEdificio : Function, ejecutarEdificacion : Function, comprobarOrdenDeEdificacion : Function, hipotecar : Function, ejecutarHipoteca : Function }, getTema : Function, getTipo : Function, caer : Function, comprar : Function }, { tema : { tipo : 'Carcel', estado : { caer : Function, comprar : Function, edificar : Function, hipotecar : Function }, getTipo : Function, getEstado : Function, caer : Function, comprar : Function, edificar : Function }, getTema : Function, getTipo : Function, caer : Function, comprar : Function }, { tema : { tipo : 'Calle', color : 'rosa', nombre : 'Glorieta de Bilbao', precio : 140, estado : { caer : Function, comprar : Function, edificar : Function, hipotecar : Function }, numCasas : 0, titulo : { propiedad : <circular reference: Object>, valorHipotecario : 50, getPropiedad : Function, getPropietario : Function, setPropietario : Function, getAlquiler : Function, edificar : Function, venderEdificio : Function, hipotecarPropiedad : Function, venderPropiedad : Function, cambiarPropietario : Function, esPropietario : Function }, getTipo : Function, getNombre : Function, getColor : Function, getPrecio : Function, setPrecio : Function, getEstado : Function, getAlquiler : Function, getPropietario : Function, getNumCasas : Function, caer : Function, comprar : Function, ejecutarCompra : Function, calcularAlquiler : Function, cobrarAlquiler : Function, edificar : Function, venderEdificio : Function, ejecutarEdificacion : Function, comprobarOrdenDeEdificacion : Function, hipotecar : Function, ejecutarHipoteca : Function }, getTema : Function, getTipo : Function, caer : Function, comprar : Function }, { tema : { tipo : 'ServicioPublico', nombre : 'Compañia de Electricidad', precio : 150, estado : { caer : Function, comprar : Function, edificar : Function, hipotecar : Function }, titulo : { propiedad : <circular reference: Object>, valorHipotecario : 50, getPropiedad : Function, getPropietario : Function, setPropietario : Function, getAlquiler : Function, edificar : Function, venderEdificio : Function, hipotecarPropiedad : Function, venderPropiedad : Function, cambiarPropietario : Function, esPropietario : Function }, getTipo : Function, getNombre : Function, getPrecio : Function, getEstado : Function, getAlquiler : Function, getPropietario : Function, caer : Function, comprar : Function, ejecutarCompra : Function, calcularAlquiler : Function, cobrarAlquiler : Function, edificar : Function, venderEdificio : Function, hipotecar : Function, ejecutarHipoteca : Function }, getTema : Function, getTipo : Function, caer : Function, comprar : Function }, { tema : { tipo : 'Calle', color : 'rosa', nombre : 'Calle Alberto Aguilera', precio : 140, estado : { caer : Function, comprar : Function, edificar : Function, hipotecar : Function }, numCasas : 0, titulo : { propiedad : <circular reference: Object>, valorHipotecario : 50, getPropiedad : Function, getPropietario : Function, setPropietario : Function, getAlquiler : Function, edificar : Function, venderEdificio : Function, hipotecarPropiedad : Function, venderPropiedad : Function, cambiarPropietario : Function, esPropietario : Function }, getTipo : Function, getNombre : Function, getColor : Function, getPrecio : Function, setPrecio : Function, getEstado : Function, getAlquiler : Function, getPropietario : Function, getNumCasas : Function, caer : Function, comprar : Function, ejecutarCompra : Function, calcularAlquiler : Function, cobrarAlquiler : Function, edificar : Function, venderEdificio : Function, ejecutarEdificacion : Function, comprobarOrdenDeEdificacion : Function, hipotecar : Function, ejecutarHipoteca : Function }, getTema : Function, getTipo : Function, caer : Function, comprar : Function }, { tema : { tipo : 'Calle', color : 'rosa', nombre : 'Calle Fuencarral', precio : 160, estado : { caer : Function, comprar : Function, edificar : Function, hipotecar : Function }, numCasas : 0, titulo : { propiedad : <circular reference: Object>, valorHipotecario : 50, getPropiedad : Function, getPropietario : Function, setPropietario : Function, getAlquiler : Function, edificar : Function, venderEdificio : Function, hipotecarPropiedad : Function, venderPropiedad : Function, cambiarPropietario : Function, esPropietario : Function }, getTipo : Function, getNombre : Function, getColor : Function, getPrecio : Function, setPrecio : Function, getEstado : Function, getAlquiler : Function, getPropietario : Function, getNumCasas : Function, caer : Function, comprar : Function, ejecutarCompra : Function, calcularAlquiler : Function, cobrarAlquiler : Function, edificar : Function, venderEdificio : Function, ejecutarEdificacion : Function, comprobarOrdenDeEdificacion : Function, hipotecar : Function, ejecutarHipoteca : Function }, getTema : Function, getTipo : Function, caer : Function, comprar : Function }, { tema : { tipo : 'Estacion', nombre : 'Estacion de las Delicias', precio : 200, estado : { caer : Function, comprar : Function, edificar : Function, hipotecar : Function }, titulo : { propiedad : <circular reference: Object>, valorHipotecario : 50, getPropiedad : Function, getPropietario : Function, setPropietario : Function, getAlquiler : Function, edificar : Function, venderEdificio : Function, hipotecarPropiedad : Function, venderPropiedad : Function, cambiarPropietario : Function, esPropietario : Function }, getTipo : Function, getNombre : Function, getPrecio : Function, getEstado : Function, getAlquiler : Function, getPropietario : Function, caer : Function, comprar : Function, ejecutarCompra : Function, calcularAlquiler : Function, cobrarAlquiler : Function, edificar : Function, venderEdificio : Function, hipotecar : Function, ejecutarHipoteca : Function }, getTema : Function, getTipo : Function, caer : Function, comprar : Function }, { tema : { tipo : 'Calle', color : 'naranja', nombre : 'Avenida Felipe II', precio : 180, estado : { caer : Function, comprar : Function, edificar : Function, hipotecar : Function }, numCasas : 0, titulo : { propiedad : <circular reference: Object>, valorHipotecario : 50, getPropiedad : Function, getPropietario : Function, setPropietario : Function, getAlquiler : Function, edificar : Function, venderEdificio : Function, hipotecarPropiedad : Function, venderPropiedad : Function, cambiarPropietario : Function, esPropietario : Function }, getTipo : Function, getNombre : Function, getColor : Function, getPrecio : Function, setPrecio : Function, getEstado : Function, getAlquiler : Function, getPropietario : Function, getNumCasas : Function, caer : Function, comprar : Function, ejecutarCompra : Function, calcularAlquiler : Function, cobrarAlquiler : Function, edificar : Function, venderEdificio : Function, ejecutarEdificacion : Function, comprobarOrdenDeEdificacion : Function, hipotecar : Function, ejecutarHipoteca : Function }, getTema : Function, getTipo : Function, caer : Function, comprar : Function }, { tema : { tipo : 'Tarjeta', clase : 'comunidad', estado : { caer : Function, comprar : Function, edificar : Function, hipotecar : Function }, getTipo : Function, getClase : Function, getEstado : Function, caer : Function, comprar : Function, edificar : Function }, getTema : Function, getTipo : Function, caer : Function, comprar : Function }, { tema : { tipo : 'Calle', color : 'naranja', nombre : 'Calle Velazquez', precio : 180, estado : { caer : Function, comprar : Function, edificar : Function, hipotecar : Function }, numCasas : 0, titulo : { propiedad : <circular reference: Object>, valorHipotecario : 50, getPropiedad : Function, getPropietario : Function, setPropietario : Function, getAlquiler : Function, edificar : Function, venderEdificio : Function, hipotecarPropiedad : Function, venderPropiedad : Function, cambiarPropietario : Function, esPropietario : Function }, getTipo : Function, getNombre : Function, getColor : Function, getPrecio : Function, setPrecio : Function, getEstado : Function, getAlquiler : Function, getPropietario : Function, getNumCasas : Function, caer : Function, comprar : Function, ejecutarCompra : Function, calcularAlquiler : Function, cobrarAlquiler : Function, edificar : Function, venderEdificio : Function, ejecutarEdificacion : Function, comprobarOrdenDeEdificacion : Function, hipotecar : Function, ejecutarHipoteca : Function }, getTema : Function, getTipo : Function, caer : Function, comprar : Function }, { tema : { tipo : 'Calle', color : 'naranja', nombre : 'Calle Serrano', precio : 200, estado : { caer : Function, comprar : Function, edificar : Function, hipotecar : Function }, numCasas : 0, titulo : { propiedad : <circular reference: Object>, valorHipotecario : 50, getPropiedad : Function, getPropietario : Function, setPropietario : Function, getAlquiler : Function, edificar : Function, venderEdificio : Function, hipotecarPropiedad : Function, venderPropiedad : Function, cambiarPropietario : Function, esPropietario : Function }, getTipo : Function, getNombre : Function, getColor : Function, getPrecio : Function, setPrecio : Function, getEstado : Function, getAlquiler : Function, getPropietario : Function, getNumCasas : Function, caer : Function, comprar : Function, ejecutarCompra : Function, calcularAlquiler : Function, cobrarAlquiler : Function, edificar : Function, venderEdificio : Function, ejecutarEdificacion : Function, comprobarOrdenDeEdificacion : Function, hipotecar : Function, ejecutarHipoteca : Function }, getTema : Function, getTipo : Function, caer : Function, comprar : Function }, { tema : { tipo : 'Parking', estado : { caer : Function, comprar : Function, edificar : Function, hipotecar : Function }, getTipo : Function, getEstado : Function, caer : Function, comprar : Function, edificar : Function }, getTema : Function, getTipo : Function, caer : Function, comprar : Function }, { tema : { tipo : 'Calle', color : 'rojo', nombre : 'Avenida de America', precio : 220, estado : { caer : Function, comprar : Function, edificar : Function, hipotecar : Function }, numCasas : 0, titulo : { propiedad : <circular reference: Object>, valorHipotecario : 50, getPropiedad : Function, getPropietario : Function, setPropietario : Function, getAlquiler : Function, edificar : Function, venderEdificio : Function, hipotecarPropiedad : Function, venderPropiedad : Function, cambiarPropietario : Function, esPropietario : Function }, getTipo : Function, getNombre : Function, getColor : Function, getPrecio : Function, setPrecio : Function, getEstado : Function, getAlquiler : Function, getPropietario : Function, getNumCasas : Function, caer : Function, comprar : Function, ejecutarCompra : Function, calcularAlquiler : Function, cobrarAlquiler : Function, edificar : Function, venderEdificio : Function, ejecutarEdificacion : Function, comprobarOrdenDeEdificacion : Function, hipotecar : Function, ejecutarHipoteca : Function }, getTema : Function, getTipo : Function, caer : Function, comprar : Function }, { tema : { tipo : 'Tarjeta', clase : 'suerte', estado : { caer : Function, comprar : Function, edificar : Function, hipotecar : Function }, getTipo : Function, getClase : Function, getEstado : Function, caer : Function, comprar : Function, edificar : Function }, getTema : Function, getTipo : Function, caer : Function, comprar : Function }, { tema : { tipo : 'Calle', color : 'rojo', nombre : 'Calle Maria de Molina', precio : 220, estado : { caer : Function, comprar : Function, edificar : Function, hipotecar : Function }, numCasas : 0, titulo : { propiedad : <circular reference: Object>, valorHipotecario : 50, getPropiedad : Function, getPropietario : Function, setPropietario : Function, getAlquiler : Function, edificar : Function, venderEdificio : Function, hipotecarPropiedad : Function, venderPropiedad : Function, cambiarPropietario : Function, esPropietario : Function }, getTipo : Function, getNombre : Function, getColor : Function, getPrecio : Function, setPrecio : Function, getEstado : Function, getAlquiler : Function, getPropietario : Function, getNumCasas : Function, caer : Function, comprar : Function, ejecutarCompra : Function, calcularAlquiler : Function, cobrarAlquiler : Function, edificar : Function, venderEdificio : Function, ejecutarEdificacion : Function, comprobarOrdenDeEdificacion : Function, hipotecar : Function, ejecutarHipoteca : Function }, getTema : Function, getTipo : Function, caer : Function, comprar : Function }, { tema : { tipo : 'Calle', color : 'rojo', nombre : 'Calle Cea Bermudez', precio : 240, estado : { caer : Function, comprar : Function, edificar : Function, hipotecar : Function }, numCasas : 0, titulo : { propiedad : <circular reference: Object>, valorHipotecario : 50, getPropiedad : Function, getPropietario : Function, setPropietario : Function, getAlquiler : Function, edificar : Function, venderEdificio : Function, hipotecarPropiedad : Function, venderPropiedad : Function, cambiarPropietario : Function, esPropietario : Function }, getTipo : Function, getNombre : Function, getColor : Function, getPrecio : Function, setPrecio : Function, getEstado : Function, getAlquiler : Function, getPropietario : Function, getNumCasas : Function, caer : Function, comprar : Function, ejecutarCompra : Function, calcularAlquiler : Function, cobrarAlquiler : Function, edificar : Function, venderEdificio : Function, ejecutarEdificacion : Function, comprobarOrdenDeEdificacion : Function, hipotecar : Function, ejecutarHipoteca : Function }, getTema : Function, getTipo : Function, caer : Function, comprar : Function }, { tema : { tipo : 'Estacion', nombre : 'Estacion del Mediodia', precio : 200, estado : { caer : Function, comprar : Function, edificar : Function, hipotecar : Function }, titulo : { propiedad : <circular reference: Object>, valorHipotecario : 50, getPropiedad : Function, getPropietario : Function, setPropietario : Function, getAlquiler : Function, edificar : Function, venderEdificio : Function, hipotecarPropiedad : Function, venderPropiedad : Function, cambiarPropietario : Function, esPropietario : Function }, getTipo : Function, getNombre : Function, getPrecio : Function, getEstado : Function, getAlquiler : Function, getPropietario : Function, caer : Function, comprar : Function, ejecutarCompra : Function, calcularAlquiler : Function, cobrarAlquiler : Function, edificar : Function, venderEdificio : Function, hipotecar : Function, ejecutarHipoteca : Function }, getTema : Function, getTipo : Function, caer : Function, comprar : Function }, { tema : { tipo : 'Calle', color : 'amarillo', nombre : 'Avenida Los Reyez Catolicos', precio : 260, estado : { caer : Function, comprar : Function, edificar : Function, hipotecar : Function }, numCasas : 0, titulo : { propiedad : <circular reference: Object>, valorHipotecario : 50, getPropiedad : Function, getPropietario : Function, setPropietario : Function, getAlquiler : Function, edificar : Function, venderEdificio : Function, hipotecarPropiedad : Function, venderPropiedad : Function, cambiarPropietario : Function, esPropietario : Function }, getTipo : Function, getNombre : Function, getColor : Function, getPrecio : Function, setPrecio : Function, getEstado : Function, getAlquiler : Function, getPropietario : Function, getNumCasas : Function, caer : Function, comprar : Function, ejecutarCompra : Function, calcularAlquiler : Function, cobrarAlquiler : Function, edificar : Function, venderEdificio : Function, ejecutarEdificacion : Function, comprobarOrdenDeEdificacion : Function, hipotecar : Function, ejecutarHipoteca : Function }, getTema : Function, getTipo : Function, caer : Function, comprar : Function }, { tema : { tipo : 'Calle', color : 'amarillo', nombre : 'Calle Bailen', precio : 260, estado : { caer : Function, comprar : Function, edificar : Function, hipotecar : Function }, numCasas : 0, titulo : { propiedad : <circular reference: Object>, valorHipotecario : 50, getPropiedad : Function, getPropietario : Function, setPropietario : Function, getAlquiler : Function, edificar : Function, venderEdificio : Function, hipotecarPropiedad : Function, venderPropiedad : Function, cambiarPropietario : Function, esPropietario : Function }, getTipo : Function, getNombre : Function, getColor : Function, getPrecio : Function, setPrecio : Function, getEstado : Function, getAlquiler : Function, getPropietario : Function, getNumCasas : Function, caer : Function, comprar : Function, ejecutarCompra : Function, calcularAlquiler : Function, cobrarAlquiler : Function, edificar : Function, venderEdificio : Function, ejecutarEdificacion : Function, comprobarOrdenDeEdificacion : Function, hipotecar : Function, ejecutarHipoteca : Function }, getTema : Function, getTipo : Function, caer : Function, comprar : Function }, { tema : { tipo : 'ServicioPublico', nombre : 'Compañia de Aguas', precio : 150, estado : { caer : Function, comprar : Function, edificar : Function, hipotecar : Function }, titulo : { propiedad : <circular reference: Object>, valorHipotecario : 50, getPropiedad : Function, getPropietario : Function, setPropietario : Function, getAlquiler : Function, edificar : Function, venderEdificio : Function, hipotecarPropiedad : Function, venderPropiedad : Function, cambiarPropietario : Function, esPropietario : Function }, getTipo : Function, getNombre : Function, getPrecio : Function, getEstado : Function, getAlquiler : Function, getPropietario : Function, caer : Function, comprar : Function, ejecutarCompra : Function, calcularAlquiler : Function, cobrarAlquiler : Function, edificar : Function, venderEdificio : Function, hipotecar : Function, ejecutarHipoteca : Function }, getTema : Function, getTipo : Function, caer : Function, comprar : Function }, { tema : { tipo : 'Calle', color : 'amarillo', nombre : 'Plaza de España', precio : 280, estado : { caer : Function, comprar : Function, edificar : Function, hipotecar : Function }, numCasas : 0, titulo : { propiedad : <circular reference: Object>, valorHipotecario : 50, getPropiedad : Function, getPropietario : Function, setPropietario : Function, getAlquiler : Function, edificar : Function, venderEdificio : Function, hipotecarPropiedad : Function, venderPropiedad : Function, cambiarPropietario : Function, esPropietario : Function }, getTipo : Function, getNombre : Function, getColor : Function, getPrecio : Function, setPrecio : Function, getEstado : Function, getAlquiler : Function, getPropietario : Function, getNumCasas : Function, caer : Function, comprar : Function, ejecutarCompra : Function, calcularAlquiler : Function, cobrarAlquiler : Function, edificar : Function, venderEdificio : Function, ejecutarEdificacion : Function, comprobarOrdenDeEdificacion : Function, hipotecar : Function, ejecutarHipoteca : Function }, getTema : Function, getTipo : Function, caer : Function, comprar : Function }, { tema : { tipo : 'IrCarcel', estado : { caer : Function, comprar : Function, edificar : Function, hipotecar : Function }, getTipo : Function, getEstado : Function, caer : Function, comprar : Function, edificar : Function }, getTema : Function, getTipo : Function, caer : Function, comprar : Function }, { tema : { tipo : 'Calle', color : 'verde', nombre : 'Puerta del Sol', precio : 300, estado : { caer : Function, comprar : Function, edificar : Function, hipotecar : Function }, numCasas : 0, titulo : { propiedad : <circular reference: Object>, valorHipotecario : 50, getPropiedad : Function, getPropietario : Function, setPropietario : Function, getAlquiler : Function, edificar : Function, venderEdificio : Function, hipotecarPropiedad : Function, venderPropiedad : Function, cambiarPropietario : Function, esPropietario : Function }, getTipo : Function, getNombre : Function, getColor : Function, getPrecio : Function, setPrecio : Function, getEstado : Function, getAlquiler : Function, getPropietario : Function, getNumCasas : Function, caer : Function, comprar : Function, ejecutarCompra : Function, calcularAlquiler : Function, cobrarAlquiler : Function, edificar : Function, venderEdificio : Function, ejecutarEdificacion : Function, comprobarOrdenDeEdificacion : Function, hipotecar : Function, ejecutarHipoteca : Function }, getTema : Function, getTipo : Function, caer : Function, comprar : Function }, { tema : { tipo : 'Calle', color : 'verde', nombre : 'Calle Alcala', precio : 300, estado : { caer : Function, comprar : Function, edificar : Function, hipotecar : Function }, numCasas : 0, titulo : { propiedad : <circular reference: Object>, valorHipotecario : 50, getPropiedad : Function, getPropietario : Function, setPropietario : Function, getAlquiler : Function, edificar : Function, venderEdificio : Function, hipotecarPropiedad : Function, venderPropiedad : Function, cambiarPropietario : Function, esPropietario : Function }, getTipo : Function, getNombre : Function, getColor : Function, getPrecio : Function, setPrecio : Function, getEstado : Function, getAlquiler : Function, getPropietario : Function, getNumCasas : Function, caer : Function, comprar : Function, ejecutarCompra : Function, calcularAlquiler : Function, cobrarAlquiler : Function, edificar : Function, venderEdificio : Function, ejecutarEdificacion : Function, comprobarOrdenDeEdificacion : Function, hipotecar : Function, ejecutarHipoteca : Function }, getTema : Function, getTipo : Function, caer : Function, comprar : Function }, { tema : { tipo : 'Tarjeta', clase : 'comunidad', estado : { caer : Function, comprar : Function, edificar : Function, hipotecar : Function }, getTipo : Function, getClase : Function, getEstado : Function, caer : Function, comprar : Function, edificar : Function }, getTema : Function, getTipo : Function, caer : Function, comprar : Function }, { tema : { tipo : 'Calle', color : 'verde', nombre : 'Gran Via', precio : 320, estado : { caer : Function, comprar : Function, edificar : Function, hipotecar : Function }, numCasas : 0, titulo : { propiedad : <circular reference: Object>, valorHipotecario : 50, getPropiedad : Function, getPropietario : Function, setPropietario : Function, getAlquiler : Function, edificar : Function, venderEdificio : Function, hipotecarPropiedad : Function, venderPropiedad : Function, cambiarPropietario : Function, esPropietario : Function }, getTipo : Function, getNombre : Function, getColor : Function, getPrecio : Function, setPrecio : Function, getEstado : Function, getAlquiler : Function, getPropietario : Function, getNumCasas : Function, caer : Function, comprar : Function, ejecutarCompra : Function, calcularAlquiler : Function, cobrarAlquiler : Function, edificar : Function, venderEdificio : Function, ejecutarEdificacion : Function, comprobarOrdenDeEdificacion : Function, hipotecar : Function, ejecutarHipoteca : Function }, getTema : Function, getTipo : Function, caer : Function, comprar : Function }, { tema : { tipo : 'Estacion', nombre : 'Estacion del Norte', precio : 200, estado : { caer : Function, comprar : Function, edificar : Function, hipotecar : Function }, titulo : { propiedad : <circular reference: Object>, valorHipotecario : 50, getPropiedad : Function, getPropietario : Function, setPropietario : Function, getAlquiler : Function, edificar : Function, venderEdificio : Function, hipotecarPropiedad : Function, venderPropiedad : Function, cambiarPropietario : Function, esPropietario : Function }, getTipo : Function, getNombre : Function, getPrecio : Function, getEstado : Function, getAlquiler : Function, getPropietario : Function, caer : Function, comprar : Function, ejecutarCompra : Function, calcularAlquiler : Function, cobrarAlquiler : Function, edificar : Function, venderEdificio : Function, hipotecar : Function, ejecutarHipoteca : Function }, getTema : Function, getTipo : Function, caer : Function, comprar : Function }, { tema : { tipo : 'Tarjeta', clase : 'suerte', estado : { caer : Function, comprar : Function, edificar : Function, hipotecar : Function }, getTipo : Function, getClase : Function, getEstado : Function, caer : Function, comprar : Function, edificar : Function }, getTema : Function, getTipo : Function, caer : Function, comprar : Function }, { tema : { tipo : 'Calle', color : 'azul', nombre : 'Paseo de la Castellana', precio : 380, estado : { caer : Function, comprar : Function, edificar : Function, hipotecar : Function }, numCasas : 0, titulo : { propiedad : <circular reference: Object>, valorHipotecario : 50, getPropiedad : Function, getPropietario : Function, setPropietario : Function, getAlquiler : Function, edificar : Function, venderEdificio : Function, hipotecarPropiedad : Function, venderPropiedad : Function, cambiarPropietario : Function, esPropietario : Function }, getTipo : Function, getNombre : Function, getColor : Function, getPrecio : Function, setPrecio : Function, getEstado : Function, getAlquiler : Function, getPropietario : Function, getNumCasas : Function, caer : Function, comprar : Function, ejecutarCompra : Function, calcularAlquiler : Function, cobrarAlquiler : Function, edificar : Function, venderEdificio : Function, ejecutarEdificacion : Function, comprobarOrdenDeEdificacion : Function, hipotecar : Function, ejecutarHipoteca : Function }, getTema : Function, getTipo : Function, caer : Function, comprar : Function }, { tema : { tipo : 'Impuesto', dinero : 100, estado : { caer : Function, comprar : Function, edificar : Function, hipotecar : Function }, getTipo : Function, getDinero : Function, getEstado : Function, caer : Function, comprar : Function, edificar : Function }, getTema : Function, getTipo : Function, caer : Function, comprar : Function }, { tema : { tipo : 'Calle', color : 'azul', nombre : 'Paseo del Prado', precio : 400, estado : { caer : Function, comprar : Function, edificar : Function, hipotecar : Function }, numCasas : 0, titulo : { propiedad : <circular reference: Object>, valorHipotecario : 50, getPropiedad : Function, getPropietario : Function, setPropietario : Function, getAlquiler : Function, edificar : Function, venderEdificio : Function, hipotecarPropiedad : Function, venderPropiedad : Function, cambiarPropietario : Function, esPropietario : Function }, getTipo : Function, getNombre : Function, getColor : Function, getPrecio : Function, setPrecio : Function, getEstado : Function, getAlquiler : Function, getPropietario : Function, getNumCasas : Function, caer : Function, comprar : Function, ejecutarCompra : Function, calcularAlquiler : Function, cobrarAlquiler : Function, edificar : Function, venderEdificio : Function, ejecutarEdificacion : Function, comprobarOrdenDeEdificacion : Function, hipotecar : Function, ejecutarHipoteca : Function }, getTema : Function, getTipo : Function, caer : Function, comprar : Function } ] }, dado : { lanzar : Function }, fichas : [ <circular reference: Object>, { usuario : { fichas : [ <circular reference: Object> ], getNombre : Function, getUid : Function, getInfo : Function, setInfo : Function, unirseAPartida : Function }, partida : <circular reference: Object>, info : [  ], cobroSalida : false, casillaALaCarel : false, color : 'rojo', saldo : 1500, posicion : 0, propiedades : [  ], monopolios : [  ], turno : { lanzarDados : Function, usarTarjetaLibreCarcel : Function, pagarSalidaCarcel : Function, comprarPropiedad : Function, edificar : Function, venderEdificio : Function, hipotecarPropiedad : Function, comenzarSubasta : Function, venderPropiedad : Function, pasarTurno : Function }, turnosEnCarcel : 0, bancarrota : false, deudas : [  ], tarjetaLibreCarcel : false, setTarjetaCogida : Function, getTarjetaCogida : Function, setCobroSalida : Function, getCobroSalida : Function, getCasillaALaCarcel : Function, getInfoPagoAFicha : Function, getUsuario : Function, getPartida : Function, getColor : Function, getSaldo : Function, getPosicion : Function, setPosicion : Function, getPropiedad : Function, getPropiedades : Function, asignarPropiedad : Function, quitarPropiedad : Function, getMonopolios : Function, setMonopolio : Function, quitarMonopolio : Function, getTurno : Function, setTurno : Function, getTurnosEnCarcel : Function, setTurnosEnCarcel : Function, setTarjetaLibreCarcel : Function, tieneTarjetaLibreCarcel : Function, getDeudas : Function, declararEnBancarrota : Function, enBancarrota : Function, setGanador : Function, esGanador : Function, empezarPartida : Function, lanzarDados : Function, usarTarjetaLibreCarcel : Function, pagarSalidaCarcel : Function, comprarPropiedad : Function, edificar : Function, venderEdificio : Function, hipotecarPropiedad : Function, venderPropiedad : Function, pasarTurno : Function, pagar : Function, pagarDeudas : Function, cobrar : Function, encarcelar : Function, comenzarSubasta : Function, pujar : Function, salirDeSubasta : Function } ], coloresFichas : [ 'azul', 'rojo', 'verde', 'amarillo', 'rosa', 'naranja' ], fase : { tituloASubastar : { propiedad : { tipo : 'Calle', color : 'marron', nombre : 'Ronda de Valencia', precio : 60, estado : { caer : Function, comprar : Function, edificar : Function, hipotecar : Function }, numCasas : 0, titulo : <circular reference: Object>, getTipo : Function, getNombre : Function, getColor : Function, getPrecio : Function, setPrecio : Function, getEstado : Function, getAlquiler : Function, getPropietario : Function, getNumCasas : Function, caer : Function, comprar : Function, ejecutarCompra : Function, calcularAlquiler : Function, cobrarAlquiler : Function, edificar : Function, venderEdificio : Function, ejecutarEdificacion : Function, comprobarOrdenDeEdificacion : Function, hipotecar : Function, ejecutarHipoteca : Function }, valorHipotecario : 50, getPropiedad : Function, getPropietario : Function, setPropietario : Function, getAlquiler : Function, edificar : Function, venderEdificio : Function, hipotecarPropiedad : Function, venderPropiedad : Function, cambiarPropietario : Function, esPropietario : Function, propietario : <circular reference: Object> }, participantes : [ <circular reference: Object>, { usuario : { fichas : [ <circular reference: Object> ], getNombre : Function, getUid : Function, getInfo : Function, setInfo : Function, unirseAPartida : Function }, partida : <circular reference: Object>, info : [  ], cobroSalida : false, casillaALaCarel : false, color : 'rojo', saldo : 1500, posicion : 0, propiedades : [  ], monopolios : [  ], turno : { lanzarDados : Function, usarTarjetaLibreCarcel : Function, pagarSalidaCarcel : Function, comprarPropiedad : Function, edificar : Function, venderEdificio : Function, hipotecarPropiedad : Function, comenzarSubasta : Function, venderPropiedad : Function, pasarTurno : Function }, turnosEnCarcel : 0, bancarrota : false, deudas : [  ], tarjetaLibreCarcel : false, setTarjetaCogida : Function, getTarjetaCogida : Function, setCobroSalida : Function, getCobroSalida : Function, getCasillaALaCarcel : Function, getInfoPagoAFicha : Function, getUsuario : Function, getPartida : Function, getColor : Function, getSaldo : Function, getPosicion : Function, setPosicion : Function, getPropiedad : Function, getPropiedades : Function, asignarPropiedad : Function, quitarPropiedad : Function, getMonopolios : Function, setMonopolio : Function, quitarMonopolio : Function, getTurno : Function, setTurno : Function, getTurnosEnCarcel : Function, setTurnosEnCarcel : Function, setTarjetaLibreCarcel : Function, tieneTarjetaLibreCarcel : Function, getDeudas : Function, declararEnBancarrota : Function, enBancarrota : Function, setGanador : Function, esGanador : Function, empezarPartida : Function, lanzarDados : Function, usarTarjetaLibreCarcel : Function, pagarSalidaCarcel : Function, comprarPropiedad : Function, edificar : Function, venderEdificio : Function, hipotecarPropiedad : Function, venderPropiedad : Function, pasarTurno : Function, pagar : Function, pagarDeudas : Function, cobrar : Function, encarcelar : Function, comenzarSubasta : Function, pujar : Function, salirDeSubasta : Function } ], pujaGanadora : { jugador : undefined, cantidad : -1 }, turno : 0, solicitarNuevoJugador : Function, empezar : Function, lanzarDados : Function, comenzarSubasta : Function, pujar : Function }, turno : 0, getNombre : Function, getMinNumJugadores : Function, getFase : Function, getTurno : Function, getFichaConTurno : Function, getNumCasas : Function, getNumHoteles : Function, getFicha : Function, getFichaPorColor : Function, getFichas : Function, getGanador : Function, generarCajaTarjetas : Function, getTarjeta : Function, solicitarNuevoJugador : Function, crearJugador : Function, empezar : Function, calcularPrimerTurno : Function, solicitarLanzarDados : Function, lanzarDados : Function, moverFicha : Function, comprarPropiedad : Function, comprarCasa : Function, comprarHotel : Function, devolverCasa : Function, devolverHotel : Function, comprobarMonopolio : Function, cobrarDineroSalida : Function, cambiarTurno : Function, comprobarGanador : Function, finalizarPartida : Function, comenzarSubasta : Function, pujar : Function, realizarPuja : Function, cajaTarjetasComunidad : [ { msg : 'Paga 50 pelotis', cantidad : 50, ejecutar : Function }, { msg : 'Avanza 4 casillas', numCasillas : 4, ejecutar : Function }, { msg : 'Retrocede 4 casillas', numCasillas : 4, ejecutar : Function }, { msg : 'TARJETA LIBRE DE CÁRCEL: Con esta tarjeta podrás salir de la cárcel', ejecutar : Function }, { msg : 'Cobra 50 pelotis', cantidad : 50, ejecutar : Function } ], cajaTarjetasSuerte : [ { msg : 'Avanza 4 casillas', numCasillas : 4, ejecutar : Function }, { msg : 'Paga 50 pelotis', cantidad : 50, ejecutar : Function }, { msg : 'Retrocede 4 casillas', numCasillas : 4, ejecutar : Function }, { msg : 'Cobra 50 pelotis', cantidad : 50, ejecutar : Function }, { msg : 'TARJETA LIBRE DE CÁRCEL: Con esta tarjeta podrás salir de la cárcel', ejecutar : Function } ] }, info : [  ], cobroSalida : false, casillaALaCarel : false, color : 'azul', saldo : 1470, posicion : 1, propiedades : [ { propiedad : { tipo : 'Calle', color : 'marron', nombre : 'Ronda de Valencia', precio : 60, estado : { caer : Function, comprar : Function, edificar : Function, hipotecar : Function }, numCasas : 0, titulo : <circular reference: Object>, getTipo : Function, getNombre : Function, getColor : Function, getPrecio : Function, setPrecio : Function, getEstado : Function, getAlquiler : Function, getPropietario : Function, getNumCasas : Function, caer : Function, comprar : Function, ejecutarCompra : Function, calcularAlquiler : Function, cobrarAlquiler : Function, edificar : Function, venderEdificio : Function, ejecutarEdificacion : Function, comprobarOrdenDeEdificacion : Function, hipotecar : Function, ejecutarHipoteca : Function }, valorHipotecario : 50, getPropiedad : Function, getPropietario : Function, setPropietario : Function, getAlquiler : Function, edificar : Function, venderEdificio : Function, hipotecarPropiedad : Function, venderPropiedad : Function, cambiarPropietario : Function, esPropietario : Function, propietario : <circular reference: Object> } ], monopolios : [  ], turno : { dadosTirados : true, dobles : 0, lanzarDados : Function, puedeRelizarOperacion : Function, usarTarjetaLibreCarcel : Function, pagarSalidaCarcel : Function, comprarPropiedad : Function, edificar : Function, venderEdificio : Function, hipotecarPropiedad : Function, venderPropiedad : Function, comenzarSubasta : Function, pasarTurno : Function }, turnosEnCarcel : 0, bancarrota : false, deudas : [  ], tarjetaLibreCarcel : false, setTarjetaCogida : Function, getTarjetaCogida : Function, setCobroSalida : Function, getCobroSalida : Function, getCasillaALaCarcel : Function, getInfoPagoAFicha : Function, getUsuario : Function, getPartida : Function, getColor : Function, getSaldo : Function, getPosicion : Function, setPosicion : Function, getPropiedad : Function, getPropiedades : Function, asignarPropiedad : Function, quitarPropiedad : Function, getMonopolios : Function, setMonopolio : Function, quitarMonopolio : Function, getTurno : Function, setTurno : Function, getTurnosEnCarcel : Function, setTurnosEnCarcel : Function, setTarjetaLibreCarcel : Function, tieneTarjetaLibreCarcel : Function, getDeudas : Function, declararEnBancarrota : Function, enBancarrota : Function, setGanador : Function, esGanador : Function, empezarPartida : Function, lanzarDados : Function, usarTarjetaLibreCarcel : Function, pagarSalidaCarcel : Function, comprarPropiedad : Function, edificar : Function, venderEdificio : Function, hipotecarPropiedad : Function, venderPropiedad : Function, pasarTurno : Function, pagar : Function, pagarDeudas : Function, cobrar : Function, encarcelar : Function, comenzarSubasta : Function, pujar : Function, salirDeSubasta : Function, tarjetaCogida : false, infoPagoAFicha : undefined }.
+    at null.<anonymous> (D:\Rep_GitHub\Monopoly-node\server\monopoly-spec.js:989:39)
+
+  2) Monopoly Movimiento por el tablero Sprint 6 Se pueden llevar a cabo subastas
+   Message:
+     Expected -1 to equal 150.
+   Stacktrace:
+     Error: Expected -1 to equal 150.
+    at null.<anonymous> (D:\Rep_GitHub\Monopoly-node\server\monopoly-spec.js:990:40)
+
+Finished in 0.212 seconds
+62 tests, 344 assertions, 2 failures, 0 skipped
+
+

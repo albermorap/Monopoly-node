@@ -210,6 +210,7 @@ DatosJugador:{
 	}
 
 	function mostrarDatosPartida(datosPartida){
+		$("#nombrePartida").html(datosPartida.nombrePartida)
 		posicionesDraw = datosPartida.posicionesFichas
 		propiedadesDraw = datosPartida.propiedadesGlobales
 
@@ -230,7 +231,7 @@ DatosJugador:{
 		$.cookie("saldo", saldo)
 
 		if (saldo == -1){
-			$("#zonaDatosJugador").append("<h4><strong>SALDO: </strong><span class='label label-danger'>Bancarrota</span></h4>")
+			$("#zonaDatosJugador").append("<h4><strong>SALDO: </strong><span class='label label-danger'>En bancarrota</span></h4>")
 		}
 		else{
 			if ($.cookie("saldo")){
@@ -263,8 +264,11 @@ DatosJugador:{
 
 		for (i in fichas){
 			$("#zonaJugadores").append("<tr id='jugador_"+fichas[i].color+"'>" +
-						"<th scope='row'><img height='30' width='30' src='client/assets/img/ficha_" + fichas[i].color + ".png'></th>" +						
+						"<th scope='row'><img height='30' width='30' src='client/assets/img/user_" + fichas[i].color + ".png'></th>" +						
 						"<td>" + fichas[i].nombre + "</td></tr>")
+
+			if (fichas[i].turno == "MeToca")
+				$("#jugador_"+fichas[i].color).attr('class', 'success')
 
 			if (fichas[i].enBancarrota)
 				$("#jugador_"+fichas[i].color).attr('class', 'danger')
@@ -302,8 +306,10 @@ DatosJugador:{
 					else
 						cadena = cadena + " <button disabled class='btn btn-default btn-xs'><span class='glyphicon glyphicon-home'/> " + v.numCasas + "</button>"
 					
-					if (v.estado == "Hipotecada")
-						cadena = cadena + " <span class='label label-danger'>Hipotecada</span></li>"
+					if (v.estado == "Hipotecada"){
+						cadena = cadena + " <button id='subastar" + i + "_Btn' class='btn btn-default btn-xs'>Subastar</button>" +
+							 " <span class='label label-danger'>Hipotecada</span></li>"
+					}
 					else{
 						cadena = cadena + " <button id='hipotecar" + i + "_Btn' class='btn btn-default btn-xs' title='+ "+(v.precio*0.5)+" pelotis'>Hipotecar</button>" +
 							"<button id='vender" + i + "_Btn' class='btn btn-default btn-xs' title='Valor: "+v.precio+" pelotis'>Vender</button></li>"
@@ -312,7 +318,7 @@ DatosJugador:{
 					$("#prop-" + v.color).append(cadena)
 
 					$('#edificar' + i + '_Btn').on("click",function(){edificarPropiedad($.cookie("uid"), v.nombre)})
-					$('#demoler' + i + '_Btn').on("click",function(){demolerPropiedad($.cookie("uid"), v.nombre)})					
+					$('#demoler' + i + '_Btn').on("click",function(){demolerPropiedad($.cookie("uid"), v.nombre)})		
 
 					switch (v.numCasas){
 						case 0:
@@ -331,7 +337,8 @@ DatosJugador:{
 					break;
 				default:
 					if (v.estado == "Hipotecada")
-						$("#zonaProp_" + v.tipo).append("<li class='list-group-item'>" + v.nombre +	" <span class='label label-danger'>Hipotecada</span></li>")
+						$("#zonaProp_" + v.tipo).append("<li class='list-group-item'>" + v.nombre +	" <button id='subastar" + i + "_Btn' class='btn btn-default btn-xs'>Subastar</button>" +
+							" <span class='label label-danger'>Hipotecada</span></li>")
 					else{
 						$("#zonaProp_" + v.tipo).append("<li class='list-group-item'>" + v.nombre + " <button id='hipotecar" + i + "_Btn' class='btn btn-default btn-xs' title='+ "+(v.precio*0.5)+" pelotis'>Hipotecar</button>" +
 							"<button id='vender" + i + "_Btn' class='btn btn-default btn-xs' title='Vender a otro jugador'>Vender</button></li>")
@@ -340,6 +347,7 @@ DatosJugador:{
 			}
 
 			$('#vender' + i + '_Btn').on("click",function(){ofertarVentaPropiedad($.cookie("uid"), v.nombre)})
+			$('#subastar' + i + '_Btn').on("click",function(){comenzarSubasta($.cookie("uid"), v.nombre)})	
 		})
 	}
 }
@@ -374,6 +382,20 @@ FuncionesAuxiliares:{
 		$('#modalSiNo_siButton').on("click", callback)
 
 		$('#modalSiNo').modal({ backdrop: 'static', keyboard: false })
+	}
+
+	function showMsgPuja(info, callback){
+		if (info){
+			$('#infoSubasta').html("<p>" + info + "</p>")
+
+			$('#modalSubastaFooter').html("<button id='modalSubasta_pujarButton' type='button' class='btn btn-primary'>Pujar</button>" +
+									 "<button id='modalSubasta_abandonarButton' type='button' class='btn btn-default'>Abandonar subasta</button>")
+
+			$('#modalSubasta_pujarButton').on("click", callback)
+			$('#modalSubasta_abandonarButton').on("click", function(){pujar($.cookie("uid"), -1)})
+		}
+
+		$('#modalSubasta').modal({ backdrop: 'static', keyboard: false })
 	}
 
 	function setAlert(tipo, msg){
@@ -473,6 +495,29 @@ Sockets: {
 				showMsg(data.nombreVendedor+" acaba de vender la propiedad "+data.nombrePropiedad+" a "+data.nombreComprador)
 		}
 	})
+
+	socket.on("comienzaSubasta", function (data){
+		if ($.cookie("uid") != undefined){
+			if (data.colorTurno == $.cookie("color"))
+				showMsgPuja("Comienza la subasta de "+data.nombrePropiedad+" que tiene un valor de "+data.valor+". Realice su puja.", function(){pujar($.cookie("uid"))})
+			else
+				showMsg("Ha comenzado una subasta de la propiedad "+data.nombrePropiedad)
+		}
+	})
+
+	socket.on("nuevaPuja", function (data){
+		if ($.cookie("uid") != undefined){
+			if (data.colorTurno == $.cookie("color"))
+				showMsgPuja("Subasta de "+data.nombrePropiedad+" que tiene un valor de "+data.valor+
+					". Última puja de "+data.jugador+" por "+data.cantidadPujada+" pelotis. Realice su puja.", function(){pujar($.cookie("uid"))})
+		}
+	})
+
+	socket.on("finSubasta", function (data){
+		if ($.cookie("uid") != undefined){
+			showMsg(data.ganador +" ha ganado la subasta", function(){refrescar($.cookie("uid"))})
+		}
+	})
 }
 
 function obtenerFicha(nombre){
@@ -509,6 +554,10 @@ function refrescar(uid){
 			reiniciarSesion(data.msg)
 		else{
 			comprobarTurno(data.datosFicha)
+			if ($.cookie("datosTirada")){
+				mostrarTirada(JSON.parse($.cookie("datosTirada")).tirada)
+				habilitarBotonesDadosTirados(JSON.parse($.cookie("datosTirada")).dadosTirados)
+			}
 		}
 	})
 }
@@ -539,6 +588,8 @@ function comprarPropiedad(uid){
 	$.getJSON(url+"comprarPropiedad/"+uid, function (data){
 		if (data.error == 1)
 			reiniciarSesion(data.msg)
+		else if (data.error == -1)
+			showMsg(data.msg)
 		else{
 			$.cookie("estadoCasilla","Comprada")
 			mostrarDatosJugador(data.datosFicha)
@@ -550,8 +601,13 @@ function edificarPropiedad(uid, nombreCalle){
 	$.getJSON(url+"edificarPropiedad/"+uid+"/"+nombreCalle, function (data){
 		if (data.error == 1)
 			reiniciarSesion(data.msg)
+		else if (data.error == -1)
+			showMsg(data.msg)
 		else{
-			mostrarDatosJugador(data.datosFicha)
+			if (data.error == 2)
+				showMsg(data.msg)
+			else
+				mostrarDatosJugador(data.datosFicha)
 		}
 	})
 }
@@ -560,22 +616,62 @@ function demolerPropiedad(uid, nombreCalle){
 	$.getJSON(url+"demolerPropiedad/"+uid+"/"+nombreCalle, function (data){
 		if (data.error == 1)
 			reiniciarSesion(data.msg)
+		else if (data.error == -1)
+			showMsg(data.msg)
 		else{
-			mostrarDatosJugador(data.datosFicha)
+			if (data.error == 2)
+				showMsg(data.msg)
+			else
+				mostrarDatosJugador(data.datosFicha)
 		}
 	})
 }
 
 function hipotecarPropiedad(uid, nombrePropiedad){
-	var r = confirm("¿Quieres hipotecar "+nombrePropiedad+"?");
-	if (r == true)
+	var callback = function(){
 		$.getJSON(url+"hipotecarPropiedad/"+uid+"/"+nombrePropiedad, function (data){
 			if (data.error == 1)
 				reiniciarSesion(data.msg)
-			else{
+			else if (data.error == -1)
+				showMsg(data.msg)
+			else if (data.error == 2)
+				showMsg(data.msg)
+			else
 				mostrarDatosJugador(data.datosFicha)
+		})
+	}
+	showMsgSiNo("Hipotecar propiedad", "¿Quieres hipotecar "+nombrePropiedad+"?", callback)
+}
+
+function comenzarSubasta(uid, nombrePropiedad){
+	$.getJSON(url+"subastar/"+uid+"/"+nombrePropiedad, function (data){
+		if (data.error == 1)
+			reiniciarSesion(data.msg)
+		else if (data.error == -1)
+			showMsg(data.msg)
+	})
+}
+
+function pujar(uid, cantidad){
+	if (parseInt($("#input_puja").val()) || cantidad){
+		var cantidadPuja
+		if (cantidad == -1)
+			cantidadPuja = -1						
+		else
+			cantidadPuja = $("#input_puja").val()
+
+		$.getJSON(url+"pujar/"+uid+"/"+cantidadPuja, function (data){
+			switch(data.error){
+				case "1": reiniciarSesion(data.msg);break;
+				case "0": $('#modalSubasta').modal('toggle');break;
+				default: $('#label_puja').html("Puja <span class='label label-danger'>"+data.msg+"</span>");console.log(data.error)
 			}
 		})
+	}
+	else
+		$('#label_puja').html("Puja <span class='label label-danger'>Puja no válida</span>")
+
+	$("#input_puja").val('')
 }
 
 function ofertarVentaPropiedad(uid, nombrePropiedad){	
@@ -603,12 +699,16 @@ function ofertarVentaPropiedad(uid, nombrePropiedad){
 			$.getJSON(url+"ofertarVentaPropiedad/"+uid+"/"+nombrePropiedad+"/"+colorComprador+"/"+cantidad, function (data){
 				if (data.error == 1)
 					reiniciarSesion(data.msg)
-				else{			
+				else if (data.error == -1)
+					showMsg(data.msg)
+				else{
 					showMsg("Ha enviado la oferta al comprador correctamente. Espere su respuesta")
 				}
 			})
 		}
 	})
+
+	$("#input_cantidadVenta").val('')
 
 	$('#modalVentaPropiedad').modal({ backdrop: 'static', keyboard: false })
 }

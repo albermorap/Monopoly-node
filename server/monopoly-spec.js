@@ -943,7 +943,6 @@ describe("Monopoly",function(){
 
 				expect(ficha1.getPropiedades().length).toEqual(0)
 				expect(ficha2.getPropiedades().length).toEqual(1)
-				//expect(ficha2.getPropiedades()[0].getPropiedad().getNombre()).toEqual(titulo.getPropiedad().getNombre())
 				expect(ficha2.getPropiedades()[0]).toEqual(titulo)
 				expect(titulo.getPropietario()).toEqual(ficha2)
 				expect(ficha1.getSaldo()).toEqual(saldoAnterior1 + cantidadVenta)
@@ -966,6 +965,81 @@ describe("Monopoly",function(){
 
 				expect(new modelo.Usuario("Juan").unirseAPartida(partida)).toBeUndefined()
 				expect(partida.fichas.length).toEqual(2)
+			});
+
+			it("Se pueden llevar a cabo subastas", function(){
+				var partida = new modelo.Partida("Partida 1", 1)
+				var ficha1 = (new modelo.Usuario("Alberto")).unirseAPartida(partida)
+				var ficha2 = (new modelo.Usuario("Pepe")).unirseAPartida(partida)
+				var ficha3 = (new modelo.Usuario("Juan")).unirseAPartida(partida)
+				partida.calcularPrimerTurno(true)
+
+				ficha1.lanzarDados([0,1])
+				ficha1.comprarPropiedad()
+
+				var titulo = ficha1.getPropiedades()[0]
+				ficha1.hipotecarPropiedad(titulo)
+				ficha1.comenzarSubasta(titulo)
+				expect(partida.getFase().constructor.name).toEqual("FaseSubasta")
+
+				var fase = partida.getFase()
+				expect(fase.participantes[fase.turno]).toEqual(ficha1)
+				expect(fase.participantes.length).toEqual(3)
+
+				ficha1.pujar(150)
+
+				expect(fase.pujaGanadora.jugador).toEqual(ficha1)
+				expect(fase.pujaGanadora.cantidad).toEqual(150)
+
+				ficha2.pujar(100)
+
+				expect(fase.pujaGanadora.jugador).toEqual(ficha1)
+				expect(fase.pujaGanadora.cantidad).toEqual(150)
+				expect(fase.participantes[fase.turno]).toEqual(ficha2)
+
+				var saldoAnterior = ficha2.getSaldo()
+				ficha2.pujar(155)
+
+				expect(fase.pujaGanadora.jugador).toEqual(ficha2)
+				expect(fase.pujaGanadora.cantidad).toEqual(155)
+
+				ficha3.salirDeSubasta()
+
+				expect(fase.jugadoresFuera.length).toEqual(1)
+				expect(fase.jugadoresFuera[0]).toEqual(2)
+
+				ficha1.salirDeSubasta()
+
+				expect(partida.getFase().constructor.name).toEqual("FaseJugar")
+				expect(ficha2.getSaldo()).toEqual(saldoAnterior - 155)
+				expect(ficha2.getPropiedades().indexOf(titulo)).not.toEqual(-1)
+				expect(ficha2.getPropiedades()[0].getPropiedad().getEstado().constructor.name).toEqual("Comprada")
+			});
+
+			it("En caso de que todos se salgan de la subasta y el último no haya pujado aún gana la subasta por 0 pelotis", function(){
+				var partida = new modelo.Partida("Partida 1", 1)
+				var ficha1 = (new modelo.Usuario("Alberto")).unirseAPartida(partida)
+				var ficha2 = (new modelo.Usuario("Pepe")).unirseAPartida(partida)
+				var ficha3 = (new modelo.Usuario("Juan")).unirseAPartida(partida)
+				partida.calcularPrimerTurno(true)
+				var saldoAnterior = ficha3.getSaldo()
+
+				ficha1.lanzarDados([0,1])
+				ficha1.comprarPropiedad()
+
+				var titulo = ficha1.getPropiedades()[0]
+				ficha1.hipotecarPropiedad(titulo)
+				ficha1.comenzarSubasta(titulo)
+
+				var fase = partida.getFase()
+
+				ficha1.salirDeSubasta()
+				ficha2.salirDeSubasta()
+
+				expect(partida.getFase().constructor.name).toEqual("FaseJugar")
+				expect(ficha3.getSaldo()).toEqual(saldoAnterior)
+				expect(ficha3.getPropiedades().indexOf(titulo)).not.toEqual(-1)
+				expect(ficha3.getPropiedades()[0].getPropiedad().getEstado().constructor.name).toEqual("Comprada")
 			});
 		});
 	});

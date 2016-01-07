@@ -55,9 +55,11 @@ function getPropiedades(ficha){
 
 function getDatosPartida(ficha){
 	var listaFichas = []
-	partida.getFichas().forEach(function (v,i,array){listaFichas[i] = {'color':v.getColor(), 'nombre':v.getUsuario().getNombre(), 'enBancarrota':v.enBancarrota()}})
+	partida.getFichas().forEach(function (v,i,array){
+		listaFichas[i] = {'color':v.getColor(), 'nombre':v.getUsuario().getNombre(), 'enBancarrota':v.enBancarrota(), 'turno':v.getTurno().constructor.name}
+	})
 
-	return {"fichas":listaFichas, "fasePartida":partida.getFase().constructor.name,	"posicionesFichas":getPosicionesFichas(),
+	return {"nombrePartida":partida.getNombre(), "fichas":listaFichas, "fasePartida":partida.getFase().constructor.name, "posicionesFichas":getPosicionesFichas(),
 			"propiedadesGlobales":getPropiedadesPartida()}
 }
 
@@ -87,6 +89,13 @@ function getPropiedadesPartida(){
 	for (var i=0;i<fichas.length;i++)
 		propiedades[fichas[i].getColor()] = getPropiedades(fichas[i])
 	return propiedades
+}
+
+function puedeRelizarOperacion(ficha){
+	if (ficha.getTurno().constructor.name == "MeToca" && ficha.getTurno().puedeRelizarOperacion(ficha))
+		return true
+	else
+		return false
 }
 
 
@@ -132,7 +141,7 @@ app.get("/empezarPartida/:uid", function (request, response) {
 		ficha.empezarPartida()
 
 		if (partida.getFase().constructor.name == "FaseJugar"){
-			jsonData = {"error":"0"}
+			jsonData = {"error":"0", "fasePartida":partida.getFase().constructor.name}
 			io.emit("partidaEmpezada")
 		}
 		else
@@ -142,12 +151,14 @@ app.get("/empezarPartida/:uid", function (request, response) {
 	}	
 })
 
-app.get("/empezarPartidaTest/:uid", function (request, response) {
-	partida.calcularPrimerTurno(true)
+app.get("/empezarPartidaTest/:uid", function (request, response){
 	var ficha = comprobarJugador(request.params.uid, response)
 	if (ficha){
-		var jsonData = {"error":"0"}
-		response.send(jsonData)
+		partida.calcularPrimerTurno(true)
+		if (partida.getFase().constructor.name == "FaseJugar"){
+			jsonData = {"error":"0", "fasePartida":partida.getFase().constructor.name, "fichaConTurno":partida.getFichaConTurno().getUsuario().getNombre()}
+			response.send(jsonData)
+		}
 	}
 })
 
@@ -190,55 +201,151 @@ function lanzarDados(ficha, response, tiradaTest){
 }
 
 app.get("/comprarPropiedad/:uid", function (request, response) {
+	var jsonData
 	var ficha = comprobarJugador(request.params.uid, response)
 	if (ficha){
-		ficha.comprarPropiedad()
+		if (puedeRelizarOperacion(ficha)){
+			ficha.comprarPropiedad()
+			jsonData = {"error":"0", "datosFicha":getDatosFicha(ficha)}
+		}
+		else
+			jsonData = {"error":"-1", "msg":"No es su turno o tiene que tirar los dados antes"}
 
-		var jsonData = {"error":"0", "datosFicha":getDatosFicha(ficha)}
 		response.send(jsonData)
 	}
 })
 
 app.get("/edificarPropiedad/:uid/:nombrePropiedad", function (request, response) {
+	var jsonData
 	var ficha = comprobarJugador(request.params.uid, response)
 	if (ficha){
-		var titulo = ficha.getPropiedad(request.params.nombrePropiedad)
-		ficha.edificar(titulo)
+		if (puedeRelizarOperacion(ficha)){
+			var titulo = ficha.getPropiedad(request.params.nombrePropiedad)
+			if (titulo){
+				ficha.edificar(titulo)
+				jsonData = {"error":"0", "datosFicha":getDatosFicha(ficha)}
+			}
+			else
+				jsonData = {"error":"2", "msg":"No existe ninguna propiedad con el nombre " + request.params.nombrePropiedad}
+		}
+		else
+			jsonData = {"error":"-1", "msg":"No es su turno o tiene que tirar los dados antes"}
 
-		var jsonData = {"error":"0", "datosFicha":getDatosFicha(ficha)}
 		response.send(jsonData)
 	}
 })
 
 app.get("/demolerPropiedad/:uid/:nombrePropiedad", function (request, response) {
+	var jsonData
 	var ficha = comprobarJugador(request.params.uid, response)
 	if (ficha){
-		var titulo = ficha.getPropiedad(request.params.nombrePropiedad)
-		ficha.venderEdificio(titulo)
+		if (puedeRelizarOperacion(ficha)){
+			var titulo = ficha.getPropiedad(request.params.nombrePropiedad)
+			if (titulo){
+				ficha.venderEdificio(titulo)
+				jsonData = {"error":"0", "datosFicha":getDatosFicha(ficha)}
+			}
+			else
+				jsonData = {"error":"2", "msg":"No existe ninguna propiedad con el nombre " + request.params.nombrePropiedad}
+		}
+		else
+			jsonData = {"error":"-1", "msg":"No es su turno o tiene que tirar los dados antes"}
 
-		var jsonData = {"error":"0", "datosFicha":getDatosFicha(ficha)}
 		response.send(jsonData)
 	}
 })
 
 app.get("/hipotecarPropiedad/:uid/:nombrePropiedad", function (request, response) {
+	var jsonData
 	var ficha = comprobarJugador(request.params.uid, response)
 	if (ficha){
-		var titulo = ficha.getPropiedad(request.params.nombrePropiedad)
-		ficha.hipotecarPropiedad(titulo)
+		if (puedeRelizarOperacion(ficha)){
+			var titulo = ficha.getPropiedad(request.params.nombrePropiedad)
+			if (titulo){
+				ficha.hipotecarPropiedad(titulo)
+				jsonData = {"error":"0", "datosFicha":getDatosFicha(ficha)}
+			}
+			else
+				jsonData = {"error":"2", "msg":"No existe ninguna propiedad con el nombre " + request.params.nombrePropiedad}
+		}
+		else
+			jsonData = {"error":"-1", "msg":"No es su turno o tiene que tirar los dados antes"}
 
-		var jsonData = {"error":"0", "datosFicha":getDatosFicha(ficha)}
+		response.send(jsonData)
+	}
+})
+
+app.get("/subastar/:uid/:nombrePropiedad", function (request, response) {
+	var jsonData
+	var ficha = comprobarJugador(request.params.uid, response)
+	if (ficha){
+		if (puedeRelizarOperacion(ficha)){
+			var titulo = ficha.getPropiedad(request.params.nombrePropiedad)
+			ficha.comenzarSubasta(titulo)
+
+			var turnoSubasta = partida.getFase().turno
+			var jugadorConTurno = partida.getFase().participantes[turnoSubasta]
+
+			io.emit("comienzaSubasta", {"nombrePropiedad":request.params.nombrePropiedad, "colorTurno":jugadorConTurno.getColor(), "valor":titulo.getPropiedad().getPrecio()})
+
+			jsonData = {"error":"0"}
+		}
+		else
+			jsonData = {"error":"-1", "msg":"No es su turno o tiene que tirar los dados antes"}
+
+		response.send(jsonData)
+	}
+})
+
+app.get("/pujar/:uid/:cantidad", function (request, response) {
+	var jsonData
+	var ficha = comprobarJugador(request.params.uid, response)
+	if (ficha){
+		if (parseInt(request.params.cantidad) && (partida.getFase().pujaGanadora.cantidad < parseInt(request.params.cantidad) || parseInt(request.params.cantidad) == -1)){
+			var cantidadPujada = parseInt(request.params.cantidad)
+			if (cantidadPujada <= ficha.getSaldo()){
+				if (request.params.cantidad == -1){
+					ficha.salirDeSubasta()
+					if (partida.ganadorSubasta)
+						io.emit("finSubasta", {"ganador":partida.ganadorSubasta})
+				}
+				else{
+					ficha.pujar(parseInt(request.params.cantidad))
+
+					var turnoSubasta = partida.getFase().turno
+					var jugadorConTurno = partida.getFase().participantes[turnoSubasta]
+
+					io.emit("nuevaPuja", {"colorTurno":jugadorConTurno.getColor(), "cantidadPujada":partida.getFase().pujaGanadora.cantidad,
+						"jugador":partida.getFase().pujaGanadora.jugador.getUsuario().getNombre(), "nombrePropiedad":partida.getFase().tituloASubastar.getPropiedad().getNombre(),
+						"valor":partida.getFase().tituloASubastar.getPropiedad().getPrecio()})
+				}
+
+				jsonData = {"error":"0"}
+			}
+			else
+				jsonData = {"error":"3", "msg":"Saldo insuficiente"}
+		}
+		else
+			jsonData = {"error":"2", "msg":"Puja no válida"}
+
 		response.send(jsonData)
 	}
 })
 
 app.get("/ofertarVentaPropiedad/:uid/:nombrePropiedad/:colorComprador/:cantidad", function (request, response) {
+	var jsonData
 	var ficha = comprobarJugador(request.params.uid, response)
 	if (ficha){
-		var jsonData = {"error":"0"}
+		if (puedeRelizarOperacion(ficha)){
+			jsonData = {"error":"0"}
+			response.send(jsonData)
+			io.emit("ofertaVentaPropiedad",{"colorComprador":request.params.colorComprador, "nombreVendedor":ficha.getUsuario().getNombre(), "colorVendedor":ficha.getColor(), 
+				"nombrePropiedad":request.params.nombrePropiedad, "cantidad":request.params.cantidad})
+		}
+		else
+			jsonData = {"error":"-1", "msg":"No es su turno o tiene que tirar los dados antes"}
+
 		response.send(jsonData)
-		io.emit("ofertaVentaPropiedad",{"colorComprador":request.params.colorComprador, "nombreVendedor":ficha.getUsuario().getNombre(), "colorVendedor":ficha.getColor(), 
-			"nombrePropiedad":request.params.nombrePropiedad, "cantidad":request.params.cantidad})
 	}
 })
 
@@ -309,11 +416,11 @@ app.get("/pagarSalidaCarcel/:uid", function (request, response) {
 })
 
 
+
 var contJugadores = 0
 io.on("connection", function(client){
 	client.on("conectado", function(data){
 		contJugadores++
-		console.log("Llega el jugador: " + data.nombreJugador)
 		io.emit("nuevoJugador", {"jugadores":getDatosPartida().fichas})
 		// Si se llega al máximo de jugadores se lanza la partida
 		if (contJugadores == partida.coloresFichas.length)	io.emit("empiezaPartida", {"color":data.colorJugador})

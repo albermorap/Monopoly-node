@@ -5,6 +5,7 @@ Constantes: {
 	var DEUDA_REQUERIDA = 0
 	var PRECIO_EDIFICAR = 50
 	var EN_BANCARROTA = -1
+	var RECHAZAR_PUJA = -1
 }
 
 function FactoryMethod(){
@@ -26,6 +27,8 @@ FasesPartida: {
 				console.log(partida.getNombre() + ":  Se necesitan al menos "+partida.getMinNumJugadores()+" jugadores")				
 		}
 		this.lanzarDados = function(partida){console.log("La partida " + partida.getNombre() + " aún no ha comenzado.")}
+		this.comenzarSubasta = function(partida, titulo){console.log("La partida " + partida.getNombre() + " aún no ha comenzado.")}
+		this.pujar = function(partida, ficha, cantidad){console.log("La partida " + partida.getNombre() + " aún no ha comenzado.")}
 	}
 
 	function FaseJugar(){
@@ -34,6 +37,39 @@ FasesPartida: {
 		}
 		this.empezar = function(partida){console.log("La partida " + partida.getNombre() + " ya está empezada.")}
 		this.lanzarDados = function(partida){return partida.lanzarDados()}
+		this.comenzarSubasta = function(partida, titulo){
+			if (titulo.getPropiedad().getEstado().constructor.name == "Hipotecada"){
+				if (partida.getFichas().length > 1){
+					var participantes = []
+					partida.getFichas().forEach(function (v,i,array){participantes.push(v)})
+					partida.ganadorSubasta = undefined
+					partida.fase = new FaseSubasta(titulo, participantes)
+					console.log(partida.getNombre() + ":  COMIENZA LA SUBASTA DE " + titulo.getPropiedad().getNombre())
+					console.log(partida.getNombre() + ":  SUBASTA - TURNO DE " + partida.fase.participantes[partida.fase.turno].getUsuario().getNombre())
+				}
+				else
+					console.log(partida.getNombre() + ":  NO SE PUEDE HACER UNA SUBASTA CON UN JUGADOR")
+			}
+			else
+				console.log(partida.getNombre() + ":  NO SE PUEDE SUBASTAR UNA PROPIEDAD NO HIPOTECADA")
+		}
+		this.pujar = function(partida, ficha, cantidad){console.log("No hay ninguna subasta activa")}
+	}
+
+	function FaseSubasta(tituloASubastar, participantes){
+		this.tituloASubastar = tituloASubastar
+		this.participantes = participantes
+		this.pujaGanadora = {"jugador":undefined, "cantidad":0}
+		this.turno = 0
+		this.jugadoresFuera = []
+
+		this.solicitarNuevoJugador = function(partida, usuario){
+			usuario.setInfo("La partida " + partida.getNombre() + " ya está empezada y no se permiten nuevos jugadores.")
+		}
+		this.empezar = function(partida){console.log("La partida " + partida.getNombre() + " ya está empezada.")}
+		this.lanzarDados = function(partida){console.log("La partida " + partida.getNombre() + " está en una subasta.")}
+		this.comenzarSubasta = function(partida, titulo){console.log("La partida " + partida.getNombre() + " ya está en una subasta.")}
+		this.pujar = function(partida, ficha, cantidad){partida.realizarPuja(ficha, cantidad)}
 	}
 
 	function FaseFinal(){
@@ -42,6 +78,8 @@ FasesPartida: {
 		}
 		this.empezar = function(partida){console.log("La partida " + partida.getNombre() + " ha finalizado.")}
 		this.lanzarDados = function(partida){console.log("La partida " + partida.getNombre() + " ha finalizado.")}
+		this.comenzarSubasta = function(partida, titulo){console.log("La partida " + partida.getNombre() + " ha finalizado.")}
+		this.pujar = function(partida, ficha, cantidad){console.log("La partida " + partida.getNombre() + " ha finalizado.")}
 	}
 }
 
@@ -58,7 +96,8 @@ function Partida(nombre, minNumeroJugadores){
 	var numCasas = 32
 	var numHoteles = 12
 	this.cajaTarjetasComunidad
-	this.cajaTarjetasSuerte	
+	this.cajaTarjetasSuerte
+	this.ganadorSubasta
 
 	this.getNombre = function(){return "Partida " + this.nombre}
 	this.getMinNumJugadores = function(){return this.minNumeroJugadores}
@@ -269,6 +308,57 @@ function Partida(nombre, minNumeroJugadores){
 			console.log(this.getNombre() + ":  FIN PARTIDA, NO HA GANDO NADIE")
 		}
 	}
+
+	// Subastas
+	this.comenzarSubasta = function(titulo){this.fase.comenzarSubasta(this, titulo)}
+	this.pujar = function(ficha, cantidad){this.fase.pujar(this, ficha, cantidad)}
+	this.realizarPuja = function(ficha, cantidad){
+		if (this.fase.participantes[this.fase.turno] == ficha){
+			if (parseInt(cantidad)){
+				if (cantidad == RECHAZAR_PUJA){
+					this.fase.jugadoresFuera.push(this.fase.turno)
+					console.log(this.getNombre() + ":  SUBASTA - FUERA " + ficha.getUsuario().getNombre())
+					
+					if ((this.fase.participantes.length - this.fase.jugadoresFuera.length) == 1){
+						var ganadorSubasta
+						for (var i=0; i<this.fase.participantes.length; i++){
+							if (this.fase.jugadoresFuera.indexOf(i) == -1){
+								ganadorSubasta = this.fase.participantes[i];break;
+							}
+						}
+						if (ganadorSubasta.pagar(this.fase.pujaGanadora.cantidad, DEUDA_REQUERIDA)){
+							this.fase.tituloASubastar.cambiarPropietario(ganadorSubasta)
+							this.fase.tituloASubastar.getPropiedad().estado = new Comprada()
+							this.fase = new FaseJugar()
+							this.ganadorSubasta = ganadorSubasta.getUsuario().getNombre()
+							console.log(this.getNombre() + ":  SUBASTA - GANADOR " + ganadorSubasta.getUsuario().getNombre())
+						}			
+					}
+					else
+						this.cambiarTurnoSubasta(ficha, cantidad)
+				}
+				else if (this.fase.pujaGanadora.cantidad < cantidad){
+					this.fase.pujaGanadora.cantidad = cantidad
+					this.fase.pujaGanadora.jugador = ficha
+					console.log(this.getNombre() + ":  SUBASTA - NUEVA PUJA DE " + ficha.getUsuario().getNombre() + ": " + cantidad + " pelotis")
+					
+					this.cambiarTurnoSubasta(ficha, cantidad)
+				}
+				else
+					console.log(this.getNombre() + ":  SUBASTA - PUJA NO VALIDA")
+			}
+			else
+				console.log(this.getNombre() + ":  SUBASTA - PUJA NO VALIDA")
+		}
+		else
+			console.log(this.getNombre() + ":  SUBASTA - NO ES TU TURNO")
+	}
+	this.cambiarTurnoSubasta = function(ficha, cantidad){
+		do{
+			this.fase.turno = (this.fase.turno + 1) % this.fase.participantes.length
+		}while(this.fase.jugadoresFuera.indexOf(this.fase.turno) != -1)		
+		console.log(this.getNombre() + ":  SUBASTA - TURNO DE " + this.fase.participantes[this.fase.turno].getUsuario().getNombre())
+	}
 }
 
 function Dado(){
@@ -317,6 +407,17 @@ Comando: {
 		this.ejecutar = function(ficha){
 			console.log("   Usuario " + ficha.getUsuario().getNombre() + ":  TARJETA LIBRE CÁRCEL - obtiene la tarjeta")
 			ficha.setTarjetaLibreCarcel(true)
+		}
+	}
+
+	function PagarPorEdificios(){		
+		var precioCasa = 20
+		var precioHotel = 30
+		this.msg = "Paga "+precioCasa+" pelotis por cada casa y "+precioHotel+" pelotis por cada hotel"
+
+		this.ejecutar = function(ficha){
+			console.log("   Usuario " + ficha.getUsuario().getNombre() + ":  TARJETA PAGAR EDIFICIO - Paga "+precioCasa+" pelotis por cada casa y "+precioHotel+" pelotis por cada hotel")
+			ficha.pagar(cantidad, DEUDA_REQUERIDA)
 		}
 	}
 }
@@ -976,6 +1077,10 @@ Jugadores: {
 					if (this.puedeRelizarOperacion(ficha))
 						titulo.venderPropiedad(ficha, comprador, cantidad)
 				}
+				this.comenzarSubasta = function(ficha, titulo){
+					if (this.puedeRelizarOperacion(ficha))
+						ficha.getPartida().comenzarSubasta(titulo)
+				}
 			}
 
 			this.pasarTurno = function(partida, ficha){
@@ -1000,6 +1105,7 @@ Jugadores: {
 			this.edificar = function(titulo, ficha){console.log("   Usuario " + ficha.getUsuario().getNombre() + ":  ESPERA TU TURNO")}
 			this.venderEdificio = function(titulo, ficha){console.log("   Usuario " + ficha.getUsuario().getNombre() + ":  ESPERA TU TURNO")}
 			this.hipotecarPropiedad = function(titulo, ficha){console.log("   Usuario " + ficha.getUsuario().getNombre() + ":  ESPERA TU TURNO")}
+			this.comenzarSubasta = function(ficha, titulo){console.log("   Usuario " + ficha.getUsuario().getNombre() + ":  ESPERA TU TURNO")}
 			this.venderPropiedad = function(titulo, ficha, comprador, cantidad){console.log("   Usuario " + ficha.getUsuario().getNombre() + ":  ESPERA TU TURNO")}
 			this.pasarTurno = function(partida, ficha){console.log("   Usuario " + ficha.getUsuario().getNombre() + ":  ESPERA TU TURNO")}		
 		}
@@ -1115,7 +1221,7 @@ Jugadores: {
 					console.log("   Usuario " + this.getUsuario().getNombre() + ":  SALDO INSUFICIENTE PARA LA OPERACIÓN")
 				else{
 					if (receptorDelPago == DEUDA_REQUERIDA)
-						console.log("   Usuario " + this.getUsuario().getNombre() + ":  SALDO INSUFICIENTE PARA LA MULTA")
+						console.log("   Usuario " + this.getUsuario().getNombre() + ":  SALDO INSUFICIENTE")
 					else
 						console.log("   Usuario " + this.getUsuario().getNombre() + ":  SALDO INSUFICIENTE PARA ALQUILER")
 					this.deudas.push({'receptor':receptorDelPago, 'cantidad':cantidad})
@@ -1154,7 +1260,11 @@ Jugadores: {
 			this.turno.dadosTirados = true
 			this.partida.moverFicha(this, 10 - this.posicion)
 			this.pasarTurno()
-		}	
+		}
+
+		this.comenzarSubasta = function(titulo){this.turno.comenzarSubasta(this, titulo)}
+		this.pujar = function(cantidad){this.partida.pujar(this, cantidad)}
+		this.salirDeSubasta = function(){this.partida.pujar(this, RECHAZAR_PUJA)}
 	}
 }
 
