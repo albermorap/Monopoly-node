@@ -228,8 +228,6 @@ DatosJugador:{
 	}
 
 	function mostrarSaldo(saldo){
-		$.cookie("saldo", saldo)
-
 		if (saldo == -1){
 			$("#zonaDatosJugador").append("<h4><strong>SALDO: </strong><span class='label label-danger'>En bancarrota</span></h4>")
 		}
@@ -242,7 +240,9 @@ DatosJugador:{
 				else
 					$("#zonaDatosJugador").append("<h4 id='info_saldo'><strong>SALDO: "+saldo+" pelotis</strong></h4>")
 			}
-		}		
+		}
+
+		$.cookie("saldo", saldo)		
 	}
 
 	function mostrarDeudas(saldo, cantidad){
@@ -436,12 +436,12 @@ FuncionesAuxiliares:{
 		mostrarDatosJugador(datosFicha)
 	}
 
-	function mostrarGanador(nombreGanador){
+	function mostrarGanador(nombreGanador, msg){
 		$('#ganadoAlert').prop('hidden', false)
 		if (nombreGanador == false)
 			$('#ganadoAlert').html("<h3 class='text-center'><strong>¡¡Fin de la partida!! Nadie ha ganado</strong></h3>")
 		else
-			$('#ganadoAlert').html("<h3 class='text-center'><strong>¡¡Fin de la partida!! Ganador: "+nombreGanador+"</strong></h3>")
+			$('#ganadoAlert').html("<h3 class='text-center'><strong>"+msg+"</strong></h3>")
 	}
 }
 
@@ -474,8 +474,8 @@ Sockets: {
 
 	socket.on("finPartida", function (data){
 		if ($.cookie("uid") != undefined){
-			refrescar($.cookie("uid"))
-			mostrarGanador(data.nombreGanador)
+			showMsg("¡¡Fin de la partida!!", function(){refrescar($.cookie("uid"))})			
+			mostrarGanador(data.nombreGanador, data.msg)
 		}			
 	})
 
@@ -564,7 +564,7 @@ function refrescar(uid){
 
 function lanzarDados(uid){
 	$.getJSON(url+"lanzarDados/"+uid, function (data){
-	//$.getJSON(url+"lanzarDadosTest/"+uid+"/4/2", function (data){
+	//$.getJSON(url+"lanzarDadosTest/"+uid+"/1/-1", function (data){
 		if (data.error == 1)
 			reiniciarSesion(data.msg)
 		else if (data.error == 2)
@@ -653,7 +653,7 @@ function comenzarSubasta(uid, nombrePropiedad){
 }
 
 function pujar(uid, cantidad){
-	if (parseInt($("#input_puja").val()) || cantidad){
+	if ((parseInt($("#input_puja").val()) && parseInt($("#input_puja").val()) > 0) || cantidad){
 		var cantidadPuja
 		if (cantidad == -1)
 			cantidadPuja = -1						
@@ -663,15 +663,18 @@ function pujar(uid, cantidad){
 		$.getJSON(url+"pujar/"+uid+"/"+cantidadPuja, function (data){
 			switch(data.error){
 				case "1": reiniciarSesion(data.msg);break;
-				case "0": $('#modalSubasta').modal('toggle');break;
-				default: $('#label_puja').html("Puja <span class='label label-danger'>"+data.msg+"</span>");console.log(data.error)
+				case "0":
+					$('#modalSubasta').modal('toggle')
+					$('#label_puja').html("Puja")
+					break;
+				default: $('#label_puja').html("Puja <span class='label label-danger'>"+data.msg+"</span>");
 			}
 		})
 	}
 	else
 		$('#label_puja').html("Puja <span class='label label-danger'>Puja no válida</span>")
 
-	$("#input_puja").val('')
+	$("#input_puja").val('')	
 }
 
 function ofertarVentaPropiedad(uid, nombrePropiedad){	
@@ -695,7 +698,8 @@ function ofertarVentaPropiedad(uid, nombrePropiedad){
 				ofertarVentaPropiedad(uid, nombrePropiedad)
 			})
 		}
-		else{
+		else if (parseInt(cantidad) && cantidad >= 0)
+		{
 			$.getJSON(url+"ofertarVentaPropiedad/"+uid+"/"+nombrePropiedad+"/"+colorComprador+"/"+cantidad, function (data){
 				if (data.error == 1)
 					reiniciarSesion(data.msg)
@@ -706,6 +710,10 @@ function ofertarVentaPropiedad(uid, nombrePropiedad){
 				}
 			})
 		}
+		else
+			showMsg("La cantidad introducida no es válida", function(){
+				ofertarVentaPropiedad(uid, nombrePropiedad)
+			})
 	})
 
 	$("#input_cantidadVenta").val('')
@@ -718,7 +726,7 @@ function aceptarOfertaVentaPropiedad(uid, nombrePropiedad, colorVendedor, cantid
 		if (data.error == 1)
 			reiniciarSesion(data.msg)
 		else{
-			if (data.error == 2)
+			if (data.error != 0)
 				showMsg(data.msg)
 			else
 				mostrarDatosJugador(data.datosFicha)

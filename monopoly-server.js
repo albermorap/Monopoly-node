@@ -304,14 +304,14 @@ app.get("/pujar/:uid/:cantidad", function (request, response) {
 		if (parseInt(request.params.cantidad) && (partida.getFase().pujaGanadora.cantidad < parseInt(request.params.cantidad) || parseInt(request.params.cantidad) == -1)){
 			var cantidadPujada = parseInt(request.params.cantidad)
 			if (cantidadPujada <= ficha.getSaldo()){
-				if (request.params.cantidad == -1){
+				if (request.params.cantidad == -1)
 					ficha.salirDeSubasta()
-					if (partida.ganadorSubasta)
-						io.emit("finSubasta", {"ganador":partida.ganadorSubasta})
-				}
-				else{
+				else
 					ficha.pujar(parseInt(request.params.cantidad))
 
+				if (partida.ganadorSubasta)
+					io.emit("finSubasta", {"ganador":partida.ganadorSubasta})
+				else{
 					var turnoSubasta = partida.getFase().turno
 					var jugadorConTurno = partida.getFase().participantes[turnoSubasta]
 
@@ -338,7 +338,6 @@ app.get("/ofertarVentaPropiedad/:uid/:nombrePropiedad/:colorComprador/:cantidad"
 	if (ficha){
 		if (puedeRelizarOperacion(ficha)){
 			jsonData = {"error":"0"}
-			response.send(jsonData)
 			io.emit("ofertaVentaPropiedad",{"colorComprador":request.params.colorComprador, "nombreVendedor":ficha.getUsuario().getNombre(), "colorVendedor":ficha.getColor(), 
 				"nombrePropiedad":request.params.nombrePropiedad, "cantidad":request.params.cantidad})
 		}
@@ -350,21 +349,25 @@ app.get("/ofertarVentaPropiedad/:uid/:nombrePropiedad/:colorComprador/:cantidad"
 })
 
 app.get("/aceptarOfertaVentaPropiedad/:uid/:nombrePropiedad/:colorVendedor/:cantidad", function (request, response) {
+	var jsonData
 	var ficha = comprobarJugador(request.params.uid, response)
 	if (ficha){
 		var vendedor = partida.getFichaPorColor(request.params.colorVendedor)
 		var titulo = vendedor.getPropiedad(request.params.nombrePropiedad)
-		vendedor.venderPropiedad(titulo, ficha, parseInt(request.params.cantidad))
-
-		var jsonData
-		// Si aún tiene la propiedad es que no se ha producido la venta
-		if (vendedor.getPropiedad(request.params.nombrePropiedad))
-			jsonData = {"error":"2", "msg":"No se ha podido llevar a cabo la venta de la propiedad porque el vendedor ha pasado su turno"}
-		else{
-			jsonData = {"error":"0", "datosFicha":getDatosFicha(ficha)}
-			io.emit("ventaPropiedad",{"nombreVendedor":vendedor.getUsuario().getNombre(), "colorVendedor":vendedor.getColor(), "nombreComprador":ficha.getUsuario().getNombre(), 
-					"nombrePropiedad":titulo.getPropiedad().getNombre()})
+		if (ficha.getSaldo() >= parseInt(request.params.cantidad)){
+			vendedor.venderPropiedad(titulo, ficha, parseInt(request.params.cantidad))
+			
+			// Si aún tiene la propiedad es que no se ha producido la venta
+			if (vendedor.getPropiedad(request.params.nombrePropiedad))
+				jsonData = {"error":"2", "msg":"No se ha podido llevar a cabo la venta de la propiedad. Compruebe que el vendedor mantiene su turno."}
+			else{
+				jsonData = {"error":"0", "datosFicha":getDatosFicha(ficha)}
+				io.emit("ventaPropiedad",{"nombreVendedor":vendedor.getUsuario().getNombre(), "colorVendedor":vendedor.getColor(), "nombreComprador":ficha.getUsuario().getNombre(), 
+						"nombrePropiedad":titulo.getPropiedad().getNombre()})
+			}
 		}
+		else
+			jsonData = {"error":"3", "msg":"No se ha podido llevar a cabo la venta de la propiedad. No tiene saldo suficiente."}
 
 		response.send(jsonData)
 	}
@@ -380,8 +383,14 @@ app.get("/pasarTurno/:uid", function (request, response) {
 		
 		if (partida.getFase().constructor.name == "FaseFinal"){
 			var ganador = partida.getGanador()
-			if (ganador)
-				io.emit("finPartida",{"nombreGanador":ganador.getUsuario().getNombre()})
+
+			if (ganador){				
+				var msg = "¡¡Fin de la partida!! Ganador: "+ ganador.getUsuario().getNombre()
+				var aux = partida.fichas.filter(function (v,i,array){return !v.enBancarrota()})
+				if (aux.length != 1)
+					msg += " (Máx saldo alcanzado)"
+				io.emit("finPartida",{"nombreGanador":ganador.getUsuario().getNombre(), "msg":msg})
+			}
 			else
 				io.emit("finPartida",{"nombreGanador":false})
 		}

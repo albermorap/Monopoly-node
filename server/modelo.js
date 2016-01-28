@@ -86,7 +86,10 @@ FasesPartida: {
 
 function Partida(nombre, minNumeroJugadores){
 	this.nombre = nombre
-	this.minNumeroJugadores = minNumeroJugadores
+	if (minNumeroJugadores > 0 && minNumeroJugadores < 7)
+		this.minNumeroJugadores = minNumeroJugadores
+	else
+		this.minNumeroJugadores = 1
 	this.tablero = (new FactoryMethod).crearTablero(40)
 	this.dado = (new FactoryMethod).crearDado()
 	this.fichas = []
